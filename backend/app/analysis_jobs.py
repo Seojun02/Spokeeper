@@ -1,6 +1,6 @@
 """분석 파이프라인 잡 정의 — backend·agent 워커가 공유한다.
 
-BuildAgent~IndirectLeakageJudge 4단계 파이프라인을 실행한다. 도커 구성에선 이 함수가
+BuildAgent~ReminderWriter 3단계 파이프라인을 실행한다. 도커 구성에선 이 함수가
 agent 워커 프로세스에서 (Redis 큐를 통해) 실행되고, 로컬(run-local.sh)에선 backend
 프로세스의 BackgroundTask 로 실행된다. 어느 쪽이든 진행률은 jobs 모듈이 알아서
 공유 저장소(Redis 또는 인메모리)에 기록한다.

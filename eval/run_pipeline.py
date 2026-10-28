@@ -28,7 +28,7 @@ sys.stdout.reconfigure(encoding="utf-8")
 
 from agents.character_entity_filter import filter_generic_role_entities  # noqa: E402
 from agents.consolidation_agent import consolidate_registry  # noqa: E402
-from agents.indirect_leakage_judge import judge_reminders  # noqa: E402
+from legacy.indirect_leakage_judge import judge_reminders  # noqa: E402
 from agents.reminder_writer_agent import write_reminders  # noqa: E402
 from agents.verifier_agent import _apply_character_name_map, canonicalize_new_characters, verify_build_result  # noqa: E402
 

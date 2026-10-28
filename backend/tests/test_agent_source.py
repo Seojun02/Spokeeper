@@ -13,7 +13,7 @@ from backend.scripts.make_demo_store import BOOK_ID, DEMO_BUILD_RESULTS
 
 
 def _disable_llm_verifier(monkeypatch):
-    from agents import indirect_leakage_judge, reminder_writer_agent
+    from agents import reminder_writer_agent
     from agents import verifier_agent
 
     monkeypatch.setattr(verifier_agent, "verify_build_result", lambda result, book_id=None: result)
@@ -23,7 +23,6 @@ def _disable_llm_verifier(monkeypatch):
         lambda new_characters, canonical_registry, book_id=None: ({}, {}),
     )
     monkeypatch.setattr(reminder_writer_agent, "write_reminders", lambda result: {"lines": []})
-    monkeypatch.setattr(indirect_leakage_judge, "judge_reminders", lambda lines: lines)
 
 
 def test_adapter_maps_names_to_ids():

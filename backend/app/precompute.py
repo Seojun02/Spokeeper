@@ -62,7 +62,7 @@ def _build_single_entry(
     prev_raw_names: set[str],
 ) -> tuple[dict, dict[str, str]]:
     """경계선 하나에 대해 인물 병합 → VerifierAgent → ReminderWriterAgent →
-    IndirectLeakageJudge를 체이닝해서 계약 entry 하나를 만든다.
+    (간접 누출 판정은 제거)를 체이닝해서 계약 entry 하나를 만든다.
 
     인물 병합은 "새로 등장한 인물만" canonical_registry와 비교하는 증분 방식
     (canonicalize_new_characters)이라, 인물 수가 아무리 늘어나도 매 경계선마다
@@ -80,7 +80,7 @@ def _build_single_entry(
     """
     from agents.character_entity_filter import filter_generic_role_entities
     from agents.reminder_writer_agent import write_reminders
-    from agents.config import CANONICALIZER, LEAK_JUDGE
+    from agents.config import CANONICALIZER
     from agents.verifier_agent import _apply_character_name_map, verify_build_result
     if CANONICALIZER == "decide":  # 동일 인물 판정을 solar-decide 분류로 대체
         from agents.decide_canonicalizer import canonicalize_new_characters
@@ -126,14 +126,10 @@ def _build_single_entry(
 
     graph = ad.to_graph_json(verified, chunk_boundary, revision_offsets=first_seen)
 
-    # 2차 가드: 서술형으로 재작성. 3차 가드(암시/복선 판정)는 LEAK_JUDGE=1 일 때만 — 기본은 생략(solar-pro4 가 간접 누출을 스스로 피한다고 판단)
+    # 2차 가드: 서술형으로 재작성. 간접 누출 판정(구 3차 가드)은 제거됨 — eval/legacy, docs/indirect-leakage-test.md 참고
     written = write_reminders(verified)
     entity_name_to_id = {e.name: e.id for e in graph.entities}
     judged_lines = written.get("lines", [])
-    if LEAK_JUDGE:
-        from agents.indirect_leakage_judge import judge_reminders
-
-        judged_lines = judge_reminders(judged_lines)
     reminders = [
         {
             "text": line.get("text", ""),

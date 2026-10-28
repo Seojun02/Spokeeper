@@ -1,4 +1,4 @@
-"""책 하나를 4단계 파이프라인(BuildAgent→Verifier→ReminderWriter→IndirectLeakageJudge)으로
+"""책 하나를 3단계 파이프라인(BuildAgent→Verifier→ReminderWriter)으로
 재분석해서 Supabase build_agent_snapshots에 덮어쓴다.
 
 사용법:

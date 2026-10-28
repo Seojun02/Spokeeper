@@ -58,8 +58,8 @@
 
 ### agent (RQ 워커)
 - backend 와 같은 코드/이미지. `rq worker` 로 `spokeeper` 큐 구독.
-- 잡: `backend.app.analysis_jobs.run_full_analysis(book_id)` — **4단계 파이프라인**
-  `BuildAgent(인물/관계/사건 추출) → Verifier → ReminderWriter → IndirectLeakageJudge`, 전부 Upstage LLM 호출.
+- 잡: `backend.app.analysis_jobs.run_full_analysis(book_id)` — **3단계 파이프라인**
+  `BuildAgent(인물/관계/사건 추출) → Verifier → ReminderWriter`, 전부 Upstage LLM 호출.
 - 결과를 Supabase `build_agent_snapshots` + 로컬 `precomputed/*.json` 에 적재, 진행률은 Redis 에 기록.
 - 분석은 **몇 분~수십 분** 소요(LLM 다회 호출).
 
