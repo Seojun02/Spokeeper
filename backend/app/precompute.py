@@ -79,9 +79,8 @@ def _build_single_entry(
     경계선 전후로 다른 이름을 갖게 된다).
     """
     from agents.character_entity_filter import filter_generic_role_entities
-    from agents.indirect_leakage_judge import judge_reminders
     from agents.reminder_writer_agent import write_reminders
-    from agents.config import CANONICALIZER
+    from agents.config import CANONICALIZER, LEAK_JUDGE
     from agents.verifier_agent import _apply_character_name_map, verify_build_result
     if CANONICALIZER == "decide":  # 동일 인물 판정을 solar-decide 분류로 대체
         from agents.decide_canonicalizer import canonicalize_new_characters
@@ -127,10 +126,14 @@ def _build_single_entry(
 
     graph = ad.to_graph_json(verified, chunk_boundary, revision_offsets=first_seen)
 
-    # 2차 가드: 서술형으로 재작성 → 3차 가드: 암시/복선 판정 후 최종 확정
+    # 2차 가드: 서술형으로 재작성. 3차 가드(암시/복선 판정)는 LEAK_JUDGE=1 일 때만 — 기본은 생략(solar-pro4 가 간접 누출을 스스로 피한다고 판단)
     written = write_reminders(verified)
     entity_name_to_id = {e.name: e.id for e in graph.entities}
-    judged_lines = judge_reminders(written.get("lines", []))
+    judged_lines = written.get("lines", [])
+    if LEAK_JUDGE:
+        from agents.indirect_leakage_judge import judge_reminders
+
+        judged_lines = judge_reminders(judged_lines)
     reminders = [
         {
             "text": line.get("text", ""),
