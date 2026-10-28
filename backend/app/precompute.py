@@ -81,7 +81,12 @@ def _build_single_entry(
     from agents.character_entity_filter import filter_generic_role_entities
     from agents.indirect_leakage_judge import judge_reminders
     from agents.reminder_writer_agent import write_reminders
-    from agents.verifier_agent import _apply_character_name_map, canonicalize_new_characters, verify_build_result
+    from agents.config import CANONICALIZER
+    from agents.verifier_agent import _apply_character_name_map, verify_build_result
+    if CANONICALIZER == "decide":  # 동일 인물 판정을 solar-decide 분류로 대체
+        from agents.decide_canonicalizer import canonicalize_new_characters
+    else:
+        from agents.verifier_agent import canonicalize_new_characters
 
     result = filter_generic_role_entities(result, book_id=book_id)
 
@@ -89,8 +94,18 @@ def _build_single_entry(
     new_characters = [c for c in raw_characters if c.get("name", "") not in prev_raw_names]
     prev_raw_names.update(c.get("name", "") for c in raw_characters)
 
+    if CANONICALIZER == "hybrid":  # 일반 지칭 판별은 solar-decide, 동일 인물 병합은 기존 LLM 방식 그대로
+        from agents.decide_canonicalizer import classify_generic_names, drop_entities, pop_dropped_names
+        classify_generic_names(new_characters, canonical_registry, book_id=book_id)
+        dropped_all = pop_dropped_names(canonical_registry)
+        result = drop_entities(result, dropped_all)
+        new_characters = [c for c in new_characters if c.get("name") not in dropped_all]
+
     new_map, rename_map = canonicalize_new_characters(new_characters, canonical_registry, book_id=book_id)
     global_name_map.update(new_map)
+    if CANONICALIZER == "decide":  # 일반 지칭으로 판정된 이름은 결과에서 제거(누적)
+        from agents.decide_canonicalizer import drop_entities, pop_dropped_names
+        result = drop_entities(result, pop_dropped_names(canonical_registry))
 
     if rename_map:
         # ConsolidationAgent의 merge_map 소급 적용과 같은 패턴 — 이미 누적된

@@ -2,7 +2,7 @@ import json
 from langchain_upstage import ChatUpstage
 from langchain_core.messages import SystemMessage, HumanMessage
 
-from agents.config import UPSTAGE_API_KEY
+from agents.config import UPSTAGE_API_KEY, CHAT_MODEL
 from agents.build_agent import extract_json_from_text
 
 
@@ -46,7 +46,7 @@ def profile_characters(characters: list[dict]) -> dict:
         return {"profiles": []}
 
     llm = ChatUpstage(
-        model="solar-pro2",
+        model=CHAT_MODEL,
         api_key=UPSTAGE_API_KEY,
         temperature=0,
     )

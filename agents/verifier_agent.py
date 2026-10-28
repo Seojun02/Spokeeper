@@ -3,7 +3,7 @@ import re
 from langchain_upstage import ChatUpstage
 from langchain_core.messages import SystemMessage, HumanMessage
 
-from agents.config import UPSTAGE_API_KEY
+from agents.config import UPSTAGE_API_KEY, CHAT_MODEL
 from agents.build_agent import extract_json_from_text
 from agents.character_aliases import load_character_alias_map
 from agents.llm_utils import invoke_with_retry
@@ -488,7 +488,7 @@ def canonicalize_new_characters(
         result_map.update({c.get("name", ""): _register_as_new(c) for c in new_characters if c.get("name")})
         return result_map, {}
 
-    llm_factory = lambda: ChatUpstage(model="solar-pro2", api_key=UPSTAGE_API_KEY, temperature=0, timeout=120)
+    llm_factory = lambda: ChatUpstage(model=CHAT_MODEL, api_key=UPSTAGE_API_KEY, temperature=0, timeout=120)
 
     candidates: list[dict] = []
     seen_candidate_names: set[str] = set()
@@ -738,7 +738,7 @@ def verify_build_result(build_result: dict, book_id: str | None = None) -> dict:
         return {**build_result, "relations": relations, "events": events, "verifier_raw_response": None}
 
     llm_factory = lambda: ChatUpstage(
-        model="solar-pro2",
+        model=CHAT_MODEL,
         api_key=UPSTAGE_API_KEY,
         temperature=0,
         timeout=120,

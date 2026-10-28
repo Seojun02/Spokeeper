@@ -4,7 +4,7 @@ import re
 from langchain_upstage import ChatUpstage
 from langchain_core.messages import SystemMessage, HumanMessage
 
-from agents.config import UPSTAGE_API_KEY
+from agents.config import UPSTAGE_API_KEY, CHAT_MODEL
 from agents.character_entity_filter import filter_generic_role_entities
 from agents.llm_utils import invoke_with_retry
 
@@ -258,7 +258,7 @@ def build_agent(chunks: list[dict], current_offset: int) -> dict:
     )
 
     llm_factory = lambda: ChatUpstage(
-        model="solar-pro2",
+        model=CHAT_MODEL,
         api_key=UPSTAGE_API_KEY,
         temperature=0,
         timeout=120,

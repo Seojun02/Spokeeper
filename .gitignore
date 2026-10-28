@@ -21,3 +21,8 @@ frontend/dist/
 
 # OS
 .DS_Store
+
+# Research artifacts (large/regenerable or contain book text)
+*.log
+eval/cache/
+eval/data/scarlet_chapters.json

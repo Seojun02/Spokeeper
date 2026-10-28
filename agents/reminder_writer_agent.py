@@ -2,7 +2,7 @@ import json
 from langchain_upstage import ChatUpstage
 from langchain_core.messages import SystemMessage, HumanMessage
 
-from agents.config import UPSTAGE_API_KEY
+from agents.config import UPSTAGE_API_KEY, CHAT_MODEL
 from agents.build_agent import extract_json_from_text
 from agents.llm_utils import invoke_with_retry
 
@@ -42,7 +42,7 @@ def write_reminders(build_result: dict) -> dict:
         return {"lines": [], "raw_response": None}
 
     llm_factory = lambda: ChatUpstage(
-        model="solar-pro2",
+        model=CHAT_MODEL,
         api_key=UPSTAGE_API_KEY,
         temperature=0,
         timeout=120,
