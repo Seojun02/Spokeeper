@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "book_id": "3fb1a332-ae08-450b-8b20-3567a4da4180",
+  "characters": [
+    {
+      "canonical_name": "셜록 홈즈",
+      "aliases": [
+        "셜록 홈스",
+        "홈즈",
+        "셜록",
+        "홈즈 씨"
+      ],
+      "notes": "A Study in Scarlet Sherlock variants."
+    },
+    {
+      "canonical_name": "존 H. 왓슨",
+      "aliases": [
+        "존 왓슨",
+        "왓슨",
+        "왓슨 박사",
+        "닥터 왓슨",
+        "나(왓슨)",
+        "나(화자)",
+        "화자",
+        "화자(왓슨)"
+      ],
+      "notes": "A Study in Scarlet is narrated by Watson, so narrator aliases are book-specific."
+    }
+  ]
+}

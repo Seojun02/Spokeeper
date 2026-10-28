@@ -1,0 +1,1680 @@
+{
+  "book_id": "63e9a9c7-3af2-43ad-bdb1-a760c4537738",
+  "entries": [
+    {
+      "boundary": 27,
+      "graph": {
+        "offset": 27,
+        "spoiler_safe": true,
+        "entities": [
+          {
+            "id": "e_f7664116",
+            "name": "이도현(도현)",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "이강율 회장의 아들, 지안과 양남매 관계, 정소율과 연인 관계"
+          },
+          {
+            "id": "e_f6b6e26c",
+            "name": "서지안(지안)",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "이강율 회장의 양녀, 도현과 양남매 관계, 유언장 경쟁자"
+          },
+          {
+            "id": "e_6b18bf2d",
+            "name": "정소율(소율)",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "도현의 연인, 기자"
+          },
+          {
+            "id": "e_8c1c3293",
+            "name": "남궁현(현)",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "고요도 별장 관리인, 이강율 회장과 오랜 관계"
+          },
+          {
+            "id": "e_ce59f77a",
+            "name": "배재현(재현)",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "이강율 회장의 고문 변호사, 유언장 공개 주관자"
+          },
+          {
+            "id": "e_e48b8875",
+            "name": "강민혁(민혁)",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "이강율 회장의 사업 동업자, 윤서희의 남편, 강태이의 아버지"
+          },
+          {
+            "id": "e_53835de1",
+            "name": "윤서희(서희)",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "강민혁의 아내, 강태이의 어머니"
+          },
+          {
+            "id": "e_dc58316e",
+            "name": "오태식(태식)",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "은퇴 형사, 이강율 회장 실종 사건 당시 수사관"
+          },
+          {
+            "id": "e_107205ca",
+            "name": "하리안(리안)",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "다큐멘터리 피디, 재벌가 미제 사건 취재 중"
+          },
+          {
+            "id": "e_e32983ab",
+            "name": "강태이(태이)",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "강민혁과 윤서희의 아들"
+          },
+          {
+            "id": "e_d7ff3de6",
+            "name": "이강율 회장",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": null
+          }
+        ],
+        "relationships": [
+          {
+            "id": "r_2c121098",
+            "source": "e_f7664116",
+            "target": "e_f6b6e26c",
+            "label": "양남매",
+            "tone": "neutral",
+            "description": "두 사람은 남매처럼 자랐지만 유언장 앞에서는 경쟁자였다.",
+            "revision_offset": 27,
+            "display_label": null,
+            "relation_category": "neutral",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_359ecc56",
+            "source": "e_f7664116",
+            "target": "e_6b18bf2d",
+            "label": "연인",
+            "tone": "ally",
+            "description": "도현은 연인이자 기자인 정소율(소율)과 함께 배에 올랐다.",
+            "revision_offset": 27,
+            "display_label": null,
+            "relation_category": "neutral",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_24047d22",
+            "source": "e_f7664116",
+            "target": "e_d7ff3de6",
+            "label": "아들",
+            "tone": "neutral",
+            "description": "이도현(도현)은 아버지 이강율 회장의 실종 십 주기를 앞두고 배재현 변호사로부터 봉투를 받았다.",
+            "revision_offset": 27,
+            "display_label": null,
+            "relation_category": "neutral",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_370c7263",
+            "source": "e_f6b6e26c",
+            "target": "e_d7ff3de6",
+            "label": "양녀",
+            "tone": "neutral",
+            "description": "선착장에는 양녀로 자란 서지안(지안)이 먼저 도착해 있었다.",
+            "revision_offset": 27,
+            "display_label": null,
+            "relation_category": "neutral",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_b65e374f",
+            "source": "e_8c1c3293",
+            "target": "e_d7ff3de6",
+            "label": "관리인",
+            "tone": "neutral",
+            "description": "그는 회장이 섬을 사들일 때부터 함께한 사람이었다.",
+            "revision_offset": 27,
+            "display_label": null,
+            "relation_category": "neutral",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_1db120e9",
+            "source": "e_ce59f77a",
+            "target": "e_d7ff3de6",
+            "label": "고문 변호사",
+            "tone": "neutral",
+            "description": "그는 회장의 오랜 고문 변호사로, 도현에게는 참고인을 대하듯 신중한 태도를 보였다.",
+            "revision_offset": 27,
+            "display_label": null,
+            "relation_category": "neutral",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_9080f187",
+            "source": "e_e48b8875",
+            "target": "e_d7ff3de6",
+            "label": "사업 동업자",
+            "tone": "neutral",
+            "description": "재현은 이들을 회장의 오랜 사업 동업자 부부라 소개했다.",
+            "revision_offset": 27,
+            "display_label": null,
+            "relation_category": "neutral",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_566faf89",
+            "source": "e_e48b8875",
+            "target": "e_53835de1",
+            "label": "부부",
+            "tone": "neutral",
+            "description": "강민혁(민혁)과 그의 아내 윤서희(서희)였다.",
+            "revision_offset": 27,
+            "display_label": null,
+            "relation_category": "neutral",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_faef42e2",
+            "source": "e_e48b8875",
+            "target": "e_e32983ab",
+            "label": "아버지",
+            "tone": "neutral",
+            "description": "민혁과 서희의 아들 강태이(태이)였다.",
+            "revision_offset": 27,
+            "display_label": null,
+            "relation_category": "neutral",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_eea3c3e6",
+            "source": "e_53835de1",
+            "target": "e_e32983ab",
+            "label": "어머니",
+            "tone": "neutral",
+            "description": "민혁과 서희의 아들 강태이(태이)였다.",
+            "revision_offset": 27,
+            "display_label": null,
+            "relation_category": "neutral",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_ca6134e1",
+            "source": "e_dc58316e",
+            "target": "e_d7ff3de6",
+            "label": "수사관",
+            "tone": "neutral",
+            "description": "태식은 십 년 전 회장 실종 사건을 직접 수사했던 인물이라 밝혔다.",
+            "revision_offset": 27,
+            "display_label": null,
+            "relation_category": "neutral",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_cae231d8",
+            "source": "e_107205ca",
+            "target": "e_d7ff3de6",
+            "label": "취재 대상",
+            "tone": "neutral",
+            "description": "리안 역시 마찬가지로, 재벌가 미제 사건을 취재 중이라고 자신을 소개했다.",
+            "revision_offset": 27,
+            "display_label": null,
+            "relation_category": "neutral",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "last_seen_global_index": null,
+            "related_events": []
+          }
+        ],
+        "events": [
+          {
+            "event_id": "E001",
+            "event_name": "유언장 공개 준비",
+            "event_summary": "이강율 회장의 유언장 공개가 고요도 별장에서 진행됨. 도현, 지안, 재현, 현, 소율이 참여",
+            "participants": [
+              {
+                "character_name": "이도현(도현)",
+                "role": "beneficiary",
+                "confidence": 0.8
+              },
+              {
+                "character_name": "서지안(지안)",
+                "role": "beneficiary",
+                "confidence": 0.8
+              },
+              {
+                "character_name": "배재현(재현)",
+                "role": "investigator",
+                "confidence": 0.7
+              },
+              {
+                "character_name": "남궁현(현)",
+                "role": "helper",
+                "confidence": 0.6
+              },
+              {
+                "character_name": "정소율(소율)",
+                "role": "witness",
+                "confidence": 0.5
+              }
+            ],
+            "evidence": "이도현(도현)은 아버지 이강율 회장의 실종 십 주기를 앞두고 배재현 변호사로부터 봉투를 받았다. ... 재현이 입을 열었다. '태풍이 다가오고 있어 오늘 안에 모든 절차를 마쳐야 합니다.'",
+            "first_seen_chunk_offset": 4,
+            "last_seen_chunk_offset": 4,
+            "first_seen_global_index": 27,
+            "last_seen_global_index": 27,
+            "confidence": 0.7
+          },
+          {
+            "event_id": "E002",
+            "event_name": "녹음테이프 분실 사건",
+            "event_summary": "유언장 공개 직전 정전 발생, 녹음테이프 분실. 민혁이 상자 근처에 있었음",
+            "participants": [
+              {
+                "character_name": "강민혁(민혁)",
+                "role": "suspect",
+                "confidence": 0.7
+              },
+              {
+                "character_name": "배재현(재현)",
+                "role": "witness",
+                "confidence": 0.6
+              },
+              {
+                "character_name": "윤서희(서희)",
+                "role": "witness",
+                "confidence": 0.5
+              },
+              {
+                "character_name": "남궁현(현)",
+                "role": "witness",
+                "confidence": 0.5
+              },
+              {
+                "character_name": "이도현(도현)",
+                "role": "investigator",
+                "confidence": 0.6
+              }
+            ],
+            "evidence": "그 말이 끝나기 무섭게 전등이 일제히 꺼졌다. ... 불이 다시 들어왔을 때 상자는 열려 있었고, 녹음테이프만 사라져 있었다. ... 도현은 민혁을 바라보았다. 방금 만난 참고인일 뿐이었지만, 정전 직전 상자 쪽에 가장 가까이 서 있던 사람이 그였다는 사실이 마음에 걸렸다.",
+            "first_seen_chunk_offset": 4,
+            "last_seen_chunk_offset": 4,
+            "first_seen_global_index": 27,
+            "last_seen_global_index": 27,
+            "confidence": 0.7
+          },
+          {
+            "event_id": "E003",
+            "event_name": "고립 상태 발생",
+            "event_summary": "태풍으로 인해 섬이 완전히 고립됨",
+            "participants": [
+              {
+                "character_name": "남궁현(현)",
+                "role": "witness",
+                "confidence": 0.6
+              },
+              {
+                "character_name": "이도현(도현)",
+                "role": "witness",
+                "confidence": 0.5
+              },
+              {
+                "character_name": "서지안(지안)",
+                "role": "witness",
+                "confidence": 0.5
+              },
+              {
+                "character_name": "정소율(소율)",
+                "role": "witness",
+                "confidence": 0.5
+              },
+              {
+                "character_name": "배재현(재현)",
+                "role": "witness",
+                "confidence": 0.5
+              }
+            ],
+            "evidence": "현이 발전기실에서 돌아와 말했다. '다리가 물에 잠겼습니다. 이제 아무도 이 섬을 나갈 수 없습니다.'",
+            "first_seen_chunk_offset": 4,
+            "last_seen_chunk_offset": 4,
+            "first_seen_global_index": 27,
+            "last_seen_global_index": 27,
+            "confidence": 0.7
+          },
+          {
+            "event_id": "E004",
+            "event_name": "사진 발견",
+            "event_summary": "서재에서 이강율 회장과 민혁의 갈등 사진 발견",
+            "participants": [
+              {
+                "character_name": "이도현(도현)",
+                "role": "investigator",
+                "confidence": 0.7
+              },
+              {
+                "character_name": "하리안(리안)",
+                "role": "witness",
+                "confidence": 0.6
+              }
+            ],
+            "evidence": "도현은 서재를 정리하다 낡은 앨범을 발견했다. 십 년 전 이 섬에서 찍힌 사진 속에는 젊은 회장과 민혁이 절벽 근처에서 언쟁을 벌이는 듯한 모습이 담겨 있었다. ... 리안이 사진을 보고 다가왔다. '취재 중에 비슷한 이야기를 들은 적이 있어요. 당시 두 분이 사업 방향을 두고 크게 부딪혔다고요.'",
+            "first_seen_chunk_offset": 4,
+            "last_seen_chunk_offset": 4,
+            "first_seen_global_index": 27,
+            "last_seen_global_index": 27,
+            "confidence": 0.7
+          },
+          {
+            "event_id": "E005",
+            "event_name": "알리바이 충돌",
+            "event_summary": "재현과 현의 알리바이 충돌. 재현의 진술과 현의 목격 증언 불일치",
+            "participants": [
+              {
+                "character_name": "배재현(재현)",
+                "role": "suspect",
+                "confidence": 0.7
+              },
+              {
+                "character_name": "남궁현(현)",
+                "role": "witness",
+                "confidence": 0.6
+              },
+              {
+                "character_name": "오태식(태식)",
+                "role": "investigator",
+                "confidence": 0.7
+              },
+              {
+                "character_name": "이도현(도현)",
+                "role": "witness",
+                "confidence": 0.5
+              },
+              {
+                "character_name": "서지안(지안)",
+                "role": "witness",
+                "confidence": 0.5
+              }
+            ],
+            "evidence": "태식은 재현이 정전 당시 '부엌에 있었다'고 진술한 것과 달리, 현이 그 시각 서재 쪽에서 재현을 봤다고 진술한 사실을 확인했다. ... 재현은 당황하며 해명했다. '착각하신 걸 겁니다. 저는 분명 부엌에 있었습니다.'",
+            "first_seen_chunk_offset": 4,
+            "last_seen_chunk_offset": 4,
+            "first_seen_global_index": 27,
+            "last_seen_global_index": 27,
+            "confidence": 0.7
+          }
+        ],
+        "generated_at": "2026-07-10T12:36:32.967771+00:00"
+      },
+      "reminders": [
+        {
+          "text": "고요도 별장에서 이강율 회장의 유언장 공개가 진행되었으며, 이도현(도현), 서지안(지안), 배재현(재현), 남궁현(현), 정소율(소율)이 참여했습니다.",
+          "entity_ids": [
+            "e_f7664116",
+            "e_f6b6e26c",
+            "e_ce59f77a",
+            "e_8c1c3293",
+            "e_6b18bf2d"
+          ]
+        },
+        {
+          "text": "유언장 공개 직전 정전이 발생하고 녹음테이프가 분실되었습니다.",
+          "entity_ids": [
+            "e_e48b8875"
+          ]
+        },
+        {
+          "text": "태풍으로 인해 섬이 완전히 고립되었으며, 남궁현(현), 이도현(도현), 서지안(지안), 정소율(소율), 배재현(재현)이 이를 목격했습니다.",
+          "entity_ids": [
+            "e_8c1c3293",
+            "e_f7664116",
+            "e_f6b6e26c",
+            "e_6b18bf2d",
+            "e_ce59f77a"
+          ]
+        },
+        {
+          "text": "이도현(도현)과 하리안(리안)이 서재에서 특정 사진을 발견했습니다.",
+          "entity_ids": [
+            "e_f7664116",
+            "e_107205ca",
+            "e_e48b8875"
+          ]
+        },
+        {
+          "text": "배재현(재현)과 남궁현(현)의 알리바이가 충돌했으며, 오태식(태식)이 이를 조사했습니다.",
+          "entity_ids": [
+            "e_ce59f77a",
+            "e_8c1c3293",
+            "e_dc58316e"
+          ]
+        },
+        {
+          "text": "이도현(도현)과 서지안(지안)은 양남매 관계입니다.",
+          "entity_ids": [
+            "e_f7664116",
+            "e_f6b6e26c"
+          ]
+        },
+        {
+          "text": "이도현(도현)은 정소율(소율)과 연인 관계입니다.",
+          "entity_ids": [
+            "e_f7664116",
+            "e_6b18bf2d"
+          ]
+        },
+        {
+          "text": "남궁현(현)은 이강율 회장의 관리인으로, 회장이 섬을 사들일 때부터 함께했습니다.",
+          "entity_ids": [
+            "e_8c1c3293",
+            "e_d7ff3de6"
+          ]
+        },
+        {
+          "text": "배재현(재현)은 이강율 회장의 고문 변호사로, 도현에게 신중한 태도를 보였습니다.",
+          "entity_ids": [
+            "e_ce59f77a",
+            "e_d7ff3de6",
+            "e_f7664116"
+          ]
+        },
+        {
+          "text": "강민혁(민혁)과 윤서희(서희)는 부부 관계이며, 이강율 회장의 사업 동업자였습니다.",
+          "entity_ids": [
+            "e_e48b8875",
+            "e_53835de1",
+            "e_d7ff3de6"
+          ]
+        },
+        {
+          "text": "오태식(태식)은 십 년 전 이강율 회장의 실종 사건을 직접 수사했던 수사관입니다.",
+          "entity_ids": [
+            "e_dc58316e",
+            "e_d7ff3de6"
+          ]
+        },
+        {
+          "text": "하리안(리안)은 이강율 회장의 미제 사건을 취재 중인 기자입니다.",
+          "entity_ids": [
+            "e_107205ca",
+            "e_d7ff3de6"
+          ]
+        }
+      ]
+    },
+    {
+      "boundary": 53,
+      "graph": {
+        "offset": 53,
+        "spoiler_safe": true,
+        "entities": [
+          {
+            "id": "e_f7664116",
+            "name": "이도현(도현)",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "이강율 회장의 아들, 지안과 양남매 관계, 정소율과 연인 관계"
+          },
+          {
+            "id": "e_f6b6e26c",
+            "name": "서지안(지안)",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "이강율 회장의 양녀, 도현과 양남매 관계, 유언장 경쟁자"
+          },
+          {
+            "id": "e_6b18bf2d",
+            "name": "정소율(소율)",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "도현의 연인, 기자"
+          },
+          {
+            "id": "e_8c1c3293",
+            "name": "남궁현(현)",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "고요도 별장 관리인, 이강율 회장과 오랜 관계"
+          },
+          {
+            "id": "e_ce59f77a",
+            "name": "배재현(재현)",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "이강율 회장의 고문 변호사, 유언장 공개 주관자"
+          },
+          {
+            "id": "e_e48b8875",
+            "name": "강민혁(민혁)",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "이강율 회장의 사업 동업자, 윤서희의 남편, 강태이의 아버지"
+          },
+          {
+            "id": "e_53835de1",
+            "name": "윤서희(서희)",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "강민혁의 아내, 강태이의 어머니"
+          },
+          {
+            "id": "e_dc58316e",
+            "name": "오태식(태식)",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "은퇴 형사, 이강율 회장 실종 사건 당시 수사관"
+          },
+          {
+            "id": "e_107205ca",
+            "name": "하리안(리안)",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "다큐멘터리 피디, 재벌가 미제 사건 취재 중"
+          },
+          {
+            "id": "e_e32983ab",
+            "name": "강태이(태이)",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "강민혁과 윤서희의 아들"
+          },
+          {
+            "id": "e_d7ff3de6",
+            "name": "이강율 회장",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": null
+          }
+        ],
+        "relationships": [
+          {
+            "id": "r_2c121098",
+            "source": "e_f7664116",
+            "target": "e_f6b6e26c",
+            "label": "양남매",
+            "tone": "neutral",
+            "description": "두 사람은 남매처럼 자랐지만 유언장 앞에서는 경쟁자였다.",
+            "revision_offset": 27,
+            "display_label": null,
+            "relation_category": "neutral",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_359ecc56",
+            "source": "e_f7664116",
+            "target": "e_6b18bf2d",
+            "label": "연인",
+            "tone": "ally",
+            "description": "도현은 연인이자 기자인 정소율(소율)과 함께 배에 올랐다.",
+            "revision_offset": 27,
+            "display_label": null,
+            "relation_category": "neutral",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_24047d22",
+            "source": "e_f7664116",
+            "target": "e_d7ff3de6",
+            "label": "아들",
+            "tone": "neutral",
+            "description": "이도현(도현)은 아버지 이강율 회장의 실종 십 주기를 앞두고 배재현 변호사로부터 봉투를 받았다.",
+            "revision_offset": 27,
+            "display_label": null,
+            "relation_category": "neutral",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_370c7263",
+            "source": "e_f6b6e26c",
+            "target": "e_d7ff3de6",
+            "label": "양녀",
+            "tone": "neutral",
+            "description": "선착장에는 양녀로 자란 서지안(지안)이 먼저 도착해 있었다.",
+            "revision_offset": 27,
+            "display_label": null,
+            "relation_category": "neutral",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_b65e374f",
+            "source": "e_8c1c3293",
+            "target": "e_d7ff3de6",
+            "label": "관리인",
+            "tone": "neutral",
+            "description": "그는 회장이 섬을 사들일 때부터 함께한 사람이었다.",
+            "revision_offset": 27,
+            "display_label": null,
+            "relation_category": "neutral",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_1db120e9",
+            "source": "e_ce59f77a",
+            "target": "e_d7ff3de6",
+            "label": "고문 변호사",
+            "tone": "neutral",
+            "description": "그는 회장의 오랜 고문 변호사로, 도현에게는 참고인을 대하듯 신중한 태도를 보였다.",
+            "revision_offset": 27,
+            "display_label": null,
+            "relation_category": "neutral",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_9080f187",
+            "source": "e_e48b8875",
+            "target": "e_d7ff3de6",
+            "label": "사업 동업자",
+            "tone": "neutral",
+            "description": "재현은 이들을 회장의 오랜 사업 동업자 부부라 소개했다.",
+            "revision_offset": 27,
+            "display_label": null,
+            "relation_category": "neutral",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_566faf89",
+            "source": "e_e48b8875",
+            "target": "e_53835de1",
+            "label": "부부",
+            "tone": "neutral",
+            "description": "강민혁(민혁)과 그의 아내 윤서희(서희)였다.",
+            "revision_offset": 27,
+            "display_label": null,
+            "relation_category": "neutral",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_faef42e2",
+            "source": "e_e48b8875",
+            "target": "e_e32983ab",
+            "label": "아버지",
+            "tone": "neutral",
+            "description": "민혁과 서희의 아들 강태이(태이)였다.",
+            "revision_offset": 27,
+            "display_label": null,
+            "relation_category": "neutral",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_eea3c3e6",
+            "source": "e_53835de1",
+            "target": "e_e32983ab",
+            "label": "어머니",
+            "tone": "neutral",
+            "description": "민혁과 서희의 아들 강태이(태이)였다.",
+            "revision_offset": 27,
+            "display_label": null,
+            "relation_category": "neutral",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_ca6134e1",
+            "source": "e_dc58316e",
+            "target": "e_d7ff3de6",
+            "label": "수사관",
+            "tone": "neutral",
+            "description": "태식은 십 년 전 회장 실종 사건을 직접 수사했던 인물이라 밝혔다.",
+            "revision_offset": 27,
+            "display_label": null,
+            "relation_category": "neutral",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_cae231d8",
+            "source": "e_107205ca",
+            "target": "e_d7ff3de6",
+            "label": "취재 대상",
+            "tone": "neutral",
+            "description": "리안 역시 마찬가지로, 재벌가 미제 사건을 취재 중이라고 자신을 소개했다.",
+            "revision_offset": 27,
+            "display_label": null,
+            "relation_category": "neutral",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_745ececc",
+            "source": "e_f7664116",
+            "target": "e_f6b6e26c",
+            "label": "협력자",
+            "tone": "ally",
+            "description": "도현과 지안, 태식 세 사람은 현을 조심스레 찾아갔다. ... 도현은 그런 지안의 어깨를 감쌌다. ... 두 사람 사이에 남아 있던 의심은 그 순간 완전히 걷혔다.",
+            "revision_offset": 53,
+            "display_label": null,
+            "relation_category": "neutral",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_3b51752b",
+            "source": "e_f7664116",
+            "target": "e_dc58316e",
+            "label": "협력자",
+            "tone": "ally",
+            "description": "도현과 지안, 태식 세 사람은 현을 조심스레 찾아갔다. ... 이 증언으로 태식은 오래된 의문 하나를 풀었다. 도현에게 태식은 이제 단순한 형사가 아니라, 함께 사건을 풀어가는 협력자가 되어 있었다.",
+            "revision_offset": 53,
+            "display_label": null,
+            "relation_category": "neutral",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_a4d1bb82",
+            "source": "e_ce59f77a",
+            "target": "e_e48b8875",
+            "label": "공모자",
+            "tone": "neutral",
+            "description": "재현은 궁지에 몰려 사실을 털어놓았다. ... 이로써 재현과 민혁이 유언장 조작을 함께 공모한 사이였다는 사실이 명확해졌다.",
+            "revision_offset": 53,
+            "display_label": null,
+            "relation_category": "neutral",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_f5123966",
+            "source": "e_8c1c3293",
+            "target": "e_e32983ab",
+            "label": "학비 지원자",
+            "tone": "neutral",
+            "description": "그는 두려움에 시신을 저수조 아래 숨기고 실종으로 위장했으며, 이후 현에게 침묵의 대가로 태이의 학비를 지원해왔다고 자백했다.",
+            "revision_offset": 53,
+            "display_label": null,
+            "relation_category": "neutral",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "last_seen_global_index": null,
+            "related_events": []
+          }
+        ],
+        "events": [
+          {
+            "event_id": "E001",
+            "event_name": "유언장 공개 준비",
+            "event_summary": "이강율 회장의 유언장 공개가 고요도 별장에서 진행됨. 도현, 지안, 재현, 현, 소율이 참여",
+            "participants": [
+              {
+                "character_name": "이도현(도현)",
+                "role": "beneficiary",
+                "confidence": 0.8
+              },
+              {
+                "character_name": "서지안(지안)",
+                "role": "beneficiary",
+                "confidence": 0.8
+              },
+              {
+                "character_name": "배재현(재현)",
+                "role": "investigator",
+                "confidence": 0.7
+              },
+              {
+                "character_name": "남궁현(현)",
+                "role": "helper",
+                "confidence": 0.6
+              },
+              {
+                "character_name": "정소율(소율)",
+                "role": "witness",
+                "confidence": 0.5
+              }
+            ],
+            "evidence": "이도현(도현)은 아버지 이강율 회장의 실종 십 주기를 앞두고 배재현 변호사로부터 봉투를 받았다. ... 재현이 입을 열었다. '태풍이 다가오고 있어 오늘 안에 모든 절차를 마쳐야 합니다.'",
+            "first_seen_chunk_offset": 4,
+            "last_seen_chunk_offset": 4,
+            "first_seen_global_index": 27,
+            "last_seen_global_index": 27,
+            "confidence": 0.7
+          },
+          {
+            "event_id": "E002",
+            "event_name": "녹음테이프 분실 사건",
+            "event_summary": "유언장 공개 직전 정전 발생, 녹음테이프 분실. 민혁이 상자 근처에 있었음",
+            "participants": [
+              {
+                "character_name": "강민혁(민혁)",
+                "role": "suspect",
+                "confidence": 0.7
+              },
+              {
+                "character_name": "배재현(재현)",
+                "role": "witness",
+                "confidence": 0.6
+              },
+              {
+                "character_name": "윤서희(서희)",
+                "role": "witness",
+                "confidence": 0.5
+              },
+              {
+                "character_name": "남궁현(현)",
+                "role": "witness",
+                "confidence": 0.5
+              },
+              {
+                "character_name": "이도현(도현)",
+                "role": "investigator",
+                "confidence": 0.6
+              }
+            ],
+            "evidence": "그 말이 끝나기 무섭게 전등이 일제히 꺼졌다. ... 불이 다시 들어왔을 때 상자는 열려 있었고, 녹음테이프만 사라져 있었다. ... 도현은 민혁을 바라보았다. 방금 만난 참고인일 뿐이었지만, 정전 직전 상자 쪽에 가장 가까이 서 있던 사람이 그였다는 사실이 마음에 걸렸다.",
+            "first_seen_chunk_offset": 4,
+            "last_seen_chunk_offset": 4,
+            "first_seen_global_index": 27,
+            "last_seen_global_index": 27,
+            "confidence": 0.7
+          },
+          {
+            "event_id": "E003",
+            "event_name": "고립 상태 발생",
+            "event_summary": "태풍으로 인해 섬이 완전히 고립됨",
+            "participants": [
+              {
+                "character_name": "남궁현(현)",
+                "role": "witness",
+                "confidence": 0.6
+              },
+              {
+                "character_name": "이도현(도현)",
+                "role": "witness",
+                "confidence": 0.5
+              },
+              {
+                "character_name": "서지안(지안)",
+                "role": "witness",
+                "confidence": 0.5
+              },
+              {
+                "character_name": "정소율(소율)",
+                "role": "witness",
+                "confidence": 0.5
+              },
+              {
+                "character_name": "배재현(재현)",
+                "role": "witness",
+                "confidence": 0.5
+              }
+            ],
+            "evidence": "현이 발전기실에서 돌아와 말했다. '다리가 물에 잠겼습니다. 이제 아무도 이 섬을 나갈 수 없습니다.'",
+            "first_seen_chunk_offset": 4,
+            "last_seen_chunk_offset": 4,
+            "first_seen_global_index": 27,
+            "last_seen_global_index": 27,
+            "confidence": 0.7
+          },
+          {
+            "event_id": "E004",
+            "event_name": "사진 발견",
+            "event_summary": "서재에서 이강율 회장과 민혁의 갈등 사진 발견",
+            "participants": [
+              {
+                "character_name": "이도현(도현)",
+                "role": "investigator",
+                "confidence": 0.7
+              },
+              {
+                "character_name": "하리안(리안)",
+                "role": "witness",
+                "confidence": 0.6
+              }
+            ],
+            "evidence": "도현은 서재를 정리하다 낡은 앨범을 발견했다. 십 년 전 이 섬에서 찍힌 사진 속에는 젊은 회장과 민혁이 절벽 근처에서 언쟁을 벌이는 듯한 모습이 담겨 있었다. ... 리안이 사진을 보고 다가왔다. '취재 중에 비슷한 이야기를 들은 적이 있어요. 당시 두 분이 사업 방향을 두고 크게 부딪혔다고요.'",
+            "first_seen_chunk_offset": 4,
+            "last_seen_chunk_offset": 4,
+            "first_seen_global_index": 27,
+            "last_seen_global_index": 27,
+            "confidence": 0.7
+          },
+          {
+            "event_id": "E005",
+            "event_name": "알리바이 충돌",
+            "event_summary": "재현과 현의 알리바이 충돌. 재현의 진술과 현의 목격 증언 불일치",
+            "participants": [
+              {
+                "character_name": "배재현(재현)",
+                "role": "suspect",
+                "confidence": 0.7
+              },
+              {
+                "character_name": "남궁현(현)",
+                "role": "witness",
+                "confidence": 0.6
+              },
+              {
+                "character_name": "오태식(태식)",
+                "role": "investigator",
+                "confidence": 0.7
+              }
+            ],
+            "evidence": "태식은 재현이 정전 당시 '부엌에 있었다'고 진술한 것과 달리, 현이 그 시각 서재 쪽에서 재현을 봤다고 진술한 사실을 확인했다. ... 재현은 당황하며 해명했다. '착각하신 걸 겁니다. 저는 분명 부엌에 있었습니다.'",
+            "first_seen_chunk_offset": 4,
+            "last_seen_chunk_offset": 4,
+            "first_seen_global_index": 27,
+            "last_seen_global_index": 27,
+            "confidence": 0.7
+          },
+          {
+            "event_id": "E001",
+            "event_name": "현의 증언",
+            "event_summary": "현이 십 년 전 절벽에서 두 명의 실루엣을 목격했다고 증언. 태식의 오랜 의문을 풀어줌.",
+            "participants": [
+              {
+                "character_name": "남궁현(현)",
+                "role": "witness",
+                "confidence": 1.0
+              },
+              {
+                "character_name": "오태식(태식)",
+                "role": "investigator",
+                "confidence": 1.0
+              }
+            ],
+            "evidence": "현은 한참을 망설이다 입을 열었다. “저는 십 년 전 그날 밤, 절벽 쪽에서 사람 두 명의 실루엣을 봤습니다. 다만 확신이 없어 아무에게도 말하지 못했습니다.” 이 증언으로 태식은 오래된 의문 하나를 풀었다.",
+            "first_seen_chunk_offset": 9,
+            "last_seen_chunk_offset": 9,
+            "first_seen_global_index": 53,
+            "last_seen_global_index": 53,
+            "confidence": 0.7
+          },
+          {
+            "event_id": "E002",
+            "event_name": "재현과 민혁의 공모",
+            "event_summary": "재현이 회사 자금 유용 사실을 민혁에게 들키고, 유언장 조작을 대가로 침묵을 사들임.",
+            "participants": [
+              {
+                "character_name": "배재현(재현)",
+                "role": "accomplice",
+                "confidence": 1.0
+              },
+              {
+                "character_name": "강민혁(민혁)",
+                "role": "accomplice",
+                "confidence": 1.0
+              }
+            ],
+            "evidence": "재현은 궁지에 몰려 사실을 털어놓았다. “제가 회사 자금 일부를 유용한 걸 민혁 실장이 알고 있었습니다. 그는 그 약점을 이용해 유언장 조항을 자신에게 유리하게 바꾸는 대가로 제 침묵을 사들였습니다.”",
+            "first_seen_chunk_offset": 9,
+            "last_seen_chunk_offset": 9,
+            "first_seen_global_index": 53,
+            "last_seen_global_index": 53,
+            "confidence": 0.7
+          },
+          {
+            "event_id": "E003",
+            "event_name": "민혁의 자백",
+            "event_summary": "민혁이 십 년 전 회장의 죽음에 관여했음을 자백. 시신을 숨기고 현에게 태이의 학비를 지원.",
+            "participants": [
+              {
+                "character_name": "강민혁(민혁)",
+                "role": "perpetrator",
+                "confidence": 1.0
+              },
+              {
+                "character_name": "남궁현(현)",
+                "role": "witness",
+                "confidence": 1.0
+              }
+            ],
+            "evidence": "민혁은 스스로 입을 열었다. “십 년 전, 회장님은 제게 경영권을 넘기지 않겠다고 최종 통보하셨습니다. ... 그는 두려움에 시신을 저수조 아래 숨기고 실종으로 위장했으며, 이후 현에게 침묵의 대가로 태이의 학비를 지원해왔다고 자백했다.",
+            "first_seen_chunk_offset": 9,
+            "last_seen_chunk_offset": 9,
+            "first_seen_global_index": 53,
+            "last_seen_global_index": 53,
+            "confidence": 0.7
+          },
+          {
+            "event_id": "E004",
+            "event_name": "서희의 의심",
+            "event_summary": "서희가 민혁의 옷에 묻은 흙을 보고 의심했으나 태이 때문에 묻어둠.",
+            "participants": [
+              {
+                "character_name": "윤서희(서희)",
+                "role": "witness",
+                "confidence": 1.0
+              },
+              {
+                "character_name": "강민혁(민혁)",
+                "role": "suspect",
+                "confidence": 0.8
+              }
+            ],
+            "evidence": "서희는 마침내 오래 눌러온 의심을 꺼냈다. “나는 그날 밤 당신 옷에 묻은 흙을 봤어. 그때부터 의심했지만... 태이 때문에 묻어뒀어.”",
+            "first_seen_chunk_offset": 9,
+            "last_seen_chunk_offset": 9,
+            "first_seen_global_index": 53,
+            "last_seen_global_index": 53,
+            "confidence": 0.7
+          },
+          {
+            "event_id": "E005",
+            "event_name": "지안의 상속권 인정",
+            "event_summary": "재단 설립과 함께 지안에게 상속권이 정식으로 인정됨.",
+            "participants": [
+              {
+                "character_name": "서지안(지안)",
+                "role": "beneficiary",
+                "confidence": 1.0
+              },
+              {
+                "character_name": "이도현(도현)",
+                "role": "helper",
+                "confidence": 0.8
+              }
+            ],
+            "evidence": "재단 설립과 함께, 상속권은 정식으로 지안에게 인정되었다. ... 도현은 이름만 물려받았지만 지안은 책임을 물려받았다는 사실에 두 사람은 처음으로 진짜 남매가 된 기분을 느꼈다.",
+            "first_seen_chunk_offset": 9,
+            "last_seen_chunk_offset": 9,
+            "first_seen_global_index": 53,
+            "last_seen_global_index": 53,
+            "confidence": 0.7
+          }
+        ],
+        "generated_at": "2026-07-10T12:36:32.967771+00:00"
+      },
+      "reminders": [
+        {
+          "text": "고요도 별장에서 이강율 회장의 유언장 공개가 진행되었으며, 이도현(도현), 서지안(지안), 배재현(재현), 남궁현(현), 정소율(소율)이 참여했습니다.",
+          "entity_ids": [
+            "e_f7664116",
+            "e_f6b6e26c",
+            "e_ce59f77a",
+            "e_8c1c3293",
+            "e_6b18bf2d"
+          ]
+        },
+        {
+          "text": "유언장 공개 과정에서 기술적 문제가 발생했으며, 강민혁(민혁)이 해당 장소에 있었던 것으로 확인되었습니다.",
+          "entity_ids": [
+            "e_e48b8875"
+          ]
+        },
+        {
+          "text": "태풍으로 인해 섬이 완전히 고립되었으며, 남궁현(현), 이도현(도현), 서지안(지안), 정소율(소율), 배재현(재현)이 이를 목격했습니다.",
+          "entity_ids": [
+            "e_8c1c3293",
+            "e_f7664116",
+            "e_f6b6e26c",
+            "e_6b18bf2d",
+            "e_ce59f77a"
+          ]
+        },
+        {
+          "text": "이도현(도현)과 하리안(리안)이 서재에서 과거 인물들과 관련된 자료를 발견했습니다.",
+          "entity_ids": [
+            "e_f7664116",
+            "e_107205ca",
+            "e_e48b8875"
+          ]
+        },
+        {
+          "text": "배재현(재현)과 남궁현(현)의 알리바이가 충돌하며, 오태식(태식)이 이를 조사했습니다.",
+          "entity_ids": [
+            "e_ce59f77a",
+            "e_8c1c3293",
+            "e_dc58316e"
+          ]
+        },
+        {
+          "text": "윤서희(서희)가 강민혁(민혁)의 옷 상태를 확인했으나 추가 조사를 진행하지 않았습니다.",
+          "entity_ids": [
+            "e_53835de1",
+            "e_e48b8875",
+            "e_e32983ab"
+          ]
+        },
+        {
+          "text": "재단 설립과 함께 서지안(지안)의 상속권이 정식으로 인정되었으며, 이도현(도현)이 이를 도왔습니다.",
+          "entity_ids": [
+            "e_f6b6e26c",
+            "e_f7664116"
+          ]
+        }
+      ]
+    }
+  ]
+}

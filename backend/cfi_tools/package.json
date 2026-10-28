@@ -1,0 +1,10 @@
+{
+  "name": "spokeeper-cfi-index-builder",
+  "version": "1.0.0",
+  "private": true,
+  "description": "EPUB 챕터별/문단별 CFI 인덱스를 생성하는 배치 스크립트",
+  "dependencies": {
+    "epub-cfi-resolver": "^1.0.2",
+    "jsdom": "^24.0.0"
+  }
+}

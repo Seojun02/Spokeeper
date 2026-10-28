@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+*.db
+.pytest_cache/
+.env
+node_modules/
+data/uploaded_books/
+data/book_registry.json
+data/book_registry.json.tmp

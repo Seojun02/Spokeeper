@@ -1,0 +1,8 @@
+streamlit
+ebooklib
+beautifulsoup4
+lxml
+python-dotenv
+langchain-upstage
+langchain-core
+python-dotenv

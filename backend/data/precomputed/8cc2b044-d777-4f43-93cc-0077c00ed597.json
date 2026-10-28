@@ -1,0 +1,1621 @@
+{
+  "book_id": "8cc2b044-d777-4f43-93cc-0077c00ed597",
+  "entries": [
+    {
+      "boundary": 8,
+      "graph": {
+        "offset": 8,
+        "spoiler_safe": true,
+        "entities": [
+          {
+            "id": "e_ee15e4e0",
+            "name": "신데렐라",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "아버지와 새어머니, 두 의붓언니와 함께 사는 착한 소녀. 집안 궂은일을 도맡아 하며 '재투성이' 또는 '신데렐라'로 불림. 외모가 매우 아름답지만 허름한 옷을 입음."
+          },
+          {
+            "id": "e_a642e191",
+            "name": "새어머니",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "신데렐라의 새어머니. 오만하고 심술궂으며, 신데렐라에게 궂은일을 시킴."
+          },
+          {
+            "id": "e_8d2d5c33",
+            "name": "첫째 의붓언니",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "새어머니의 딸. 오만하고 심술궂으며 신데렐라를 놀림."
+          },
+          {
+            "id": "e_ce2fd6d9",
+            "name": "둘째 의붓언니",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "새어머니의 딸. 첫째보다는 덜 모질지만 신데렐라를 놀림. 신데렐라를 '신데렐라'라고 부름."
+          },
+          {
+            "id": "e_a0fc9412",
+            "name": "대모(요정)",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "신데렐라의 대모. 사실은 요정이며, 신데렐라의 소원을 들어주려 함."
+          }
+        ],
+        "relationships": [
+          {
+            "id": "r_fb079804",
+            "source": "e_ee15e4e0",
+            "target": "e_a642e191",
+            "label": "의붓모자 관계",
+            "tone": "neutral",
+            "description": "소녀는 아버지와 함께 살고 있었다. 소녀의 어머니는 일찍 세상을 떠났고, 아버지는 얼마 뒤 새어머니를 맞아들였다.",
+            "revision_offset": 8,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "personal",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_4df1d1b3",
+            "source": "e_ee15e4e0",
+            "target": "e_8d2d5c33",
+            "label": "의붓자매 관계",
+            "tone": "neutral",
+            "description": "새어머니에게는 이미 두 딸이 있었는데, 둘 다 어머니를 꼭 닮아 오만하고 심술궂었다.",
+            "revision_offset": 8,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "personal",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_d07ab06d",
+            "source": "e_ee15e4e0",
+            "target": "e_ce2fd6d9",
+            "label": "의붓자매 관계",
+            "tone": "neutral",
+            "description": "새어머니에게는 이미 두 딸이 있었는데, 둘 다 어머니를 꼭 닮아 오만하고 심술궂었다.",
+            "revision_offset": 8,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "personal",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_96f14798",
+            "source": "e_ee15e4e0",
+            "target": "e_a642e191",
+            "label": "가해자-피해자 관계",
+            "tone": "neutral",
+            "description": "새어머니는 소녀에게 집안의 온갖 궂은일을 시켰다.",
+            "revision_offset": 8,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "action",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_fba7ff6a",
+            "source": "e_ee15e4e0",
+            "target": "e_8d2d5c33",
+            "label": "가해자-피해자 관계",
+            "tone": "neutral",
+            "description": "'신데렐라, 너도 무도회에 가고 싶니?' 언니들이 짓궂게 물었다. / '맞아, 재투성이가 무도회에 가면 다들 웃음거리로 삼을 거야.' 언니들은 그렇게 말하며 깔깔댔다.",
+            "revision_offset": 8,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "action",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_b303ea76",
+            "source": "e_ee15e4e0",
+            "target": "e_ce2fd6d9",
+            "label": "가해자-피해자 관계",
+            "tone": "neutral",
+            "description": "'신데렐라, 너도 무도회에 가고 싶니?' 언니들이 짓궂게 물었다. / '맞아, 재투성이가 무도회에 가면 다들 웃음거리로 삼을 거야.' 언니들은 그렇게 말하며 깔깔댔다.",
+            "revision_offset": 8,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "action",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          }
+        ],
+        "events": [
+          {
+            "event_id": "event_001",
+            "event_name": "신데렐라의 가정 내 학대",
+            "event_summary": "새어머니와 의붓언니들이 신데렐라를 학대하며 궂은일을 시키고 놀림.",
+            "participants": [
+              {
+                "character_name": "새어머니",
+                "role": "perpetrator",
+                "confidence": 0.9
+              },
+              {
+                "character_name": "첫째 의붓언니",
+                "role": "perpetrator",
+                "confidence": 0.8
+              },
+              {
+                "character_name": "둘째 의붓언니",
+                "role": "perpetrator",
+                "confidence": 0.7
+              },
+              {
+                "character_name": "신데렐라",
+                "role": "victim",
+                "confidence": 0.95
+              }
+            ],
+            "evidence": "새어머니는 소녀에게 집안의 온갖 궂은일을 시켰다. / '신데렐라, 너도 무도회에 가고 싶니?' 언니들이 짓궂게 물었다. / '맞아, 재투성이가 무도회에 가면 다들 웃음거리로 삼을 거야.'",
+            "first_seen_chunk_offset": 0,
+            "last_seen_chunk_offset": 0,
+            "first_seen_global_index": 8,
+            "last_seen_global_index": 8,
+            "confidence": 0.7
+          },
+          {
+            "event_id": "event_002",
+            "event_name": "왕궁 무도회 초대",
+            "event_summary": "왕궁에서 무도회가 열리며 새어머니와 의붓언니들이 초대받음. 신데렐라는 초대받지 못함.",
+            "participants": [
+              {
+                "character_name": "새어머니",
+                "role": "beneficiary",
+                "confidence": 0.8
+              },
+              {
+                "character_name": "첫째 의붓언니",
+                "role": "beneficiary",
+                "confidence": 0.8
+              },
+              {
+                "character_name": "둘째 의붓언니",
+                "role": "beneficiary",
+                "confidence": 0.8
+              },
+              {
+                "character_name": "신데렐라",
+                "role": "witness",
+                "confidence": 0.7
+              }
+            ],
+            "evidence": "어느 날 왕궁에서 무도회가 열린다는 소식이 전해졌다. / 새어머니의 두 딸도 초대장을 받고 뛸 듯이 기뻐했다.",
+            "first_seen_chunk_offset": 0,
+            "last_seen_chunk_offset": 0,
+            "first_seen_global_index": 8,
+            "last_seen_global_index": 8,
+            "confidence": 0.7
+          }
+        ],
+        "generated_at": "2026-07-13T06:56:09.189641+00:00",
+        "current_global_index": null,
+        "current_page": null,
+        "total_pages": null,
+        "spoiler_boundary_page": null,
+        "snapshot_boundary": null
+      },
+      "reminders": [
+        {
+          "text": "신데렐라는 새어머니와 의붓언니들로부터 학대를 받으며 집안의 궂은일을 도맡아 하고 있습니다.",
+          "entity_ids": [
+            "e_ee15e4e0",
+            "e_a642e191",
+            "e_8d2d5c33",
+            "e_ce2fd6d9"
+          ]
+        },
+        {
+          "text": "왕궁 무도회 초대에서 새어머니와 의붓언니들은 초대받은 반면 신데렐라는 초대받지 못했습니다.",
+          "entity_ids": [
+            "e_a642e191",
+            "e_8d2d5c33",
+            "e_ce2fd6d9",
+            "e_ee15e4e0"
+          ]
+        },
+        {
+          "text": "신데렐라는 아버지와 함께 살고 있었으나, 아버지의 재혼으로 새어머니와 의붓언니들과 함께 살게 되었습니다.",
+          "entity_ids": [
+            "e_ee15e4e0",
+            "e_a642e191",
+            "e_8d2d5c33",
+            "e_ce2fd6d9"
+          ]
+        },
+        {
+          "text": "새어머니와 의붓언니들은 신데렐라에게 무도회 참석 의사를 묻는 질문을 했습니다.",
+          "entity_ids": [
+            "e_a642e191",
+            "e_8d2d5c33",
+            "e_ce2fd6d9",
+            "e_ee15e4e0"
+          ]
+        }
+      ]
+    },
+    {
+      "boundary": 16,
+      "graph": {
+        "offset": 16,
+        "spoiler_safe": true,
+        "entities": [
+          {
+            "id": "e_ee15e4e0",
+            "name": "신데렐라",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "아버지와 새어머니, 두 의붓언니와 함께 사는 착한 소녀. 집안 궂은일을 도맡아 하며 '재투성이' 또는 '신데렐라'로 불림. 외모가 매우 아름답지만 허름한 옷을 입음."
+          },
+          {
+            "id": "e_a642e191",
+            "name": "새어머니",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "신데렐라의 새어머니. 오만하고 심술궂으며, 신데렐라에게 궂은일을 시킴."
+          },
+          {
+            "id": "e_8d2d5c33",
+            "name": "첫째 의붓언니",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "새어머니의 딸. 오만하고 심술궂으며 신데렐라를 놀림."
+          },
+          {
+            "id": "e_ce2fd6d9",
+            "name": "둘째 의붓언니",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "새어머니의 딸. 첫째보다는 덜 모질지만 신데렐라를 놀림. 신데렐라를 '신데렐라'라고 부름."
+          },
+          {
+            "id": "e_a0fc9412",
+            "name": "대모(요정)",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "신데렐라의 대모. 사실은 요정이며, 신데렐라의 소원을 들어주려 함."
+          },
+          {
+            "id": "e_7d45099f",
+            "name": "왕자",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "무도회에 참석한 왕자. 신데렐라의 아름다움에 반해 밤새 그녀의 곁을 떠나지 않는다."
+          }
+        ],
+        "relationships": [
+          {
+            "id": "r_fb079804",
+            "source": "e_ee15e4e0",
+            "target": "e_a642e191",
+            "label": "의붓모자 관계",
+            "tone": "neutral",
+            "description": "소녀는 아버지와 함께 살고 있었다. 소녀의 어머니는 일찍 세상을 떠났고, 아버지는 얼마 뒤 새어머니를 맞아들였다.",
+            "revision_offset": 8,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "personal",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_4df1d1b3",
+            "source": "e_ee15e4e0",
+            "target": "e_8d2d5c33",
+            "label": "의붓자매 관계",
+            "tone": "neutral",
+            "description": "새어머니에게는 이미 두 딸이 있었는데, 둘 다 어머니를 꼭 닮아 오만하고 심술궂었다.",
+            "revision_offset": 8,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "personal",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_d07ab06d",
+            "source": "e_ee15e4e0",
+            "target": "e_ce2fd6d9",
+            "label": "의붓자매 관계",
+            "tone": "neutral",
+            "description": "새어머니에게는 이미 두 딸이 있었는데, 둘 다 어머니를 꼭 닮아 오만하고 심술궂었다.",
+            "revision_offset": 8,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "personal",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_96f14798",
+            "source": "e_ee15e4e0",
+            "target": "e_a642e191",
+            "label": "가해자-피해자 관계",
+            "tone": "neutral",
+            "description": "새어머니는 소녀에게 집안의 온갖 궂은일을 시켰다.",
+            "revision_offset": 8,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "action",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_fba7ff6a",
+            "source": "e_ee15e4e0",
+            "target": "e_8d2d5c33",
+            "label": "가해자-피해자 관계",
+            "tone": "neutral",
+            "description": "'신데렐라, 너도 무도회에 가고 싶니?' 언니들이 짓궂게 물었다. / '맞아, 재투성이가 무도회에 가면 다들 웃음거리로 삼을 거야.' 언니들은 그렇게 말하며 깔깔댔다.",
+            "revision_offset": 8,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "action",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_b303ea76",
+            "source": "e_ee15e4e0",
+            "target": "e_ce2fd6d9",
+            "label": "가해자-피해자 관계",
+            "tone": "neutral",
+            "description": "'신데렐라, 너도 무도회에 가고 싶니?' 언니들이 짓궂게 물었다. / '맞아, 재투성이가 무도회에 가면 다들 웃음거리로 삼을 거야.' 언니들은 그렇게 말하며 깔깔댔다.",
+            "revision_offset": 8,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "action",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_9376ef48",
+            "source": "e_ee15e4e0",
+            "target": "e_a0fc9412",
+            "label": "도움을 요청-도움을 제공",
+            "tone": "neutral",
+            "description": "그때 대모가 나타나 눈물짓는 신데렐라를 보고 무슨 일이냐고 물었다. / '저도... 저도 무도회에 가고 싶어요.' 신데렐라가 흐느끼며 말했다. / 대모는 사실 요정이었다. 대모는 신데렐라에게 정원에 가",
+            "revision_offset": 16,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "action",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_04eab3e8",
+            "source": "e_ee15e4e0",
+            "target": "e_a0fc9412",
+            "label": "보호-피보호자",
+            "tone": "neutral",
+            "description": "대모는 신데렐라를 다독이며 말했다. '착하게만 굴면, 내가 방법을 찾아주마.' / 대모는 지팡이로 살짝 건드리자, 신데렐라의 옷은 금실과 은실로 짠 화려한 드레스로 변했고, 발에는 세상에서 가장 아름다운 유리 구두가 신겨졌다.",
+            "revision_offset": 16,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "action",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_cf001139",
+            "source": "e_7d45099f",
+            "target": "e_ee15e4e0",
+            "label": "연모",
+            "tone": "neutral",
+            "description": "왕자는 낯선 아름다운 여인이 도착했다는 말을 듣고 몸소 마중을 나와 손을 잡아 이끌었다. / 왕자는 밤새 신데렐라의 곁을 떠나지 않았고, / '정말 아름다운 공주님이 오셨는데, 왕자님이 그분에게서 눈을 떼지 못하시더라.'",
+            "revision_offset": 16,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "action",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          }
+        ],
+        "events": [
+          {
+            "event_id": "event_001",
+            "event_name": "신데렐라의 가정 내 학대",
+            "event_summary": "새어머니와 의붓언니들이 신데렐라를 학대하며 궂은일을 시키고 놀림.",
+            "participants": [
+              {
+                "character_name": "새어머니",
+                "role": "perpetrator",
+                "confidence": 0.9
+              },
+              {
+                "character_name": "첫째 의붓언니",
+                "role": "perpetrator",
+                "confidence": 0.8
+              },
+              {
+                "character_name": "둘째 의붓언니",
+                "role": "perpetrator",
+                "confidence": 0.7
+              },
+              {
+                "character_name": "신데렐라",
+                "role": "victim",
+                "confidence": 0.95
+              }
+            ],
+            "evidence": "새어머니는 소녀에게 집안의 온갖 궂은일을 시켰다. / '신데렐라, 너도 무도회에 가고 싶니?' 언니들이 짓궂게 물었다. / '맞아, 재투성이가 무도회에 가면 다들 웃음거리로 삼을 거야.'",
+            "first_seen_chunk_offset": 0,
+            "last_seen_chunk_offset": 0,
+            "first_seen_global_index": 8,
+            "last_seen_global_index": 8,
+            "confidence": 0.7
+          },
+          {
+            "event_id": "event_002",
+            "event_name": "왕궁 무도회 초대",
+            "event_summary": "왕궁에서 무도회가 열리며 새어머니와 의붓언니들이 초대받음. 신데렐라는 초대받지 못함.",
+            "participants": [
+              {
+                "character_name": "새어머니",
+                "role": "beneficiary",
+                "confidence": 0.8
+              },
+              {
+                "character_name": "첫째 의붓언니",
+                "role": "beneficiary",
+                "confidence": 0.8
+              },
+              {
+                "character_name": "둘째 의붓언니",
+                "role": "beneficiary",
+                "confidence": 0.8
+              },
+              {
+                "character_name": "신데렐라",
+                "role": "witness",
+                "confidence": 0.7
+              }
+            ],
+            "evidence": "어느 날 왕궁에서 무도회가 열린다는 소식이 전해졌다. / 새어머니의 두 딸도 초대장을 받고 뛸 듯이 기뻐했다.",
+            "first_seen_chunk_offset": 0,
+            "last_seen_chunk_offset": 0,
+            "first_seen_global_index": 8,
+            "last_seen_global_index": 8,
+            "confidence": 0.7
+          },
+          {
+            "event_id": "event_003",
+            "event_name": "신데렐라의 무도회 참석 요청",
+            "event_summary": "신데렐라가 대모(요정)에게 무도회 참석을 도와달라고 요청함.",
+            "participants": [
+              {
+                "character_name": "신데렐라",
+                "role": "witness",
+                "confidence": 0.9
+              },
+              {
+                "character_name": "대모(요정)",
+                "role": "helper",
+                "confidence": 0.85
+              },
+              {
+                "character_name": "신데렐라",
+                "role": "target",
+                "confidence": 1.0
+              },
+              {
+                "character_name": "대모(요정)",
+                "role": "helper",
+                "confidence": 1.0
+              }
+            ],
+            "evidence": "'저도... 저도 무도회에 가고 싶어요.' 신데렐라가 흐느끼며 말했다. / 대모는 사실 요정이었다. 대모는 신데렐라에게 정원에 가\n모가 나타나 눈물짓는 신데렐라를 보고 무슨 일이냐고 물었다. / '저도... 저도 무도회에 가고 싶어요.' 신데렐라가 흐느끼며 말했다.",
+            "first_seen_chunk_offset": 0,
+            "last_seen_chunk_offset": 1,
+            "first_seen_global_index": 8,
+            "last_seen_global_index": 16,
+            "confidence": 0.7
+          },
+          {
+            "event_id": "event_002",
+            "event_name": "대모의 마법 수행",
+            "event_summary": "대모가 호박, 쥐, 도마뱀을 마법으로 마차, 말, 마부, 시종으로 변신시키고 신데렐라의 옷을 화려하게 꾸민다.",
+            "participants": [
+              {
+                "character_name": "대모(요정)",
+                "role": "perpetrator",
+                "confidence": 1.0
+              },
+              {
+                "character_name": "신데렐라",
+                "role": "beneficiary",
+                "confidence": 1.0
+              }
+            ],
+            "evidence": "대모는 신데렐라를 다독이며 말했다. '착하게만 굴면, 내가 방법을 찾아주마.' / 대모는 지팡이로 살짝 건드리자, 신데렐라의 옷은 금실과 은실로 짠 화려한 드레스로 변했고, 발에는 세상에서 가장 아름다운 유리 구두가 신겨졌다.",
+            "first_seen_chunk_offset": 1,
+            "last_seen_chunk_offset": 1,
+            "first_seen_global_index": 16,
+            "last_seen_global_index": 16,
+            "confidence": 0.7
+          },
+          {
+            "event_id": "event_003",
+            "event_name": "신데렐라의 무도회 참석",
+            "event_summary": "신데렐라가 대모의 도움으로 무도회에 참석하고 왕자와 만난다.",
+            "participants": [
+              {
+                "character_name": "신데렐라",
+                "role": "target",
+                "confidence": 1.0
+              },
+              {
+                "character_name": "왕자",
+                "role": "investigator",
+                "confidence": 0.8
+              },
+              {
+                "character_name": "대모(요정)",
+                "role": "helper",
+                "confidence": 1.0
+              }
+            ],
+            "evidence": "신데렐라는 그러겠노라 약속하고 설레는 마음으로 궁전을 향해 떠났다. / 왕자는 낯선 아름다운 여인이 도착했다는 말을 듣고 몸소 마중을 나와 손을 잡아 이끌었다. / 왕자는 밤새 신데렐라의 곁을 떠나지 않았고,",
+            "first_seen_chunk_offset": 1,
+            "last_seen_chunk_offset": 1,
+            "first_seen_global_index": 16,
+            "last_seen_global_index": 16,
+            "confidence": 0.7
+          },
+          {
+            "event_id": "event_005",
+            "event_name": "언니들의 무도회 이야기",
+            "event_summary": "언니들이 신데렐라에게 무도회에서 본 아름다운 여인에 대해 이야기한다.",
+            "participants": [
+              {
+                "character_name": "언니들",
+                "role": "witness",
+                "confidence": 1.0
+              },
+              {
+                "character_name": "신데렐라",
+                "role": "target",
+                "confidence": 1.0
+              }
+            ],
+            "evidence": "잠시 후 돌아온 언니들은 신데렐라에게 무도회 이야기를 들려주었다. / '정말 아름다운 공주님이 오셨는데, 왕자님이 그분에게서 눈을 떼지 못하시더라. 그런데 이름도 모르겠고, 어디서 오셨는지도 모르겠어.'",
+            "first_seen_chunk_offset": 1,
+            "last_seen_chunk_offset": 1,
+            "first_seen_global_index": 16,
+            "last_seen_global_index": 16,
+            "confidence": 0.7
+          }
+        ],
+        "generated_at": "2026-07-13T06:56:09.189641+00:00",
+        "current_global_index": null,
+        "current_page": null,
+        "total_pages": null,
+        "spoiler_boundary_page": null,
+        "snapshot_boundary": null
+      },
+      "reminders": [
+        {
+          "text": "새어머니와 첫째 의붓언니, 둘째 의붓언니는 신데렐라를 학대하며 궂은일을 시키고 놀렸습니다.",
+          "entity_ids": [
+            "e_a642e191",
+            "e_8d2d5c33",
+            "e_ce2fd6d9",
+            "e_ee15e4e0"
+          ]
+        },
+        {
+          "text": "왕궁 무도회 초대에서 새어머니와 첫째 의붓언니, 둘째 의붓언니는 초대받았지만 신데렐라는 초대받지 못했습니다.",
+          "entity_ids": [
+            "e_a642e191",
+            "e_8d2d5c33",
+            "e_ce2fd6d9",
+            "e_ee15e4e0"
+          ]
+        },
+        {
+          "text": "신데렐라는 대모(요정)에게 무도회 참석을 도와달라고 요청했고, 대모(요정)는 이를 수락했습니다.",
+          "entity_ids": [
+            "e_ee15e4e0",
+            "e_a0fc9412"
+          ]
+        },
+        {
+          "text": "대모(요정)는 마법을 사용해 신데렐라가 무도회에 참석할 수 있도록 도왔습니다.",
+          "entity_ids": [
+            "e_a0fc9412",
+            "e_ee15e4e0"
+          ]
+        },
+        {
+          "text": "신데렐라는 무도회에 참석하여 여러 사람들과 만났습니다.",
+          "entity_ids": [
+            "e_ee15e4e0",
+            "e_7d45099f",
+            "e_a0fc9412"
+          ]
+        }
+      ]
+    },
+    {
+      "boundary": 23,
+      "graph": {
+        "offset": 23,
+        "spoiler_safe": true,
+        "entities": [
+          {
+            "id": "e_ee15e4e0",
+            "name": "신데렐라",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "아버지와 새어머니, 두 의붓언니와 함께 사는 착한 소녀. 집안 궂은일을 도맡아 하며 '재투성이' 또는 '신데렐라'로 불림. 외모가 매우 아름답지만 허름한 옷을 입음."
+          },
+          {
+            "id": "e_a642e191",
+            "name": "새어머니",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "신데렐라의 새어머니. 오만하고 심술궂으며, 신데렐라에게 궂은일을 시킴."
+          },
+          {
+            "id": "e_8d2d5c33",
+            "name": "첫째 의붓언니",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "새어머니의 딸. 오만하고 심술궂으며 신데렐라를 놀림."
+          },
+          {
+            "id": "e_ce2fd6d9",
+            "name": "둘째 의붓언니",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "새어머니의 딸. 첫째보다는 덜 모질지만 신데렐라를 놀림. 신데렐라를 '신데렐라'라고 부름."
+          },
+          {
+            "id": "e_a0fc9412",
+            "name": "대모(요정)",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "신데렐라의 대모. 사실은 요정이며, 신데렐라의 소원을 들어주려 함."
+          },
+          {
+            "id": "e_7d45099f",
+            "name": "왕자",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "무도회에 참석한 왕자. 신데렐라의 아름다움에 반해 밤새 그녀의 곁을 떠나지 않는다."
+          },
+          {
+            "id": "e_ea699f5c",
+            "name": "신하",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "왕자의 명을 받아 유리 구두를 신겨 본 인물."
+          }
+        ],
+        "relationships": [
+          {
+            "id": "r_fb079804",
+            "source": "e_ee15e4e0",
+            "target": "e_a642e191",
+            "label": "의붓모자 관계",
+            "tone": "neutral",
+            "description": "소녀는 아버지와 함께 살고 있었다. 소녀의 어머니는 일찍 세상을 떠났고, 아버지는 얼마 뒤 새어머니를 맞아들였다.",
+            "revision_offset": 8,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "personal",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_4df1d1b3",
+            "source": "e_ee15e4e0",
+            "target": "e_8d2d5c33",
+            "label": "의붓자매 관계",
+            "tone": "neutral",
+            "description": "새어머니에게는 이미 두 딸이 있었는데, 둘 다 어머니를 꼭 닮아 오만하고 심술궂었다.",
+            "revision_offset": 8,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "personal",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_d07ab06d",
+            "source": "e_ee15e4e0",
+            "target": "e_ce2fd6d9",
+            "label": "의붓자매 관계",
+            "tone": "neutral",
+            "description": "새어머니에게는 이미 두 딸이 있었는데, 둘 다 어머니를 꼭 닮아 오만하고 심술궂었다.",
+            "revision_offset": 8,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "personal",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_96f14798",
+            "source": "e_ee15e4e0",
+            "target": "e_a642e191",
+            "label": "가해자-피해자 관계",
+            "tone": "neutral",
+            "description": "새어머니는 소녀에게 집안의 온갖 궂은일을 시켰다.",
+            "revision_offset": 8,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "action",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_fba7ff6a",
+            "source": "e_ee15e4e0",
+            "target": "e_8d2d5c33",
+            "label": "가해자-피해자 관계",
+            "tone": "neutral",
+            "description": "'신데렐라, 너도 무도회에 가고 싶니?' 언니들이 짓궂게 물었다. / '맞아, 재투성이가 무도회에 가면 다들 웃음거리로 삼을 거야.' 언니들은 그렇게 말하며 깔깔댔다.",
+            "revision_offset": 8,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "action",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_b303ea76",
+            "source": "e_ee15e4e0",
+            "target": "e_ce2fd6d9",
+            "label": "가해자-피해자 관계",
+            "tone": "neutral",
+            "description": "'신데렐라, 너도 무도회에 가고 싶니?' 언니들이 짓궂게 물었다. / '맞아, 재투성이가 무도회에 가면 다들 웃음거리로 삼을 거야.' 언니들은 그렇게 말하며 깔깔댔다.",
+            "revision_offset": 8,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "action",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_9376ef48",
+            "source": "e_ee15e4e0",
+            "target": "e_a0fc9412",
+            "label": "도움을 요청-도움을 제공",
+            "tone": "neutral",
+            "description": "그때 대모가 나타나 눈물짓는 신데렐라를 보고 무슨 일이냐고 물었다. / '저도... 저도 무도회에 가고 싶어요.' 신데렐라가 흐느끼며 말했다. / 대모는 사실 요정이었다. 대모는 신데렐라에게 정원에 가",
+            "revision_offset": 16,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "action",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_04eab3e8",
+            "source": "e_ee15e4e0",
+            "target": "e_a0fc9412",
+            "label": "보호-피보호자",
+            "tone": "neutral",
+            "description": "대모는 신데렐라를 다독이며 말했다. '착하게만 굴면, 내가 방법을 찾아주마.' / 대모는 지팡이로 살짝 건드리자, 신데렐라의 옷은 금실과 은실로 짠 화려한 드레스로 변했고, 발에는 세상에서 가장 아름다운 유리 구두가 신겨졌다.",
+            "revision_offset": 16,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "action",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_2beb5278",
+            "source": "e_ee15e4e0",
+            "target": "e_a0fc9412",
+            "label": "도움을 받음",
+            "tone": "neutral",
+            "description": "신데렐라는 다시 대모의 도움으로 더욱 화려하게 차려입고 궁전으로 향했다.",
+            "revision_offset": 23,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "action",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_4819b953",
+            "source": "e_ee15e4e0",
+            "target": "e_7d45099f",
+            "label": "연인 관계",
+            "tone": "ally",
+            "description": "왕자는 그날도 신데렐라 곁을 떠나지 않고 다정한 말을 건넸다. ... 왕자는 신데렐라를 그 어느 때보다 사랑스럽게 여겼고, 며칠 뒤 성대한 혼례를 올렸다.",
+            "revision_offset": 23,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "personal",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_ad1b0f7d",
+            "source": "e_7d45099f",
+            "target": "e_ea699f5c",
+            "label": "명령-복종",
+            "tone": "neutral",
+            "description": "왕자는 온 나라에 이 구두가 꼭 맞는 여인과 혼인하겠다고 선포했다. ... 신하는 ... 왕자의 명을 따라 정중히 신데렐라를 자리에 앉혔다.",
+            "revision_offset": 23,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "action",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          }
+        ],
+        "events": [
+          {
+            "event_id": "event_001",
+            "event_name": "신데렐라의 가정 내 학대",
+            "event_summary": "새어머니와 의붓언니들이 신데렐라를 학대하며 궂은일을 시키고 놀림.",
+            "participants": [
+              {
+                "character_name": "새어머니",
+                "role": "perpetrator",
+                "confidence": 0.9
+              },
+              {
+                "character_name": "첫째 의붓언니",
+                "role": "perpetrator",
+                "confidence": 0.8
+              },
+              {
+                "character_name": "둘째 의붓언니",
+                "role": "perpetrator",
+                "confidence": 0.7
+              },
+              {
+                "character_name": "신데렐라",
+                "role": "victim",
+                "confidence": 0.95
+              }
+            ],
+            "evidence": "새어머니는 소녀에게 집안의 온갖 궂은일을 시켰다. / '신데렐라, 너도 무도회에 가고 싶니?' 언니들이 짓궂게 물었다. / '맞아, 재투성이가 무도회에 가면 다들 웃음거리로 삼을 거야.'",
+            "first_seen_chunk_offset": 0,
+            "last_seen_chunk_offset": 0,
+            "first_seen_global_index": 8,
+            "last_seen_global_index": 8,
+            "confidence": 0.7
+          },
+          {
+            "event_id": "event_002",
+            "event_name": "왕궁 무도회 초대",
+            "event_summary": "왕궁에서 무도회가 열리며 새어머니와 의붓언니들이 초대받음. 신데렐라는 초대받지 못함.",
+            "participants": [
+              {
+                "character_name": "새어머니",
+                "role": "beneficiary",
+                "confidence": 0.8
+              },
+              {
+                "character_name": "첫째 의붓언니",
+                "role": "beneficiary",
+                "confidence": 0.8
+              },
+              {
+                "character_name": "둘째 의붓언니",
+                "role": "beneficiary",
+                "confidence": 0.8
+              },
+              {
+                "character_name": "신데렐라",
+                "role": "witness",
+                "confidence": 0.7
+              }
+            ],
+            "evidence": "어느 날 왕궁에서 무도회가 열린다는 소식이 전해졌다. / 새어머니의 두 딸도 초대장을 받고 뛸 듯이 기뻐했다.",
+            "first_seen_chunk_offset": 0,
+            "last_seen_chunk_offset": 0,
+            "first_seen_global_index": 8,
+            "last_seen_global_index": 8,
+            "confidence": 0.7
+          },
+          {
+            "event_id": "event_003",
+            "event_name": "신데렐라의 무도회 참석 요청",
+            "event_summary": "신데렐라가 대모(요정)에게 무도회 참석을 도와달라고 요청함.",
+            "participants": [
+              {
+                "character_name": "신데렐라",
+                "role": "witness",
+                "confidence": 0.9
+              },
+              {
+                "character_name": "대모(요정)",
+                "role": "helper",
+                "confidence": 0.85
+              },
+              {
+                "character_name": "신데렐라",
+                "role": "target",
+                "confidence": 1.0
+              },
+              {
+                "character_name": "대모(요정)",
+                "role": "helper",
+                "confidence": 1.0
+              }
+            ],
+            "evidence": "'저도... 저도 무도회에 가고 싶어요.' 신데렐라가 흐느끼며 말했다. / 대모는 사실 요정이었다. 대모는 신데렐라에게 정원에 가\n모가 나타나 눈물짓는 신데렐라를 보고 무슨 일이냐고 물었다. / '저도... 저도 무도회에 가고 싶어요.' 신데렐라가 흐느끼며 말했다.",
+            "first_seen_chunk_offset": 0,
+            "last_seen_chunk_offset": 1,
+            "first_seen_global_index": 8,
+            "last_seen_global_index": 16,
+            "confidence": 0.7
+          },
+          {
+            "event_id": "event_002",
+            "event_name": "대모의 마법 수행",
+            "event_summary": "대모가 호박, 쥐, 도마뱀을 마법으로 마차, 말, 마부, 시종으로 변신시키고 신데렐라의 옷을 화려하게 꾸민다.",
+            "participants": [
+              {
+                "character_name": "대모(요정)",
+                "role": "perpetrator",
+                "confidence": 1.0
+              },
+              {
+                "character_name": "신데렐라",
+                "role": "beneficiary",
+                "confidence": 1.0
+              }
+            ],
+            "evidence": "대모는 신데렐라를 다독이며 말했다. '착하게만 굴면, 내가 방법을 찾아주마.' / 대모는 지팡이로 살짝 건드리자, 신데렐라의 옷은 금실과 은실로 짠 화려한 드레스로 변했고, 발에는 세상에서 가장 아름다운 유리 구두가 신겨졌다.",
+            "first_seen_chunk_offset": 1,
+            "last_seen_chunk_offset": 1,
+            "first_seen_global_index": 16,
+            "last_seen_global_index": 16,
+            "confidence": 0.7
+          },
+          {
+            "event_id": "event_003",
+            "event_name": "신데렐라의 무도회 참석",
+            "event_summary": "신데렐라가 대모의 도움으로 무도회에 참석하고 왕자와 만난다.",
+            "participants": [
+              {
+                "character_name": "신데렐라",
+                "role": "target",
+                "confidence": 1.0
+              },
+              {
+                "character_name": "왕자",
+                "role": "investigator",
+                "confidence": 0.8
+              },
+              {
+                "character_name": "대모(요정)",
+                "role": "helper",
+                "confidence": 1.0
+              }
+            ],
+            "evidence": "신데렐라는 그러겠노라 약속하고 설레는 마음으로 궁전을 향해 떠났다. / 왕자는 낯선 아름다운 여인이 도착했다는 말을 듣고 몸소 마중을 나와 손을 잡아 이끌었다. / 왕자는 밤새 신데렐라의 곁을 떠나지 않았고,",
+            "first_seen_chunk_offset": 1,
+            "last_seen_chunk_offset": 1,
+            "first_seen_global_index": 16,
+            "last_seen_global_index": 16,
+            "confidence": 0.7
+          },
+          {
+            "event_id": "event_003",
+            "event_name": "구두 주인 찾기",
+            "event_summary": "왕자가 유리 구두의 주인을 찾아 혼인하겠다고 선포하고 신하들이 구두를 신겨 봄.",
+            "participants": [
+              {
+                "character_name": "왕자",
+                "role": "investigator",
+                "confidence": 0.9
+              }
+            ],
+            "evidence": "왕자는 온 나라에 이 구두가 꼭 맞는 여인과 혼인하겠다고 선포했다. ... 신하들이 신데렐라의 집에도 찾아와 두 언니에게 구두를 신겨 보았지만, 아무리 애써도 발이 들어가지 않았다.",
+            "first_seen_chunk_offset": 2,
+            "last_seen_chunk_offset": 2,
+            "first_seen_global_index": 23,
+            "last_seen_global_index": 23,
+            "confidence": 0.7
+          },
+          {
+            "event_id": "event_005",
+            "event_name": "용서 및 혼인",
+            "event_summary": "신데렐라가 언니들을 용서하고 왕자와 혼인함.",
+            "participants": [
+              {
+                "character_name": "신데렐라",
+                "role": "beneficiary",
+                "confidence": 0.9
+              },
+              {
+                "character_name": "왕자",
+                "role": "beneficiary",
+                "confidence": 0.8
+              }
+            ],
+            "evidence": "신데렐라는 언니들을 일으켜 세우고 다정하게 끌어안으며, 진심으로 용서한다고 말했다. ... 신데렐라는 그 옷차림 그대로 왕자에게 인도되었다. 왕자는 신데렐라를 그 어느 때보다 사랑스럽게 여겼고, 며칠 뒤 성대한 혼례를 올렸다.",
+            "first_seen_chunk_offset": 2,
+            "last_seen_chunk_offset": 2,
+            "first_seen_global_index": 23,
+            "last_seen_global_index": 23,
+            "confidence": 0.7
+          }
+        ],
+        "generated_at": "2026-07-13T06:56:09.189641+00:00",
+        "current_global_index": null,
+        "current_page": null,
+        "total_pages": null,
+        "spoiler_boundary_page": null,
+        "snapshot_boundary": null
+      },
+      "reminders": [
+        {
+          "text": "새어머니와 첫째 의붓언니, 둘째 의붓언니는 신데렐라를 학대하며 궂은일을 시키고 놀렸습니다.",
+          "entity_ids": [
+            "e_a642e191",
+            "e_8d2d5c33",
+            "e_ce2fd6d9",
+            "e_ee15e4e0"
+          ]
+        },
+        {
+          "text": "왕궁 무도회 초대에서 새어머니와 첫째 의붓언니, 둘째 의붓언니는 초대받았지만 신데렐라는 초대받지 못했습니다.",
+          "entity_ids": [
+            "e_a642e191",
+            "e_8d2d5c33",
+            "e_ce2fd6d9",
+            "e_ee15e4e0"
+          ]
+        },
+        {
+          "text": "신데렐라는 대모(요정)에게 무도회 참석을 도와달라고 요청했습니다.",
+          "entity_ids": [
+            "e_ee15e4e0",
+            "e_a0fc9412"
+          ]
+        },
+        {
+          "text": "대모(요정)는 호박, 쥐, 도마뱀을 마법으로 마차, 말, 마부, 시종으로 변신시키고 신데렐라의 옷을 화려하게 꾸몄습니다.",
+          "entity_ids": [
+            "e_a0fc9412",
+            "e_ee15e4e0"
+          ]
+        },
+        {
+          "text": "신데렐라는 대모(요정)의 도움으로 무도회에 참석했습니다.",
+          "entity_ids": [
+            "e_ee15e4e0",
+            "e_7d45099f",
+            "e_a0fc9412"
+          ]
+        },
+        {
+          "text": "신데렐라는 급히 떠나면서 유리 구두 한 짝을 잃어버렸습니다.",
+          "entity_ids": [
+            "e_ee15e4e0"
+          ]
+        },
+        {
+          "text": "왕자는 유리 구두의 주인을 찾기 위해 신하들을 보냈습니다.",
+          "entity_ids": [
+            "e_7d45099f",
+            "e_ea699f5c"
+          ]
+        }
+      ]
+    }
+  ]
+}

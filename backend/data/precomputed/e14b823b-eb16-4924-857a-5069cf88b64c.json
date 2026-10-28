@@ -1,0 +1,1703 @@
+{
+  "book_id": "e14b823b-eb16-4924-857a-5069cf88b64c",
+  "entries": [
+    {
+      "boundary": 24,
+      "graph": {
+        "offset": 24,
+        "spoiler_safe": true,
+        "entities": [
+          {
+            "id": "e_2cb5beba",
+            "name": "서은교",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "서인호 앵커의 딸이자 신입 작가. 아버지의 이십 주기 특집 생방송을 준비 중."
+          },
+          {
+            "id": "e_218a2d97",
+            "name": "서인호",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "이십 년 전 생방송 직전 조명 설비 사고로 사망한 앵커."
+          },
+          {
+            "id": "e_2675d999",
+            "name": "남주원",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "은교의 연인이자 카메라 감독."
+          },
+          {
+            "id": "e_c90d2012",
+            "name": "배도현",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "특집을 총괄하는 PD. 서인호의 후배."
+          },
+          {
+            "id": "e_42a60400",
+            "name": "오세경",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "보도국장. 은교에게 조심스러운 참고인 같은 존재."
+          },
+          {
+            "id": "e_ebb27e25",
+            "name": "최기환",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "조명·기술감독. 은교와 오늘 처음 인사."
+          },
+          {
+            "id": "e_4799efea",
+            "name": "임하늘",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "진행자. 은교와 같은 팀 동료."
+          },
+          {
+            "id": "e_0184fd44",
+            "name": "강필주",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "형사. 은교의 오랜 친구."
+          },
+          {
+            "id": "e_e7a502d8",
+            "name": "정다혜",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "이십 년 전 사건을 취재했던 프리랜서 기자. 이번 특집에 자문으로 참여."
+          },
+          {
+            "id": "e_35bd125d",
+            "name": "노경수",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "보안팀장. 스튜디오에 갇힘."
+          },
+          {
+            "id": "e_80e80eaf",
+            "name": "황태린",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "오세경 국장의 아들. 신입 기자."
+          }
+        ],
+        "relationships": [
+          {
+            "id": "r_89c16969",
+            "source": "e_2cb5beba",
+            "target": "e_218a2d97",
+            "label": "부모-자식",
+            "tone": "neutral",
+            "description": "서은교(은교)는 아버지 서인호 앵커의 이십 주기 특집 생방송을 준비하는 신입 작가였다.",
+            "revision_offset": 24,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "personal",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_9e6a8dd3",
+            "source": "e_2cb5beba",
+            "target": "e_2675d999",
+            "label": "연인",
+            "tone": "ally",
+            "description": "은교는 연인이자 카메라 감독인 남주원(주원)과 함께 스튜디오로 향했다.",
+            "revision_offset": 24,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "personal",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_13e7eb72",
+            "source": "e_2cb5beba",
+            "target": "e_0184fd44",
+            "label": "친구",
+            "tone": "ally",
+            "description": "필주는 은교의 오랜 친구로, 오늘은 순수하게 특집을 응원하러 왔다고 했다.",
+            "revision_offset": 24,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "personal",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_104cb013",
+            "source": "e_2cb5beba",
+            "target": "e_4799efea",
+            "label": "동료",
+            "tone": "ally",
+            "description": "은교에게 하늘은 같은 팀 동료였다.",
+            "revision_offset": 24,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "personal",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_ff7d701e",
+            "source": "e_218a2d97",
+            "target": "e_c90d2012",
+            "label": "선후배",
+            "tone": "neutral",
+            "description": "그는 이십 년 전 서인호의 후배였다고 했다.",
+            "revision_offset": 24,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "personal",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_3ba5225a",
+            "source": "e_42a60400",
+            "target": "e_80e80eaf",
+            "label": "부모-자식",
+            "tone": "neutral",
+            "description": "세경 국장의 아들이자 신입 기자인 황태린(태린)이었다.",
+            "revision_offset": 24,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "personal",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_40251aa7",
+            "source": "e_42a60400",
+            "target": "e_c90d2012",
+            "label": "동료",
+            "tone": "ally",
+            "description": "도현과 세경은 오래전부터 함께 일해온 사이였다.",
+            "revision_offset": 24,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "personal",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_72f670c9",
+            "source": "e_2cb5beba",
+            "target": "e_42a60400",
+            "label": "참고인-작가",
+            "tone": "neutral",
+            "description": "은교에게 세경은 조심스러운 참고인 같은 존재였다.",
+            "revision_offset": 24,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "action",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_4e07b147",
+            "source": "e_2cb5beba",
+            "target": "e_ebb27e25",
+            "label": "초면",
+            "tone": "neutral",
+            "description": "은교에게는 오늘 처음 인사를 나누는 얼굴이었다.",
+            "revision_offset": 24,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "action",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_39005c40",
+            "source": "e_2cb5beba",
+            "target": "e_e7a502d8",
+            "label": "초면",
+            "tone": "neutral",
+            "description": "은교에게 둘 다 낯선 얼굴이었다.",
+            "revision_offset": 24,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "action",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_d73ba407",
+            "source": "e_2cb5beba",
+            "target": "e_35bd125d",
+            "label": "초면",
+            "tone": "neutral",
+            "description": "은교에게 둘 다 낯선 얼굴이었다.",
+            "revision_offset": 24,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "action",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          }
+        ],
+        "events": [
+          {
+            "event_id": "E001",
+            "event_name": "조명 설비 사고",
+            "event_summary": "이십 년 전 서인호 앵커가 생방송 직전 조명 설비 사고로 사망.",
+            "participants": [
+              {
+                "character_name": "서인호",
+                "role": "victim",
+                "confidence": 1.0
+              }
+            ],
+            "evidence": "아버지는 이십 년 전 생방송 직전 스튜디오에서 조명 설비 사고로 세상을 떠났다고 알려져 있었다.",
+            "first_seen_chunk_offset": 4,
+            "last_seen_chunk_offset": 4,
+            "first_seen_global_index": 24,
+            "last_seen_global_index": 24,
+            "confidence": 0.7
+          },
+          {
+            "event_id": "E002",
+            "event_name": "테이프 도난 사건",
+            "event_summary": "스튜디오 정전 중 서인호의 마지막 편집 테이프가 사라짐.",
+            "participants": [
+              {
+                "character_name": "강필주",
+                "role": "investigator",
+                "confidence": 0.9
+              }
+            ],
+            "evidence": "그 순간 스튜디오 전체가 정전되었다. 자동 보안 시스템이 오작동을 일으키며 비상문이 잠겨버렸다. 정전은 십여 분간 이어졌고, 불이 다시 들어왔을 때 상자 속 테이프만 사라져 있었다. 필주는 곧바로 상황을 통제했다. '건물이 봉쇄된 이상, 테이프를 가져간 사람은 이 안에 있습니다.'",
+            "first_seen_chunk_offset": 4,
+            "last_seen_chunk_offset": 4,
+            "first_seen_global_index": 24,
+            "last_seen_global_index": 24,
+            "confidence": 0.7
+          },
+          {
+            "event_id": "E003",
+            "event_name": "조명실 서명 위조 발견",
+            "event_summary": "서인호 사고 당일 조명 설비 점검 기록에 서명이 겹쳐 있는 것이 발견됨.",
+            "participants": [
+              {
+                "character_name": "서은교",
+                "role": "investigator",
+                "confidence": 0.8
+              },
+              {
+                "character_name": "노경수",
+                "role": "helper",
+                "confidence": 0.7
+              }
+            ],
+            "evidence": "은교는 자료실에서 원본 방송 테이프를 확인하다 이상한 점을 발견했다. 사고 당일 조명 설비 점검 기록에 서명이 두 개 겹쳐 있었다. 경수가 그 기록을 살펴보며 말했다. '이건 정비 이력입니다. 서명이 겹쳤다는 건 원래 기록을 지우고 다시 썼다는 뜻일 수 있어요.'",
+            "first_seen_chunk_offset": 4,
+            "last_seen_chunk_offset": 4,
+            "first_seen_global_index": 24,
+            "last_seen_global_index": 24,
+            "confidence": 0.7
+          },
+          {
+            "event_id": "E004",
+            "event_name": "조명실 근처 인물 확인",
+            "event_summary": "정전 직전 조명실 근처에 있었던 인물들 확인(오세경, 최기환, 배도현, 노경수).",
+            "participants": [
+              {
+                "character_name": "강필주",
+                "role": "investigator",
+                "confidence": 0.8
+              },
+              {
+                "character_name": "오세경",
+                "role": "suspect",
+                "confidence": 0.6
+              },
+              {
+                "character_name": "최기환",
+                "role": "suspect",
+                "confidence": 0.6
+              },
+              {
+                "character_name": "배도현",
+                "role": "suspect",
+                "confidence": 0.6
+              },
+              {
+                "character_name": "노경수",
+                "role": "suspect",
+                "confidence": 0.6
+              }
+            ],
+            "evidence": "필주는 상황을 정리했다. '정전이 시작되기 직전, 조명실 근처에 있었던 사람이 누구인지부터 확인해야 합니다.' 사람들의 기억을 맞춰본 결과, 세경·기환·도현·경수 네 사람이 그 시간 조명실 가까이 있었다는 사실이 드러났다.",
+            "first_seen_chunk_offset": 4,
+            "last_seen_chunk_offset": 4,
+            "first_seen_global_index": 24,
+            "last_seen_global_index": 24,
+            "confidence": 0.7
+          },
+          {
+            "event_id": "E005",
+            "event_name": "오세경의 진술 모순",
+            "event_summary": "오세경이 국장실에 있었다는 진술과 경수의 출입 기록이 불일치.",
+            "participants": [
+              {
+                "character_name": "강필주",
+                "role": "investigator",
+                "confidence": 0.8
+              },
+              {
+                "character_name": "오세경",
+                "role": "suspect",
+                "confidence": 0.7
+              },
+              {
+                "character_name": "노경수",
+                "role": "witness",
+                "confidence": 0.7
+              }
+            ],
+            "evidence": "필주는 세경이 '그날 밤 줄곧 국장실에 있었다'고 말한 것과 달리, 경수의 출입 기록에 세경이 정전 직전 조명실 인근을 지나간 흔적이 남아 있다는 사실을 확인했다. 세경은 당황하며 해명했다. '착각이겠죠. 저는 분명 국장실에 있었습니다.'",
+            "first_seen_chunk_offset": 4,
+            "last_seen_chunk_offset": 4,
+            "first_seen_global_index": 24,
+            "last_seen_global_index": 24,
+            "confidence": 0.7
+          }
+        ],
+        "generated_at": "2026-07-11T07:14:40.835564+00:00"
+      },
+      "reminders": [
+        {
+          "text": "이십 년 전 서인호 앵커가 생방송 직전 조명 설비 사고로 사망했으며, 서은교는 그의 딸로 아버지의 이십 주기 특집 생방송을 준비하는 신입 작가입니다.",
+          "entity_ids": [
+            "e_218a2d97",
+            "e_2cb5beba"
+          ]
+        },
+        {
+          "text": "스튜디오 정전 중 일부 자료가 분실되었으며, 강필주는 관련 사건을 조사했습니다.",
+          "entity_ids": [
+            "e_218a2d97",
+            "e_0184fd44"
+          ]
+        },
+        {
+          "text": "서인호 사고 당일 조명 설비 점검 기록에 서명 관련 특이사항이 발견되었습니다.",
+          "entity_ids": [
+            "e_218a2d97",
+            "e_2cb5beba",
+            "e_35bd125d"
+          ]
+        },
+        {
+          "text": "정전 직전 조명실 근처에 있었던 인물들로는 오세경, 최기환, 배도현, 노경수가 확인되었으며, 강필주는 이들의 행적을 조사했습니다.",
+          "entity_ids": [
+            "e_0184fd44",
+            "e_42a60400",
+            "e_ebb27e25",
+            "e_c90d2012",
+            "e_35bd125d"
+          ]
+        },
+        {
+          "text": "오세경과 노경수의 진술 및 기록에 차이가 있는 부분이 발견되었습니다.",
+          "entity_ids": [
+            "e_42a60400",
+            "e_35bd125d"
+          ]
+        },
+        {
+          "text": "배도현은 이십 년 전 서인호의 후배였으며, 오세경과 오랜 동료 관계입니다.",
+          "entity_ids": [
+            "e_c90d2012",
+            "e_218a2d97",
+            "e_42a60400"
+          ]
+        },
+        {
+          "text": "서은교는 오세경을 참고인으로 대했으며, 최기환, 정다혜, 노경수와는 오늘 처음 인사를 나눈 사이입니다.",
+          "entity_ids": [
+            "e_2cb5beba",
+            "e_42a60400",
+            "e_ebb27e25",
+            "e_e7a502d8",
+            "e_35bd125d"
+          ]
+        }
+      ]
+    },
+    {
+      "boundary": 50,
+      "graph": {
+        "offset": 50,
+        "spoiler_safe": true,
+        "entities": [
+          {
+            "id": "e_2cb5beba",
+            "name": "서은교",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "서인호 앵커의 딸이자 신입 작가. 아버지의 이십 주기 특집 생방송을 준비 중."
+          },
+          {
+            "id": "e_218a2d97",
+            "name": "서인호",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "이십 년 전 생방송 직전 조명 설비 사고로 사망한 앵커."
+          },
+          {
+            "id": "e_2675d999",
+            "name": "남주원",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "은교의 연인이자 카메라 감독."
+          },
+          {
+            "id": "e_c90d2012",
+            "name": "배도현",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "특집을 총괄하는 PD. 서인호의 후배."
+          },
+          {
+            "id": "e_42a60400",
+            "name": "오세경",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "보도국장. 은교에게 조심스러운 참고인 같은 존재."
+          },
+          {
+            "id": "e_ebb27e25",
+            "name": "최기환",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "조명·기술감독. 은교와 오늘 처음 인사."
+          },
+          {
+            "id": "e_4799efea",
+            "name": "임하늘",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "진행자. 은교와 같은 팀 동료."
+          },
+          {
+            "id": "e_0184fd44",
+            "name": "강필주",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "형사. 은교의 오랜 친구."
+          },
+          {
+            "id": "e_e7a502d8",
+            "name": "정다혜",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "이십 년 전 사건을 취재했던 프리랜서 기자. 이번 특집에 자문으로 참여."
+          },
+          {
+            "id": "e_35bd125d",
+            "name": "노경수",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "보안팀장. 스튜디오에 갇힘."
+          },
+          {
+            "id": "e_80e80eaf",
+            "name": "황태린",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "오세경 국장의 아들. 신입 기자."
+          }
+        ],
+        "relationships": [
+          {
+            "id": "r_89c16969",
+            "source": "e_2cb5beba",
+            "target": "e_218a2d97",
+            "label": "부모-자식",
+            "tone": "neutral",
+            "description": "서은교(은교)는 아버지 서인호 앵커의 이십 주기 특집 생방송을 준비하는 신입 작가였다.",
+            "revision_offset": 24,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "personal",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_9e6a8dd3",
+            "source": "e_2cb5beba",
+            "target": "e_2675d999",
+            "label": "연인",
+            "tone": "ally",
+            "description": "은교는 연인이자 카메라 감독인 남주원(주원)과 함께 스튜디오로 향했다.",
+            "revision_offset": 24,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "personal",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_13e7eb72",
+            "source": "e_2cb5beba",
+            "target": "e_0184fd44",
+            "label": "친구",
+            "tone": "ally",
+            "description": "필주는 은교의 오랜 친구로, 오늘은 순수하게 특집을 응원하러 왔다고 했다.",
+            "revision_offset": 24,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "personal",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_104cb013",
+            "source": "e_2cb5beba",
+            "target": "e_4799efea",
+            "label": "동료",
+            "tone": "ally",
+            "description": "은교에게 하늘은 같은 팀 동료였다.",
+            "revision_offset": 24,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "personal",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_ff7d701e",
+            "source": "e_218a2d97",
+            "target": "e_c90d2012",
+            "label": "선후배",
+            "tone": "neutral",
+            "description": "그는 이십 년 전 서인호의 후배였다고 했다.",
+            "revision_offset": 24,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "personal",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_3ba5225a",
+            "source": "e_42a60400",
+            "target": "e_80e80eaf",
+            "label": "부모-자식",
+            "tone": "neutral",
+            "description": "세경 국장의 아들이자 신입 기자인 황태린(태린)이었다.",
+            "revision_offset": 24,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "personal",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_40251aa7",
+            "source": "e_42a60400",
+            "target": "e_c90d2012",
+            "label": "동료",
+            "tone": "ally",
+            "description": "도현과 세경은 오래전부터 함께 일해온 사이였다.",
+            "revision_offset": 24,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "personal",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_72f670c9",
+            "source": "e_2cb5beba",
+            "target": "e_42a60400",
+            "label": "참고인-작가",
+            "tone": "neutral",
+            "description": "은교에게 세경은 조심스러운 참고인 같은 존재였다.",
+            "revision_offset": 24,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "action",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_4e07b147",
+            "source": "e_2cb5beba",
+            "target": "e_ebb27e25",
+            "label": "초면",
+            "tone": "neutral",
+            "description": "은교에게는 오늘 처음 인사를 나누는 얼굴이었다.",
+            "revision_offset": 24,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "action",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_39005c40",
+            "source": "e_2cb5beba",
+            "target": "e_e7a502d8",
+            "label": "초면",
+            "tone": "neutral",
+            "description": "은교에게 둘 다 낯선 얼굴이었다.",
+            "revision_offset": 24,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "action",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_d73ba407",
+            "source": "e_2cb5beba",
+            "target": "e_35bd125d",
+            "label": "초면",
+            "tone": "neutral",
+            "description": "은교에게 둘 다 낯선 얼굴이었다.",
+            "revision_offset": 24,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "action",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_14f098db",
+            "source": "e_2cb5beba",
+            "target": "e_218a2d97",
+            "label": "딸-아버지",
+            "tone": "neutral",
+            "description": "은교는 스튜디오 중앙에 서서 아버지가 마지막으로 섰을 자리를 오래도록 바라보았다.",
+            "revision_offset": 50,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "personal",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_18151bf5",
+            "source": "e_80e80eaf",
+            "target": "e_42a60400",
+            "label": "딸-어머니",
+            "tone": "neutral",
+            "description": "태린은 어머니를 바라보며 처음으로 완전한 의심의 눈빛을 보였다. ... 태린은 마지막으로 은교에게 고개를 숙였다. “저희 어머니 대신, 죄송하다는 말씀 드리고 싶어요.”",
+            "revision_offset": 50,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "personal",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_3f3d2916",
+            "source": "e_2cb5beba",
+            "target": "e_e7a502d8",
+            "label": "협력자",
+            "tone": "ally",
+            "description": "이 고백으로 다혜는 더 이상 낯선 자문 위원이 아니라, 사건을 함께 밝히는 협력자가 되었다.",
+            "revision_offset": 50,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "action",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_2ff8b554",
+            "source": "e_2cb5beba",
+            "target": "e_0184fd44",
+            "label": "협력자",
+            "tone": "ally",
+            "description": "다혜와 필주는 이제 함께 사건을 파헤치는 협력자가 되어 있었다.",
+            "revision_offset": 50,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "action",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_a5245a0a",
+            "source": "e_42a60400",
+            "target": "e_ebb27e25",
+            "label": "공범",
+            "tone": "neutral",
+            "description": "기환이 먼저 입을 열었다. “저는 세경 국장님과 이십 년째 공모해왔습니다. 그날 밤, 국장님이 조명 설비를 손보는 걸 도왔습니다.”",
+            "revision_offset": 50,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "action",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_eff188f2",
+            "source": "e_0184fd44",
+            "target": "e_42a60400",
+            "label": "조사자-용의자",
+            "tone": "neutral",
+            "description": "필주는 다혜의 자료와 경수의 보안 기록, 기환의 증언을 모두 정리해 사람들을 불러 모았다. “지금까지 확보한 정황은 분명히 오세경 국장님을 가리키고 있습니다.”",
+            "revision_offset": 50,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "action",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_990c4171",
+            "source": "e_2cb5beba",
+            "target": "e_42a60400",
+            "label": "조사자-용의자",
+            "tone": "neutral",
+            "description": "은교에게 세경은 이제 그저 어려운 상사가 아니라, 명확한 용의자였다.",
+            "revision_offset": 50,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "action",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          }
+        ],
+        "events": [
+          {
+            "event_id": "E001",
+            "event_name": "조명 설비 사고",
+            "event_summary": "이십 년 전 서인호 앵커가 생방송 직전 조명 설비 사고로 사망.",
+            "participants": [
+              {
+                "character_name": "서인호",
+                "role": "victim",
+                "confidence": 1.0
+              }
+            ],
+            "evidence": "아버지는 이십 년 전 생방송 직전 스튜디오에서 조명 설비 사고로 세상을 떠났다고 알려져 있었다.",
+            "first_seen_chunk_offset": 4,
+            "last_seen_chunk_offset": 4,
+            "first_seen_global_index": 24,
+            "last_seen_global_index": 24,
+            "confidence": 0.7
+          },
+          {
+            "event_id": "E002",
+            "event_name": "테이프 도난 사건",
+            "event_summary": "스튜디오 정전 중 서인호의 마지막 편집 테이프가 사라짐.",
+            "participants": [
+              {
+                "character_name": "강필주",
+                "role": "investigator",
+                "confidence": 0.9
+              },
+              {
+                "character_name": "오세경",
+                "role": "suspect",
+                "confidence": 0.6
+              },
+              {
+                "character_name": "최기환",
+                "role": "suspect",
+                "confidence": 0.6
+              },
+              {
+                "character_name": "배도현",
+                "role": "suspect",
+                "confidence": 0.6
+              },
+              {
+                "character_name": "노경수",
+                "role": "suspect",
+                "confidence": 0.6
+              }
+            ],
+            "evidence": "그 순간 스튜디오 전체가 정전되었다. 자동 보안 시스템이 오작동을 일으키며 비상문이 잠겨버렸다. 정전은 십여 분간 이어졌고, 불이 다시 들어왔을 때 상자 속 테이프만 사라져 있었다. 필주는 곧바로 상황을 통제했다. '건물이 봉쇄된 이상, 테이프를 가져간 사람은 이 안에 있습니다.'",
+            "first_seen_chunk_offset": 4,
+            "last_seen_chunk_offset": 4,
+            "first_seen_global_index": 24,
+            "last_seen_global_index": 24,
+            "confidence": 0.7
+          },
+          {
+            "event_id": "E003",
+            "event_name": "조명실 서명 위조 발견",
+            "event_summary": "서인호 사고 당일 조명 설비 점검 기록에 서명이 겹쳐 있는 것이 발견됨.",
+            "participants": [
+              {
+                "character_name": "서은교",
+                "role": "investigator",
+                "confidence": 0.8
+              },
+              {
+                "character_name": "노경수",
+                "role": "helper",
+                "confidence": 0.7
+              },
+              {
+                "character_name": "정다혜",
+                "role": "helper",
+                "confidence": 0.7
+              }
+            ],
+            "evidence": "은교는 자료실에서 원본 방송 테이프를 확인하다 이상한 점을 발견했다. 사고 당일 조명 설비 점검 기록에 서명이 두 개 겹쳐 있었다. 경수가 그 기록을 살펴보며 말했다. '이건 정비 이력입니다. 서명이 겹쳤다는 건 원래 기록을 지우고 다시 썼다는 뜻일 수 있어요.'",
+            "first_seen_chunk_offset": 4,
+            "last_seen_chunk_offset": 4,
+            "first_seen_global_index": 24,
+            "last_seen_global_index": 24,
+            "confidence": 0.7
+          },
+          {
+            "event_id": "E004",
+            "event_name": "조명실 근처 인물 확인",
+            "event_summary": "정전 직전 조명실 근처에 있었던 인물들 확인(오세경, 최기환, 배도현, 노경수).",
+            "participants": [
+              {
+                "character_name": "강필주",
+                "role": "investigator",
+                "confidence": 0.8
+              },
+              {
+                "character_name": "오세경",
+                "role": "suspect",
+                "confidence": 0.6
+              },
+              {
+                "character_name": "최기환",
+                "role": "suspect",
+                "confidence": 0.6
+              },
+              {
+                "character_name": "배도현",
+                "role": "suspect",
+                "confidence": 0.6
+              },
+              {
+                "character_name": "노경수",
+                "role": "suspect",
+                "confidence": 0.6
+              }
+            ],
+            "evidence": "필주는 상황을 정리했다. '정전이 시작되기 직전, 조명실 근처에 있었던 사람이 누구인지부터 확인해야 합니다.' 사람들의 기억을 맞춰본 결과, 세경·기환·도현·경수 네 사람이 그 시간 조명실 가까이 있었다는 사실이 드러났다.",
+            "first_seen_chunk_offset": 4,
+            "last_seen_chunk_offset": 4,
+            "first_seen_global_index": 24,
+            "last_seen_global_index": 24,
+            "confidence": 0.7
+          },
+          {
+            "event_id": "E005",
+            "event_name": "오세경의 진술 모순",
+            "event_summary": "오세경이 국장실에 있었다는 진술과 경수의 출입 기록이 불일치.",
+            "participants": [
+              {
+                "character_name": "강필주",
+                "role": "investigator",
+                "confidence": 0.8
+              },
+              {
+                "character_name": "오세경",
+                "role": "suspect",
+                "confidence": 0.7
+              },
+              {
+                "character_name": "노경수",
+                "role": "witness",
+                "confidence": 0.7
+              }
+            ],
+            "evidence": "필주는 세경이 '그날 밤 줄곧 국장실에 있었다'고 말한 것과 달리, 경수의 출입 기록에 세경이 정전 직전 조명실 인근을 지나간 흔적이 남아 있다는 사실을 확인했다. 세경은 당황하며 해명했다. '착각이겠죠. 저는 분명 국장실에 있었습니다.'",
+            "first_seen_chunk_offset": 4,
+            "last_seen_chunk_offset": 4,
+            "first_seen_global_index": 24,
+            "last_seen_global_index": 24,
+            "confidence": 0.7
+          },
+          {
+            "event_id": "E001",
+            "event_name": "20년 전 조명 설비 조작 사건",
+            "event_summary": "세경이 서인호를 제거하기 위해 조명 설비를 조작해 사고를 위장함. 기환이 세경을 도왔음.",
+            "participants": [
+              {
+                "character_name": "오세경",
+                "role": "perpetrator",
+                "confidence": 1.0
+              },
+              {
+                "character_name": "최기환",
+                "role": "accomplice",
+                "confidence": 1.0
+              },
+              {
+                "character_name": "서인호",
+                "role": "victim",
+                "confidence": 1.0
+              }
+            ],
+            "evidence": "세경은 더는 부인하지 못했다. “인호 선배는 제게 앵커 자리를 넘길 생각이 없었어요. 저는... 조명 설비를 조작해 사고처럼 보이게 만들었습니다.”",
+            "first_seen_chunk_offset": 9,
+            "last_seen_chunk_offset": 9,
+            "first_seen_global_index": 50,
+            "last_seen_global_index": 50,
+            "confidence": 0.7
+          },
+          {
+            "event_id": "E002",
+            "event_name": "은교의 사건 조사",
+            "event_summary": "은교가 다혜, 필주, 경수, 기환, 하늘 등의 증언을 바탕으로 세경의 범행을 밝혀냄.",
+            "participants": [
+              {
+                "character_name": "서은교",
+                "role": "investigator",
+                "confidence": 1.0
+              },
+              {
+                "character_name": "정다혜",
+                "role": "helper",
+                "confidence": 0.9
+              },
+              {
+                "character_name": "강필주",
+                "role": "helper",
+                "confidence": 0.9
+              },
+              {
+                "character_name": "노경수",
+                "role": "helper",
+                "confidence": 0.8
+              },
+              {
+                "character_name": "최기환",
+                "role": "witness",
+                "confidence": 0.8
+              },
+              {
+                "character_name": "임하늘",
+                "role": "witness",
+                "confidence": 0.7
+              }
+            ],
+            "evidence": "은교는 기환의 말에서 실마리를 느꼈다. ... 필주는 이 자료를 바탕으로 조사를 이어갔다. ... 경수는 보안 기록 원본을 다시 확인하며 세경의 동선을 정리했다. ... 하늘도 자신이 기억하는 사실을 보탰다.",
+            "first_seen_chunk_offset": 9,
+            "last_seen_chunk_offset": 9,
+            "first_seen_global_index": 50,
+            "last_seen_global_index": 50,
+            "confidence": 0.7
+          },
+          {
+            "event_id": "E003",
+            "event_name": "세경의 자백",
+            "event_summary": "세경이 20년 전 조명 설비 조작 사실을 자백하고 기환과의 공모를 인정함.",
+            "participants": [
+              {
+                "character_name": "오세경",
+                "role": "perpetrator",
+                "confidence": 1.0
+              },
+              {
+                "character_name": "최기환",
+                "role": "accomplice",
+                "confidence": 1.0
+              },
+              {
+                "character_name": "서은교",
+                "role": "investigator",
+                "confidence": 1.0
+              },
+              {
+                "character_name": "황태린",
+                "role": "witness",
+                "confidence": 0.8
+              }
+            ],
+            "evidence": "기환이 먼저 입을 열었다. “저는 세경 국장님과 이십 년째 공모해왔습니다. ... 세경은 더는 부인하지 못했다. ... 태린은 어머니의 자백을 듣고도 자리를 뜨지 않았다.",
+            "first_seen_chunk_offset": 9,
+            "last_seen_chunk_offset": 9,
+            "first_seen_global_index": 50,
+            "last_seen_global_index": 50,
+            "confidence": 0.7
+          },
+          {
+            "event_id": "E004",
+            "event_name": "경찰 수사 개시",
+            "event_summary": "경찰이 세경과 기환의 진술을 인계받고 정식 수사를 시작함.",
+            "participants": [
+              {
+                "character_name": "강필주",
+                "role": "informant",
+                "confidence": 0.9
+              },
+              {
+                "character_name": "오세경",
+                "role": "suspect",
+                "confidence": 1.0
+              },
+              {
+                "character_name": "최기환",
+                "role": "suspect",
+                "confidence": 0.9
+              }
+            ],
+            "evidence": "필주는 세경과 기환의 진술을 모두 기록하며 정식 수사를 요청하겠다고 밝혔다. ... 경찰이 도착해 세경과 관련 자료를 인계받았다.",
+            "first_seen_chunk_offset": 9,
+            "last_seen_chunk_offset": 9,
+            "first_seen_global_index": 50,
+            "last_seen_global_index": 50,
+            "confidence": 0.7
+          }
+        ],
+        "generated_at": "2026-07-11T07:14:40.835564+00:00"
+      },
+      "reminders": [
+        {
+          "text": "이십 년 전 서인호 앵커가 생방송 직전 조명 설비 사고로 사망했으며, 서은교는 그의 딸로 아버지의 사고 현장을 오랫동안 바라보았다.",
+          "entity_ids": [
+            "e_218a2d97",
+            "e_2cb5beba"
+          ]
+        },
+        {
+          "text": "스튜디오 정전 중 서인호의 마지막 편집 테이프가 사라졌고, 강필주는 조사자 역할을 했으며 일부 인물들이 용의자로 조사받았다.",
+          "entity_ids": [
+            "e_0184fd44",
+            "e_42a60400",
+            "e_ebb27e25",
+            "e_c90d2012",
+            "e_35bd125d"
+          ]
+        },
+        {
+          "text": "서인호 사고 당일 조명 설비 점검 기록에 서명이 겹쳐 있는 것이 발견되었고, 서은교가 조사자 역할을 했으며 노경수와 정다혜가 도움을 주었다.",
+          "entity_ids": [
+            "e_218a2d97",
+            "e_2cb5beba",
+            "e_35bd125d",
+            "e_e7a502d8"
+          ]
+        },
+        {
+          "text": "정전 직전 조명실 근처에 있었던 인물들이 확인되었고, 강필주가 조사자 역할을 했다.",
+          "entity_ids": [
+            "e_0184fd44",
+            "e_42a60400",
+            "e_ebb27e25",
+            "e_c90d2012",
+            "e_35bd125d"
+          ]
+        },
+        {
+          "text": "오세경이 국장실에 있었다는 진술과 노경수의 출입 기록이 불일치했고, 강필주가 조사자 역할을 했으며 노경수가 증인으로 참여했다.",
+          "entity_ids": [
+            "e_0184fd44",
+            "e_42a60400",
+            "e_35bd125d"
+          ]
+        },
+        {
+          "text": "경찰이 오세경과 최기환의 진술을 인계받고 정식 수사를 시작했으며, 강필주가 정보를 제공했다.",
+          "entity_ids": [
+            "e_0184fd44",
+            "e_42a60400",
+            "e_ebb27e25"
+          ]
+        },
+        {
+          "text": "서은교는 아버지 서인호의 이십 주기 특집 생방송을 준비하는 신입 작가였고, 남주원은 그녀의 연인이자 카메라 감독이었다.",
+          "entity_ids": [
+            "e_2cb5beba",
+            "e_218a2d97",
+            "e_2675d999"
+          ]
+        },
+        {
+          "text": "강필주는 서은교의 오랜 친구로 조사자 역할을 했다.",
+          "entity_ids": [
+            "e_0184fd44",
+            "e_2cb5beba",
+            "e_42a60400"
+          ]
+        },
+        {
+          "text": "정다혜와 강필주는 서은교와 협력했다.",
+          "entity_ids": [
+            "e_e7a502d8",
+            "e_0184fd44",
+            "e_2cb5beba"
+          ]
+        }
+      ]
+    }
+  ]
+}

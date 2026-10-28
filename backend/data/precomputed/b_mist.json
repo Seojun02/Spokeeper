@@ -1,0 +1,256 @@
+{
+  "book_id": "b_mist",
+  "entries": [
+    {
+      "boundary": 215,
+      "graph": {
+        "offset": 215,
+        "spoiler_safe": true,
+        "entities": [
+          {
+            "id": "e_f0eedd1e",
+            "name": "민우",
+            "type": "person",
+            "color": "blue"
+          },
+          {
+            "id": "e_fde9b7cb",
+            "name": "서현",
+            "type": "person",
+            "color": "blue"
+          },
+          {
+            "id": "e_db5949e3",
+            "name": "아틀라스 호",
+            "type": "ship",
+            "color": "blue"
+          }
+        ],
+        "relationships": [
+          {
+            "id": "r_4dfce8eb",
+            "source": "e_f0eedd1e",
+            "target": "e_fde9b7cb",
+            "label": "동료 연구원",
+            "tone": "ally",
+            "description": "통제실에서 함께 아틀라스 호 신호를 확인함.",
+            "revision_offset": 215
+          },
+          {
+            "id": "r_b1c42202",
+            "source": "e_f0eedd1e",
+            "target": "e_db5949e3",
+            "label": "신호 추적",
+            "tone": "tense",
+            "description": "민우가 실종 탐사선의 고유 신호를 포착함.",
+            "revision_offset": 215
+          }
+        ]
+      },
+      "reminders": [
+        {
+          "text": "민우와 서현은 통제실에서 아틀라스 호의 신호를 함께 확인했다.",
+          "entity_ids": [
+            "e_f0eedd1e",
+            "e_fde9b7cb"
+          ]
+        },
+        {
+          "text": "민우가 실종 탐사선 아틀라스 호의 고유 신호를 포착했다.",
+          "entity_ids": [
+            "e_f0eedd1e",
+            "e_db5949e3"
+          ]
+        }
+      ]
+    },
+    {
+      "boundary": 320,
+      "graph": {
+        "offset": 320,
+        "spoiler_safe": true,
+        "entities": [
+          {
+            "id": "e_f0eedd1e",
+            "name": "민우",
+            "type": "person",
+            "color": "blue"
+          },
+          {
+            "id": "e_fde9b7cb",
+            "name": "서현",
+            "type": "person",
+            "color": "blue"
+          },
+          {
+            "id": "e_db5949e3",
+            "name": "아틀라스 호",
+            "type": "ship",
+            "color": "blue"
+          },
+          {
+            "id": "e_135c7e69",
+            "name": "강 국장",
+            "type": "person",
+            "color": "dark"
+          }
+        ],
+        "relationships": [
+          {
+            "id": "r_4dfce8eb",
+            "source": "e_f0eedd1e",
+            "target": "e_fde9b7cb",
+            "label": "동료 연구원",
+            "tone": "ally",
+            "description": "통제실에서 함께 아틀라스 호 신호를 확인함.",
+            "revision_offset": 215
+          },
+          {
+            "id": "r_b1c42202",
+            "source": "e_f0eedd1e",
+            "target": "e_db5949e3",
+            "label": "신호 추적",
+            "tone": "tense",
+            "description": "민우가 실종 탐사선의 고유 신호를 포착함.",
+            "revision_offset": 215
+          },
+          {
+            "id": "r_d2de5c1d",
+            "source": "e_fde9b7cb",
+            "target": "e_135c7e69",
+            "label": "은폐 의혹",
+            "tone": "tense",
+            "description": "서현이 신호 속 강 국장의 보안 서명을 확인함.",
+            "revision_offset": 320
+          }
+        ]
+      },
+      "reminders": [
+        {
+          "text": "민우와 서현은 통제실에서 아틀라스 호의 신호를 함께 확인했다.",
+          "entity_ids": [
+            "e_f0eedd1e",
+            "e_fde9b7cb"
+          ]
+        },
+        {
+          "text": "서현은 신호 속에서 강 국장의 보안 서명을 발견해 은폐 의혹을 품었다.",
+          "entity_ids": [
+            "e_fde9b7cb",
+            "e_135c7e69"
+          ]
+        }
+      ]
+    },
+    {
+      "boundary": 380,
+      "graph": {
+        "offset": 380,
+        "spoiler_safe": true,
+        "entities": [
+          {
+            "id": "e_f0eedd1e",
+            "name": "민우",
+            "type": "person",
+            "color": "blue"
+          },
+          {
+            "id": "e_fde9b7cb",
+            "name": "서현",
+            "type": "person",
+            "color": "blue"
+          },
+          {
+            "id": "e_db5949e3",
+            "name": "아틀라스 호",
+            "type": "ship",
+            "color": "blue"
+          },
+          {
+            "id": "e_135c7e69",
+            "name": "강 국장",
+            "type": "person",
+            "color": "dark"
+          },
+          {
+            "id": "e_6085cde8",
+            "name": "윤 팀장",
+            "type": "person",
+            "color": "dark"
+          }
+        ],
+        "relationships": [
+          {
+            "id": "r_4dfce8eb",
+            "source": "e_f0eedd1e",
+            "target": "e_fde9b7cb",
+            "label": "동료 연구원",
+            "tone": "ally",
+            "description": "통제실에서 함께 아틀라스 호 신호를 확인함.",
+            "revision_offset": 215
+          },
+          {
+            "id": "r_b1c42202",
+            "source": "e_f0eedd1e",
+            "target": "e_db5949e3",
+            "label": "신호 추적",
+            "tone": "tense",
+            "description": "민우가 실종 탐사선의 고유 신호를 포착함.",
+            "revision_offset": 215
+          },
+          {
+            "id": "r_d2de5c1d",
+            "source": "e_fde9b7cb",
+            "target": "e_135c7e69",
+            "label": "은폐 의혹",
+            "tone": "tense",
+            "description": "서현이 신호 속 강 국장의 보안 서명을 확인함.",
+            "revision_offset": 320
+          },
+          {
+            "id": "r_2479dc67",
+            "source": "e_6085cde8",
+            "target": "e_f0eedd1e",
+            "label": "압박 조사",
+            "tone": "tense",
+            "description": "윤 팀장이 무장 요원들과 통제실에 진입함.",
+            "revision_offset": 380
+          },
+          {
+            "id": "r_18331a98",
+            "source": "e_6085cde8",
+            "target": "e_fde9b7cb",
+            "label": "압박 조사",
+            "tone": "tense",
+            "description": "윤 팀장이 무장 요원들과 통제실에 진입함.",
+            "revision_offset": 380
+          }
+        ]
+      },
+      "reminders": [
+        {
+          "text": "민우와 서현은 통제실에서 아틀라스 호의 신호를 함께 확인했다.",
+          "entity_ids": [
+            "e_f0eedd1e",
+            "e_fde9b7cb"
+          ]
+        },
+        {
+          "text": "서현은 신호 속에서 강 국장의 보안 서명을 발견해 은폐 의혹을 품었다.",
+          "entity_ids": [
+            "e_fde9b7cb",
+            "e_135c7e69"
+          ]
+        },
+        {
+          "text": "강 국장의 집행관 윤 팀장이 무장 요원들과 통제실에 진입해 압박을 시작했다.",
+          "entity_ids": [
+            "e_6085cde8",
+            "e_f0eedd1e",
+            "e_fde9b7cb"
+          ]
+        }
+      ]
+    }
+  ]
+}

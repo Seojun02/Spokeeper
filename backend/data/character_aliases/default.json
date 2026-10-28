@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "book_id": "29f8f4f6-1cff-4b13-95e3-5405a19f8b11",
+  "characters": [
+    {
+      "canonical_name": "셜록 홈즈",
+      "aliases": [
+        "셜록 홈스",
+        "홈즈",
+        "셜록",
+        "홈즈 씨",
+        "셜록 홈즈 씨"
+      ],
+      "notes": "Common Korean variants for Sherlock Holmes."
+    },
+    {
+      "canonical_name": "존 H. 왓슨",
+      "aliases": [
+        "존 왓슨",
+        "왓슨",
+        "왓슨 박사",
+        "닥터 왓슨"
+      ],
+      "notes": "Common Korean variants for Dr. John H. Watson."
+    },
+    {
+      "canonical_name": "스탬포드",
+      "aliases": [
+        "스태퍼드"
+      ],
+      "notes": "Korean transliteration variants for Stamford."
+    },
+    {
+      "canonical_name": "토비아스 그레그슨",
+      "aliases": [
+        "그렉슨",
+        "그레그슨"
+      ],
+      "notes": "Short and variant Korean spellings for Tobias Gregson."
+    },
+    {
+      "canonical_name": "조셉 스미스",
+      "aliases": [
+        "요셉 스미스"
+      ],
+      "notes": "Joseph transliteration variant. Do not apply to Stangerson."
+    }
+  ]
+}

@@ -1,0 +1,1181 @@
+{
+  "book_id": "05c1ba65-72f4-4111-a2c4-52aadbbd395b",
+  "entries": [
+    {
+      "boundary": 19,
+      "graph": {
+        "offset": 19,
+        "spoiler_safe": true,
+        "entities": [
+          {
+            "id": "e_d1c5a3b1",
+            "name": "Cinderilla",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "주인공. 계모와 의붓자매들에게 학대받지만 선하고 아름다운 성품을 가진 소녀. 'Cinder-breech' 또는 'Cinderilla'로 불림."
+          },
+          {
+            "id": "e_05bdf4b8",
+            "name": "Cinderilla's father",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "Cinderilla의 아버지. 계모에게 완전히 지배당하며, Cinderilla의 고통을 알지 못함."
+          },
+          {
+            "id": "e_70d2250a",
+            "name": "Cinderilla's stepmother",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "Cinderilla의 계모. 오만하고 거만한 성격으로, Cinderilla를 학대하고 자신의 딸들을 편애함."
+          },
+          {
+            "id": "e_504b78ce",
+            "name": "Cinderilla's eldest stepsister",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "계모의 첫째 딸. 오만하고 무례하며, Cinderilla를 조롱함."
+          },
+          {
+            "id": "e_43cf48c0",
+            "name": "Cinderilla's youngest stepsister",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "계모의 둘째 딸. 첫째보다는 덜 무례하지만 여전히 Cinderilla를 조롱함."
+          },
+          {
+            "id": "e_eb9c61dc",
+            "name": "Cinderilla's godmother (Fairy)",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "Cinderilla의 대모. 마법을 사용하여 Cinderilla가 무도회에 갈 수 있도록 도움."
+          },
+          {
+            "id": "e_08c2bec6",
+            "name": "King's son",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "무도회를 연 왕자."
+          }
+        ],
+        "relationships": [
+          {
+            "id": "r_07eee8a5",
+            "source": "e_d1c5a3b1",
+            "target": "e_05bdf4b8",
+            "label": "father-daughter",
+            "tone": "neutral",
+            "description": "He had likewise, by another wife, a young daughter... No sooner were the ceremonies of the wedding over, but the stepmother began to shew herself in her colours... she dared not tell her father, who would have rattled her off; for his wife governed him intirely.",
+            "revision_offset": 19,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "personal",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_31ae8ece",
+            "source": "e_d1c5a3b1",
+            "target": "e_70d2250a",
+            "label": "stepmother-stepdaughter",
+            "tone": "neutral",
+            "description": "Once there was a gentleman who married, for his second wife, the proudest and most haughty woman... She could not bear the good qualities of this pretty girl... She employed her in the meanest work of the house... her sisters lay in fine rooms... The poor girl bore all patiently... for his wife governed him intirely.",
+            "revision_offset": 19,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "personal",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_8f584645",
+            "source": "e_d1c5a3b1",
+            "target": "e_eb9c61dc",
+            "label": "godchild-godmother",
+            "tone": "neutral",
+            "description": "Her godmother, who saw her all in tears, asked her what was the matter... This godmother of hers, who was a Fairy, said to her... 'Thou wishest thou couldest go to the ball, is it not so?'... 'Well,' said her godmother, 'be but a good girl, and I will contrive that thou shalt go.'... Then she took her into her chamber... Her godmother scooped out all the inside of it... she struck it with her wand... the pumpkin was instantly turned into a fine coach... she found six mice all alive, and ordered Cinderilla to lift up a little the trap-door... giving each mouse, as it went out, a little tap with her wand, the mouse was at that moment turned into a fair horse... 'Thou art in the right,' replied her godmother; 'go and look.'",
+            "revision_offset": 19,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "personal",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_0c336a56",
+            "source": "e_504b78ce",
+            "target": "e_43cf48c0",
+            "label": "sisters",
+            "tone": "neutral",
+            "description": "She had, by a former husband, two daughters of her own humour... They were mightily delighted at this invitation... 'For my part,' said the eldest, 'I will wear my red velvet suit, with French trimming.'... 'And I,' said the youngest, 'shall only have my usual petticoat...'... 'Cinderilla, would you not be glad to go to the ball?'... 'Thou art in the right of it,' replied they, 'it would make the people laugh to see a Cinder-breech at a ball.'... Any one but Cinderilla would have dressed their heads awry, but she was very good.",
+            "revision_offset": 19,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "personal",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          }
+        ],
+        "events": [
+          {
+            "event_id": "event_001",
+            "event_name": "계모의 학대 시작",
+            "event_summary": "계모가 Cinderilla를 학대하기 시작하고, 의붓자매들과 달리 Cinderilla를 하인으로 부려먹음.",
+            "participants": [
+              {
+                "character_name": "Cinderilla's stepmother",
+                "role": "perpetrator",
+                "confidence": 0.9
+              },
+              {
+                "character_name": "Cinderilla",
+                "role": "victim",
+                "confidence": 0.9
+              }
+            ],
+            "evidence": "No sooner were the ceremonies of the wedding over, but the stepmother began to shew herself in her colours. She could not bear the good qualities of this pretty girl; and the less, because they made her own daughters appear the more odious. She employed her in the meanest work of the house; she scoured the dishes, tables, &c. and rubbed Madam's chamber, and those of Misses, her daughters; she lay up in a sorry garret, upon a wretched straw-bed, while her sisters lay in fine rooms, with floors all inlaid, upon beds of the very newest fashion, and where they had looking-glasses so large, that they might see themselves at their full length, from head to foot.",
+            "first_seen_chunk_offset": 4,
+            "last_seen_chunk_offset": 4,
+            "first_seen_global_index": 19,
+            "last_seen_global_index": 19,
+            "confidence": 0.7
+          },
+          {
+            "event_id": "event_003",
+            "event_name": "의붓자매들의 조롱",
+            "event_summary": "의붓자매들이 Cinderilla를 조롱하며 무도회에 갈 수 없다고 말함.",
+            "participants": [
+              {
+                "character_name": "Cinderilla's eldest stepsister",
+                "role": "perpetrator",
+                "confidence": 0.8
+              },
+              {
+                "character_name": "Cinderilla's youngest stepsister",
+                "role": "perpetrator",
+                "confidence": 0.8
+              },
+              {
+                "character_name": "Cinderilla",
+                "role": "victim",
+                "confidence": 0.8
+              }
+            ],
+            "evidence": "'Cinderilla, would you not be glad to go to the ball?'... 'Ah!' said she, 'you only jeer at me; it is not for such as I am to go thither.'... 'Thou art in the right of it,' replied they, 'it would make the people laugh to see a Cinder-breech at a ball.'",
+            "first_seen_chunk_offset": 4,
+            "last_seen_chunk_offset": 4,
+            "first_seen_global_index": 19,
+            "last_seen_global_index": 19,
+            "confidence": 0.7
+          },
+          {
+            "event_id": "event_004",
+            "event_name": "대모의 도움",
+            "event_summary": "Cinderilla의 대모가 마법을 사용하여 그녀가 무도회에 갈 수 있도록 도움.",
+            "participants": [
+              {
+                "character_name": "Cinderilla's godmother (Fairy)",
+                "role": "helper",
+                "confidence": 0.9
+              },
+              {
+                "character_name": "Cinderilla",
+                "role": "beneficiary",
+                "confidence": 0.9
+              }
+            ],
+            "evidence": "Her godmother, who saw her all in tears, asked her what was the matter... This godmother of hers, who was a Fairy, said to her... 'Thou wishest thou couldest go to the ball, is it not so?'... 'Well,' said her godmother, 'be but a good girl, and I will contrive that thou shalt go.'... Then she took her into her chamber... Her godmother scooped out all the inside of it... she struck it with her wand, and the pumpkin was instantly turned into a fine coach... she found six mice all alive, and ordered Cinderilla to lift up a little the trap-door... giving each mouse, as it went out, a little tap with her wand, the mouse was at that moment turned into a fair horse... 'Thou art in the right,' replied her godmother; 'go and look.'",
+            "first_seen_chunk_offset": 4,
+            "last_seen_chunk_offset": 4,
+            "first_seen_global_index": 19,
+            "last_seen_global_index": 19,
+            "confidence": 0.7
+          }
+        ],
+        "generated_at": "2026-07-13T06:39:01.384832+00:00",
+        "current_global_index": null,
+        "current_page": null,
+        "total_pages": null,
+        "spoiler_boundary_page": null,
+        "snapshot_boundary": null
+      },
+      "reminders": [
+        {
+          "text": "Cinderilla의 계모는 그녀를 학대하기 시작하고 의붓자매들과 달리 하인으로 부려먹으며, Cinderilla의 아버지는 계모의 통제 아래 있어 이를 막지 못합니다.",
+          "entity_ids": [
+            "e_d1c5a3b1",
+            "e_70d2250a",
+            "e_05bdf4b8"
+          ]
+        },
+        {
+          "text": "Cinderilla의 의붓자매들은 그녀를 조롱하며 무도회 참석을 거부하지만, Cinderilla는 예상치 못한 도움을 받아 특별한 기회를 얻습니다.",
+          "entity_ids": [
+            "e_504b78ce",
+            "e_43cf48c0",
+            "e_d1c5a3b1",
+            "e_eb9c61dc"
+          ]
+        },
+        {
+          "text": "Cinderilla는 마법적인 방법으로 무도회 참석을 위한 준비를 완료합니다.",
+          "entity_ids": [
+            "e_eb9c61dc",
+            "e_d1c5a3b1"
+          ]
+        }
+      ]
+    },
+    {
+      "boundary": 37,
+      "graph": {
+        "offset": 37,
+        "spoiler_safe": true,
+        "entities": [
+          {
+            "id": "e_d1c5a3b1",
+            "name": "Cinderilla",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "주인공. 계모와 의붓자매들에게 학대받지만 선하고 아름다운 성품을 가진 소녀. 'Cinder-breech' 또는 'Cinderilla'로 불림."
+          },
+          {
+            "id": "e_05bdf4b8",
+            "name": "Cinderilla's father",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "Cinderilla의 아버지. 계모에게 완전히 지배당하며, Cinderilla의 고통을 알지 못함."
+          },
+          {
+            "id": "e_70d2250a",
+            "name": "Cinderilla's stepmother",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "Cinderilla의 계모. 오만하고 거만한 성격으로, Cinderilla를 학대하고 자신의 딸들을 편애함."
+          },
+          {
+            "id": "e_504b78ce",
+            "name": "Cinderilla's eldest stepsister",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "계모의 첫째 딸. 오만하고 무례하며, Cinderilla를 조롱함."
+          },
+          {
+            "id": "e_43cf48c0",
+            "name": "Cinderilla's youngest stepsister",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "계모의 둘째 딸. 첫째보다는 덜 무례하지만 여전히 Cinderilla를 조롱함."
+          },
+          {
+            "id": "e_eb9c61dc",
+            "name": "Cinderilla's godmother (Fairy)",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "Cinderilla의 대모. 마법을 사용하여 Cinderilla가 무도회에 갈 수 있도록 도움."
+          },
+          {
+            "id": "e_08c2bec6",
+            "name": "King's son",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "무도회를 연 왕자."
+          }
+        ],
+        "relationships": [
+          {
+            "id": "r_07eee8a5",
+            "source": "e_d1c5a3b1",
+            "target": "e_05bdf4b8",
+            "label": "father-daughter",
+            "tone": "neutral",
+            "description": "He had likewise, by another wife, a young daughter... No sooner were the ceremonies of the wedding over, but the stepmother began to shew herself in her colours... she dared not tell her father, who would have rattled her off; for his wife governed him intirely.",
+            "revision_offset": 19,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "personal",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_31ae8ece",
+            "source": "e_d1c5a3b1",
+            "target": "e_70d2250a",
+            "label": "stepmother-stepdaughter",
+            "tone": "neutral",
+            "description": "Once there was a gentleman who married, for his second wife, the proudest and most haughty woman... She could not bear the good qualities of this pretty girl... She employed her in the meanest work of the house... her sisters lay in fine rooms... The poor girl bore all patiently... for his wife governed him intirely.",
+            "revision_offset": 19,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "personal",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_c7d7894b",
+            "source": "e_d1c5a3b1",
+            "target": "e_504b78ce",
+            "label": "stepsister-stepsister",
+            "tone": "neutral",
+            "description": "She had, by a former husband, two daughters of her own humour... They were mightily delighted at this invitation... 'For my part,' said the eldest, 'I will wear my red velvet suit, with French trimming.'... 'Cinderilla, would you not be glad to go to the ball?'... 'Thou art in the right of it,' replied they, 'it would make the people laugh to see a Cinder-breech at a ball.'... Any one but Cinderilla would have dressed their heads awry, but she was very good.",
+            "revision_offset": 37,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "personal",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_e6452b85",
+            "source": "e_d1c5a3b1",
+            "target": "e_43cf48c0",
+            "label": "stepsister-stepsister",
+            "tone": "neutral",
+            "description": "She had, by a former husband, two daughters of her own humour... They were mightily delighted at this invitation... 'And I,' said the youngest, 'shall only have my usual petticoat...'... 'Cinderilla, would you not be glad to go to the ball?'... 'Thou art in the right of it,' replied they, 'it would make the people laugh to see a Cinder-breech at a ball.'... Any one but Cinderilla would have dressed their heads awry, but she was very good.",
+            "revision_offset": 37,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "personal",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_8f584645",
+            "source": "e_d1c5a3b1",
+            "target": "e_eb9c61dc",
+            "label": "godchild-godmother",
+            "tone": "neutral",
+            "description": "Her godmother, who saw her all in tears, asked her what was the matter... This godmother of hers, who was a Fairy, said to her... 'Thou wishest thou couldest go to the ball, is it not so?'... 'Well,' said her godmother, 'be but a good girl, and I will contrive that thou shalt go.'... Then she took her into her chamber... Her godmother scooped out all the inside of it... she struck it with her wand... the pumpkin was instantly turned into a fine coach... she found six mice all alive, and ordered Cinderilla to lift up a little the trap-door... giving each mouse, as it went out, a little tap with her wand, the mouse was at that moment turned into a fair horse... 'Thou art in the right,' replied her godmother; 'go and look.'",
+            "revision_offset": 19,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "personal",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_0c336a56",
+            "source": "e_504b78ce",
+            "target": "e_43cf48c0",
+            "label": "sisters",
+            "tone": "neutral",
+            "description": "She had, by a former husband, two daughters of her own humour... They were mightily delighted at this invitation... 'For my part,' said the eldest, 'I will wear my red velvet suit, with French trimming.'... 'And I,' said the youngest, 'shall only have my usual petticoat...'... 'Cinderilla, would you not be glad to go to the ball?'... 'Thou art in the right of it,' replied they, 'it would make the people laugh to see a Cinder-breech at a ball.'... Any one but Cinderilla would have dressed their heads awry, but she was very good.",
+            "revision_offset": 19,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "personal",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          }
+        ],
+        "events": [
+          {
+            "event_id": "event_001",
+            "event_name": "계모의 학대 시작",
+            "event_summary": "계모가 Cinderilla를 학대하기 시작하고, 의붓자매들과 달리 Cinderilla를 하인으로 부려먹음.",
+            "participants": [
+              {
+                "character_name": "Cinderilla's stepmother",
+                "role": "perpetrator",
+                "confidence": 0.9
+              },
+              {
+                "character_name": "Cinderilla",
+                "role": "victim",
+                "confidence": 0.9
+              }
+            ],
+            "evidence": "No sooner were the ceremonies of the wedding over, but the stepmother began to shew herself in her colours. She could not bear the good qualities of this pretty girl; and the less, because they made her own daughters appear the more odious. She employed her in the meanest work of the house; she scoured the dishes, tables, &c. and rubbed Madam's chamber, and those of Misses, her daughters; she lay up in a sorry garret, upon a wretched straw-bed, while her sisters lay in fine rooms, with floors all inlaid, upon beds of the very newest fashion, and where they had looking-glasses so large, that they might see themselves at their full length, from head to foot.",
+            "first_seen_chunk_offset": 4,
+            "last_seen_chunk_offset": 4,
+            "first_seen_global_index": 19,
+            "last_seen_global_index": 19,
+            "confidence": 0.7
+          },
+          {
+            "event_id": "event_002",
+            "event_name": "왕자의 무도회 초대",
+            "event_summary": "왕자가 무도회를 열고, Cinderilla의 의붓자매들을 포함한 상류층 인사들을 초대함.",
+            "participants": [
+              {
+                "character_name": "King's son",
+                "role": "perpetrator",
+                "confidence": 0.8
+              },
+              {
+                "character_name": "Cinderilla's eldest stepsister",
+                "role": "beneficiary",
+                "confidence": 0.8
+              },
+              {
+                "character_name": "Cinderilla's youngest stepsister",
+                "role": "beneficiary",
+                "confidence": 0.8
+              }
+            ],
+            "evidence": "It happened that the King's son gave a ball, and invited all persons of fashion to it. Our young misses were also invited; for they cut a very grand figure among the quality. They were mightily delighted at this invitation, and wonderfully busy in chusing out such gowns, petticoats, and head-clothes as might best become them.",
+            "first_seen_chunk_offset": 4,
+            "last_seen_chunk_offset": 4,
+            "first_seen_global_index": 19,
+            "last_seen_global_index": 19,
+            "confidence": 0.7
+          },
+          {
+            "event_id": "event_003",
+            "event_name": "의붓자매들의 조롱",
+            "event_summary": "의붓자매들이 Cinderilla를 조롱하며 무도회에 갈 수 없다고 말함.",
+            "participants": [
+              {
+                "character_name": "Cinderilla's eldest stepsister",
+                "role": "perpetrator",
+                "confidence": 0.8
+              },
+              {
+                "character_name": "Cinderilla's youngest stepsister",
+                "role": "perpetrator",
+                "confidence": 0.8
+              },
+              {
+                "character_name": "Cinderilla",
+                "role": "victim",
+                "confidence": 0.8
+              }
+            ],
+            "evidence": "'Cinderilla, would you not be glad to go to the ball?'... 'Ah!' said she, 'you only jeer at me; it is not for such as I am to go thither.'... 'Thou art in the right of it,' replied they, 'it would make the people laugh to see a Cinder-breech at a ball.'",
+            "first_seen_chunk_offset": 4,
+            "last_seen_chunk_offset": 4,
+            "first_seen_global_index": 19,
+            "last_seen_global_index": 19,
+            "confidence": 0.7
+          },
+          {
+            "event_id": "event_004",
+            "event_name": "대모의 도움",
+            "event_summary": "Cinderilla의 대모가 마법을 사용하여 그녀가 무도회에 갈 수 있도록 도움.",
+            "participants": [
+              {
+                "character_name": "Cinderilla's godmother (Fairy)",
+                "role": "helper",
+                "confidence": 0.9
+              },
+              {
+                "character_name": "Cinderilla",
+                "role": "beneficiary",
+                "confidence": 0.9
+              }
+            ],
+            "evidence": "Her godmother, who saw her all in tears, asked her what was the matter... This godmother of hers, who was a Fairy, said to her... 'Thou wishest thou couldest go to the ball, is it not so?'... 'Well,' said her godmother, 'be but a good girl, and I will contrive that thou shalt go.'... Then she took her into her chamber... Her godmother scooped out all the inside of it... she struck it with her wand, and the pumpkin was instantly turned into a fine coach... she found six mice all alive, and ordered Cinderilla to lift up a little the trap-door... giving each mouse, as it went out, a little tap with her wand, the mouse was at that moment turned into a fair horse... 'Thou art in the right,' replied her godmother; 'go and look.'",
+            "first_seen_chunk_offset": 4,
+            "last_seen_chunk_offset": 4,
+            "first_seen_global_index": 19,
+            "last_seen_global_index": 19,
+            "confidence": 0.7
+          }
+        ],
+        "generated_at": "2026-07-13T06:39:01.384832+00:00",
+        "current_global_index": null,
+        "current_page": null,
+        "total_pages": null,
+        "spoiler_boundary_page": null,
+        "snapshot_boundary": null
+      },
+      "reminders": [
+        {
+          "text": "Cinderilla의 계모는 그녀를 학대하기 시작하고 의붓자매들과 달리 하인으로 부려먹으며, Cinderilla의 아버지는 계모의 통제 아래 있어 이를 막지 못합니다.",
+          "entity_ids": [
+            "e_d1c5a3b1",
+            "e_70d2250a",
+            "e_05bdf4b8"
+          ]
+        },
+        {
+          "text": "왕자가 무도회를 열어 Cinderilla의 의붓자매들을 포함한 상류층 인사들을 초대하자, 그들은 기뻐하며 참석할 준비를 합니다.",
+          "entity_ids": [
+            "e_08c2bec6",
+            "e_504b78ce",
+            "e_43cf48c0"
+          ]
+        },
+        {
+          "text": "의붓자매들은 Cinderilla에게 무도회 참석이 어려울 것이라고 말하며, Cinderilla는 이에 대해 별다른 반응을 보이지 않습니다.",
+          "entity_ids": [
+            "e_504b78ce",
+            "e_43cf48c0",
+            "e_d1c5a3b1"
+          ]
+        }
+      ]
+    },
+    {
+      "boundary": 50,
+      "graph": {
+        "offset": 50,
+        "spoiler_safe": true,
+        "entities": [
+          {
+            "id": "e_d1c5a3b1",
+            "name": "Cinderilla",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "주인공. 계모와 의붓자매들에게 학대받지만 선하고 아름다운 성품을 가진 소녀. 'Cinder-breech' 또는 'Cinderilla'로 불림."
+          },
+          {
+            "id": "e_05bdf4b8",
+            "name": "Cinderilla's father",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "Cinderilla의 아버지. 계모에게 완전히 지배당하며, Cinderilla의 고통을 알지 못함."
+          },
+          {
+            "id": "e_70d2250a",
+            "name": "Cinderilla's stepmother",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "Cinderilla의 계모. 오만하고 거만한 성격으로, Cinderilla를 학대하고 자신의 딸들을 편애함."
+          },
+          {
+            "id": "e_504b78ce",
+            "name": "Cinderilla's eldest stepsister",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "계모의 첫째 딸. 오만하고 무례하며, Cinderilla를 조롱함."
+          },
+          {
+            "id": "e_43cf48c0",
+            "name": "Cinderilla's youngest stepsister",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "계모의 둘째 딸. 첫째보다는 덜 무례하지만 여전히 Cinderilla를 조롱함."
+          },
+          {
+            "id": "e_eb9c61dc",
+            "name": "Cinderilla's godmother (Fairy)",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "Cinderilla의 대모. 마법을 사용하여 Cinderilla가 무도회에 갈 수 있도록 도움."
+          },
+          {
+            "id": "e_08c2bec6",
+            "name": "King's son",
+            "type": "person",
+            "color": "blue",
+            "importance_score": 1,
+            "importance_level": "minor",
+            "description": "무도회를 연 왕자."
+          }
+        ],
+        "relationships": [
+          {
+            "id": "r_07eee8a5",
+            "source": "e_d1c5a3b1",
+            "target": "e_05bdf4b8",
+            "label": "father-daughter",
+            "tone": "neutral",
+            "description": "He had likewise, by another wife, a young daughter... No sooner were the ceremonies of the wedding over, but the stepmother began to shew herself in her colours... she dared not tell her father, who would have rattled her off; for his wife governed him intirely.",
+            "revision_offset": 19,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "personal",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_31ae8ece",
+            "source": "e_d1c5a3b1",
+            "target": "e_70d2250a",
+            "label": "stepmother-stepdaughter",
+            "tone": "neutral",
+            "description": "Once there was a gentleman who married, for his second wife, the proudest and most haughty woman... She could not bear the good qualities of this pretty girl... She employed her in the meanest work of the house... her sisters lay in fine rooms... The poor girl bore all patiently... for his wife governed him intirely.",
+            "revision_offset": 19,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "personal",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_8f584645",
+            "source": "e_d1c5a3b1",
+            "target": "e_eb9c61dc",
+            "label": "godchild-godmother",
+            "tone": "neutral",
+            "description": "Her godmother, who saw her all in tears, asked her what was the matter... This godmother of hers, who was a Fairy, said to her... 'Thou wishest thou couldest go to the ball, is it not so?'... 'Well,' said her godmother, 'be but a good girl, and I will contrive that thou shalt go.'... Then she took her into her chamber... Her godmother scooped out all the inside of it... she struck it with her wand... the pumpkin was instantly turned into a fine coach... she found six mice all alive, and ordered Cinderilla to lift up a little the trap-door... giving each mouse, as it went out, a little tap with her wand, the mouse was at that moment turned into a fair horse... 'Thou art in the right,' replied her godmother; 'go and look.'",
+            "revision_offset": 19,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "personal",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_0c336a56",
+            "source": "e_504b78ce",
+            "target": "e_43cf48c0",
+            "label": "sisters",
+            "tone": "neutral",
+            "description": "She had, by a former husband, two daughters of her own humour... They were mightily delighted at this invitation... 'For my part,' said the eldest, 'I will wear my red velvet suit, with French trimming.'... 'And I,' said the youngest, 'shall only have my usual petticoat...'... 'Cinderilla, would you not be glad to go to the ball?'... 'Thou art in the right of it,' replied they, 'it would make the people laugh to see a Cinder-breech at a ball.'... Any one but Cinderilla would have dressed their heads awry, but she was very good.",
+            "revision_offset": 19,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "personal",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_b688838f",
+            "source": "e_08c2bec6",
+            "target": "e_d1c5a3b1",
+            "label": "lover",
+            "tone": "neutral",
+            "description": "The King's son was always by her, and never ceased his compliments and amorous speeches to her; ... he thought her more charming than ever, and, a few days after, married her.",
+            "revision_offset": 50,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "action",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          },
+          {
+            "id": "r_5b333070",
+            "source": "e_d1c5a3b1",
+            "target": "e_08c2bec6",
+            "label": "wife",
+            "tone": "neutral",
+            "description": "She was conducted to the young Prince, dressed as she was; he thought her more charming than ever, and, a few days after, married her.",
+            "revision_offset": 50,
+            "display_label": null,
+            "relation_category": "neutral",
+            "relation_kind": "action",
+            "directionality": "undirected",
+            "relation_importance_score": 1,
+            "relation_importance_level": "minor",
+            "first_seen_global_index": null,
+            "first_seen_boundary": null,
+            "is_new_at_current_position": false,
+            "detail": null,
+            "event_name": null,
+            "event_summary": null,
+            "relation_role": null,
+            "role_label": null,
+            "role_pair_label": null,
+            "relationship_summary": null,
+            "evidence": [],
+            "confidence": 0.5,
+            "is_story_relation": false,
+            "label_is_generic": false,
+            "has_direct_evidence": true,
+            "last_seen_global_index": null,
+            "related_events": []
+          }
+        ],
+        "events": [
+          {
+            "event_id": "event_001",
+            "event_name": "계모의 학대 시작",
+            "event_summary": "계모가 Cinderilla를 학대하기 시작하고, 의붓자매들과 달리 Cinderilla를 하인으로 부려먹음.",
+            "participants": [
+              {
+                "character_name": "Cinderilla's stepmother",
+                "role": "perpetrator",
+                "confidence": 0.9
+              },
+              {
+                "character_name": "Cinderilla",
+                "role": "victim",
+                "confidence": 0.9
+              }
+            ],
+            "evidence": "No sooner were the ceremonies of the wedding over, but the stepmother began to shew herself in her colours. She could not bear the good qualities of this pretty girl; and the less, because they made her own daughters appear the more odious. She employed her in the meanest work of the house; she scoured the dishes, tables, &c. and rubbed Madam's chamber, and those of Misses, her daughters; she lay up in a sorry garret, upon a wretched straw-bed, while her sisters lay in fine rooms, with floors all inlaid, upon beds of the very newest fashion, and where they had looking-glasses so large, that they might see themselves at their full length, from head to foot.",
+            "first_seen_chunk_offset": 4,
+            "last_seen_chunk_offset": 4,
+            "first_seen_global_index": 19,
+            "last_seen_global_index": 19,
+            "confidence": 0.7
+          },
+          {
+            "event_id": "event_002",
+            "event_name": "왕자의 무도회 초대",
+            "event_summary": "왕자가 무도회를 열고, Cinderilla의 의붓자매들을 포함한 상류층 인사들을 초대함.",
+            "participants": [
+              {
+                "character_name": "King's son",
+                "role": "perpetrator",
+                "confidence": 0.8
+              },
+              {
+                "character_name": "Cinderilla's eldest stepsister",
+                "role": "beneficiary",
+                "confidence": 0.8
+              },
+              {
+                "character_name": "Cinderilla's youngest stepsister",
+                "role": "beneficiary",
+                "confidence": 0.8
+              }
+            ],
+            "evidence": "It happened that the King's son gave a ball, and invited all persons of fashion to it. Our young misses were also invited; for they cut a very grand figure among the quality. They were mightily delighted at this invitation, and wonderfully busy in chusing out such gowns, petticoats, and head-clothes as might best become them.",
+            "first_seen_chunk_offset": 4,
+            "last_seen_chunk_offset": 4,
+            "first_seen_global_index": 19,
+            "last_seen_global_index": 19,
+            "confidence": 0.7
+          },
+          {
+            "event_id": "event_003",
+            "event_name": "의붓자매들의 조롱",
+            "event_summary": "의붓자매들이 Cinderilla를 조롱하며 무도회에 갈 수 없다고 말함.",
+            "participants": [
+              {
+                "character_name": "Cinderilla's eldest stepsister",
+                "role": "perpetrator",
+                "confidence": 0.8
+              },
+              {
+                "character_name": "Cinderilla's youngest stepsister",
+                "role": "perpetrator",
+                "confidence": 0.8
+              },
+              {
+                "character_name": "Cinderilla",
+                "role": "victim",
+                "confidence": 0.8
+              }
+            ],
+            "evidence": "'Cinderilla, would you not be glad to go to the ball?'... 'Ah!' said she, 'you only jeer at me; it is not for such as I am to go thither.'... 'Thou art in the right of it,' replied they, 'it would make the people laugh to see a Cinder-breech at a ball.'",
+            "first_seen_chunk_offset": 4,
+            "last_seen_chunk_offset": 4,
+            "first_seen_global_index": 19,
+            "last_seen_global_index": 19,
+            "confidence": 0.7
+          },
+          {
+            "event_id": "event_004",
+            "event_name": "대모의 도움",
+            "event_summary": "Cinderilla의 대모가 마법을 사용하여 그녀가 무도회에 갈 수 있도록 도움.",
+            "participants": [
+              {
+                "character_name": "Cinderilla's godmother (Fairy)",
+                "role": "helper",
+                "confidence": 0.9
+              },
+              {
+                "character_name": "Cinderilla",
+                "role": "beneficiary",
+                "confidence": 0.9
+              }
+            ],
+            "evidence": "Her godmother, who saw her all in tears, asked her what was the matter... This godmother of hers, who was a Fairy, said to her... 'Thou wishest thou couldest go to the ball, is it not so?'... 'Well,' said her godmother, 'be but a good girl, and I will contrive that thou shalt go.'... Then she took her into her chamber... Her godmother scooped out all the inside of it... she struck it with her wand, and the pumpkin was instantly turned into a fine coach... she found six mice all alive, and ordered Cinderilla to lift up a little the trap-door... giving each mouse, as it went out, a little tap with her wand, the mouse was at that moment turned into a fair horse... 'Thou art in the right,' replied her godmother; 'go and look.'",
+            "first_seen_chunk_offset": 4,
+            "last_seen_chunk_offset": 4,
+            "first_seen_global_index": 19,
+            "last_seen_global_index": 19,
+            "confidence": 0.7
+          },
+          {
+            "event_id": "glass_slipper_search",
+            "event_name": "유리 구두 주인 찾기",
+            "event_summary": "왕자가 유리 구두의 주인을 찾아 결혼하겠다고 선포하고, Cinderilla가 구두의 주인으로 확인됨.",
+            "participants": [
+              {
+                "character_name": "King's son",
+                "role": "investigator",
+                "confidence": 0.9
+              },
+              {
+                "character_name": "Cinderilla",
+                "role": "target",
+                "confidence": 0.9
+              },
+              {
+                "character_name": "Cinderilla's sisters",
+                "role": "suspect",
+                "confidence": 0.7
+              }
+            ],
+            "evidence": "The King's son caused it to be proclaimed by sound of trumpet, that he would marry her whose foot this slipper would just fit. ... He invited Cinderilla to sit down, and putting the slipper to her foot, he found it went on very easily, and fitted her, as if it had been made of wax.",
+            "first_seen_chunk_offset": 13,
+            "last_seen_chunk_offset": 13,
+            "first_seen_global_index": 50,
+            "last_seen_global_index": 50,
+            "confidence": 0.7
+          },
+          {
+            "event_id": "reconciliation",
+            "event_name": "화해와 결혼",
+            "event_summary": "Cinderilla가 언니들의 사과를 받아들이고 용서함. 왕자와 결혼하고 언니들을 궁전에 살게 함.",
+            "participants": [
+              {
+                "character_name": "Cinderilla",
+                "role": "beneficiary",
+                "confidence": 0.9
+              },
+              {
+                "character_name": "Cinderilla's sisters",
+                "role": "threatened",
+                "confidence": 0.8
+              },
+              {
+                "character_name": "King's son",
+                "role": "beneficiary",
+                "confidence": 0.9
+              }
+            ],
+            "evidence": "They threw themselves at her feet, to beg pardon for all the ill treatment they had made her undergo. Cinderilla took them up, and as she embraced them, cried that she forgave them with all her heart, ... She was conducted to the young Prince, dressed as she was; he thought her more charming than ever, and, a few days after, married her.",
+            "first_seen_chunk_offset": 13,
+            "last_seen_chunk_offset": 13,
+            "first_seen_global_index": 50,
+            "last_seen_global_index": 50,
+            "confidence": 0.7
+          }
+        ],
+        "generated_at": "2026-07-13T06:39:01.384832+00:00",
+        "current_global_index": null,
+        "current_page": null,
+        "total_pages": null,
+        "spoiler_boundary_page": null,
+        "snapshot_boundary": null
+      },
+      "reminders": [
+        {
+          "text": "계모는 신데렐라를 학대하기 시작하고 의붓자매들과 달리 그녀를 하인으로 부려먹었습니다.",
+          "entity_ids": [
+            "e_70d2250a",
+            "e_d1c5a3b1"
+          ]
+        },
+        {
+          "text": "왕자는 무도회를 열고 신데렐라의 의붓자매들을 포함한 상류층 인사들을 초대했습니다.",
+          "entity_ids": [
+            "e_08c2bec6",
+            "e_504b78ce",
+            "e_43cf48c0"
+          ]
+        },
+        {
+          "text": "의붓자매들은 신데렐라를 조롱하며 무도회에 갈 수 없다고 말했습니다.",
+          "entity_ids": [
+            "e_504b78ce",
+            "e_43cf48c0",
+            "e_d1c5a3b1"
+          ]
+        },
+        {
+          "text": "신데렐라는 무도회에 참석할 수 있는 기회를 얻었습니다.",
+          "entity_ids": [
+            "e_eb9c61dc",
+            "e_d1c5a3b1"
+          ]
+        }
+      ]
+    }
+  ]
+}

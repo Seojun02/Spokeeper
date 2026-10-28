@@ -1,0 +1,72 @@
+# SpoKeeper 도커 구성 — 4개 서비스로 서비스한다.
+#
+#   nginx     React 정적 빌드 서빙 + /api → backend 프록시   :8080  ← 브라우저
+#   backend   FastAPI (API 서빙 + 업로드 시 CFI 생성 + 잡 enqueue)  :8000
+#   agent     RQ 워커 (Redis 큐에서 분석 잡을 집어 실행)
+#   redis     큐 브로커 + 진행률 공유 저장소
+#
+# 실행:  docker compose up --build
+#   브라우저에서 http://localhost:8080 접속.
+#   .env (SUPABASE_DB_URL / UPSTAGE_API_KEY / SPO_SOURCE=agent)가 있어야 한다.
+
+services:
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    volumes:
+      - redis-data:/data
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: spokeeper-app
+    environment:
+      REDIS_URL: redis://redis:6379/0
+      # progress SQLite 를 공유 볼륨 안에 둬서 재시작해도 유지.
+      SPO_DB: sqlite:////app/backend/data/spokeeper.db
+      # .env 의 SPO_EPUB_PATH 는 호스트 절대경로라 컨테이너엔 없다. 데모 책 경로를
+      # 컨테이너 기준으로 덮어쓴다(load_dotenv override=False 라 이 값이 우선).
+      SPO_EPUB_PATH: /app/agents/data/books/arthur-conan-doyle_the-hound-of-the-baskervilles.epub
+    ports:
+      # 호스트 8001 → 컨테이너 8000. 브라우저는 nginx(:8080)만 쓰고, 이 포트는
+      # 직접 API 디버깅용이다. (호스트 8000 이 비어 있으면 "8000:8000" 로 바꿔도 됨)
+      - "8001:8000"
+    volumes:
+      # .env 를 마운트해 앱의 load_dotenv() 가 직접 읽게 한다. compose 의 env_file 은
+      # 값의 $ 를 변수로 해석해 SUPABASE 비밀번호(...$kA6)를 깨뜨리므로 쓰지 않는다.
+      - ./.env:/app/.env:ro
+      # 업로드 EPUB(uploaded_books)·precomputed JSON 을 agent 워커와 공유.
+      - ./backend/data:/app/backend/data
+    depends_on:
+      - redis
+    restart: unless-stopped
+
+  agent:
+    # backend 와 동일 이미지(spokeeper-app)를 재사용하고 command 만 워커로 바꾼다.
+    image: spokeeper-app
+    command: ["rq", "worker", "--url", "redis://redis:6379/0", "spokeeper"]
+    environment:
+      REDIS_URL: redis://redis:6379/0
+      SPO_DB: sqlite:////app/backend/data/spokeeper.db
+      SPO_EPUB_PATH: /app/agents/data/books/arthur-conan-doyle_the-hound-of-the-baskervilles.epub
+    volumes:
+      - ./.env:/app/.env:ro
+      - ./backend/data:/app/backend/data
+    depends_on:
+      - redis
+      - backend
+    restart: unless-stopped
+
+  nginx:
+    # ./frontend 에서 React 를 빌드하고 nginx 로 서빙(+ /api 프록시)하는 이미지.
+    build:
+      context: ./frontend
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  redis-data:

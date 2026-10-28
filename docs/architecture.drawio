@@ -1,0 +1,129 @@
+<mxfile host="app.diagrams.net" agent="Claude" version="24.0.0">
+  <diagram id="spokeeper-docker" name="SpoKeeper Docker Compose">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- ============ Browser (host) ============ -->
+        <mxCell id="browser" value="&lt;b&gt;사용자 브라우저&lt;/b&gt;&lt;br&gt;http://localhost:8080" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="470" width="160" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- ============ Docker Host boundary ============ -->
+        <mxCell id="host" value="Docker Host (macOS)  —  docker compose up --build" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#666666;dashed=1;verticalAlign=top;fontStyle=1;fontSize=13;align=left;spacingLeft=10;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="260" y="60" width="1120" height="860" as="geometry" />
+        </mxCell>
+
+        <!-- ============ Docker network boundary ============ -->
+        <mxCell id="net" value="docker network: upstage_bootcamp_default (bridge)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;verticalAlign=top;fontStyle=2;fontSize=12;align=left;spacingLeft=10;spacingTop=6;dashed=0;" vertex="1" parent="1">
+          <mxGeometry x="300" y="150" width="820" height="470" as="geometry" />
+        </mxCell>
+
+        <!-- ============ frontend service ============ -->
+        <mxCell id="frontend" value="&lt;b&gt;nginx&lt;/b&gt;&lt;hr size=1&gt;&lt;div align=left&gt;build: ./frontend (node 빌드 → nginx)&lt;br&gt;image: nginx:1.27-alpine&lt;br&gt;ports: &lt;b&gt;8080:80&lt;/b&gt;&lt;br&gt;depends_on: backend&lt;br&gt;&lt;i&gt;React 정적 빌드(dist) 서빙&lt;br&gt;+ /api → backend 리버스 프록시&lt;/i&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;verticalAlign=top;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="330" y="200" width="330" height="180" as="geometry" />
+        </mxCell>
+
+        <!-- ============ redis service ============ -->
+        <mxCell id="redis" value="&lt;b&gt;redis&lt;/b&gt;&lt;hr size=1&gt;&lt;div align=left&gt;image: redis:7-alpine&lt;br&gt;port: 6379 (내부만)&lt;br&gt;volumes: redis-data:/data&lt;br&gt;&lt;i&gt;큐 브로커 + 진행률 공유 저장소&lt;/i&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;verticalAlign=top;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="760" y="200" width="330" height="180" as="geometry" />
+        </mxCell>
+
+        <!-- ============ backend service ============ -->
+        <mxCell id="backend" value="&lt;b&gt;backend&lt;/b&gt;  &lt;font color=#7f00ff&gt;[image: spokeeper-app]&lt;/font&gt;&lt;hr size=1&gt;&lt;div align=left&gt;build: . (python3.12 + node)&lt;br&gt;command: uvicorn backend.app.main:app&lt;br&gt;ports: &lt;b&gt;8001:8000&lt;/b&gt;&lt;br&gt;env: REDIS_URL, SPO_DB, SPO_EPUB_PATH&lt;br&gt;volumes: ./.env:ro, ./backend/data&lt;br&gt;depends_on: redis&lt;br&gt;&lt;i&gt;API 서빙 + 업로드 시 node CFI 생성&lt;br&gt;+ 분석 잡 enqueue&lt;/i&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;verticalAlign=top;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="330" y="410" width="330" height="190" as="geometry" />
+        </mxCell>
+
+        <!-- ============ agent service ============ -->
+        <mxCell id="agent" value="&lt;b&gt;agent&lt;/b&gt;  &lt;font color=#7f00ff&gt;[image: spokeeper-app]&lt;/font&gt;&lt;hr size=1&gt;&lt;div align=left&gt;image: spokeeper-app (backend와 동일 이미지 재사용)&lt;br&gt;command: rq worker --url redis://redis:6379/0 spokeeper&lt;br&gt;env: REDIS_URL, SPO_DB, SPO_EPUB_PATH&lt;br&gt;volumes: ./.env:ro, ./backend/data&lt;br&gt;depends_on: redis, backend&lt;br&gt;&lt;i&gt;RQ 워커: 큐에서 분석 잡 dequeue&lt;br&gt;→ 4단계 파이프라인(Upstage LLM) 실행&lt;/i&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;verticalAlign=top;spacingTop=6;" vertex="1" parent="1">
+          <mxGeometry x="760" y="410" width="330" height="190" as="geometry" />
+        </mxCell>
+
+        <!-- ============ shared-image note ============ -->
+        <mxCell id="sharednote" value="&lt;b&gt;spokeeper-app&lt;/b&gt; 단일 이미지를 backend·agent가 공유&lt;br&gt;(command 만 uvicorn ↔ rq worker 로 교체)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="565" y="360" width="290" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- ============ Volumes / mounts (host side) ============ -->
+        <mxCell id="voldata" value="&lt;b&gt;bind: ./backend/data&lt;/b&gt;&lt;br&gt;(backend ↔ agent 공유)&lt;br&gt;• uploaded_books/*.epub&lt;br&gt;• precomputed/*.json&lt;br&gt;• spokeeper.db (progress)" style="shape=cylinder3;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;boundedLbl=1;backgroundOutline=1;size=12;verticalAlign=top;spacingTop=6;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="330" y="670" width="230" height="150" as="geometry" />
+        </mxCell>
+
+        <mxCell id="volenv" value="&lt;b&gt;bind: ./.env (ro)&lt;/b&gt;&lt;br&gt;앱 load_dotenv() 가&lt;br&gt;직접 읽음&lt;br&gt;(env_file 미사용:&lt;br&gt;비밀번호 $ 보간 회피)" style="shape=cylinder3;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;boundedLbl=1;backgroundOutline=1;size=12;verticalAlign=top;spacingTop=6;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="600" y="670" width="220" height="150" as="geometry" />
+        </mxCell>
+
+        <mxCell id="volredis" value="&lt;b&gt;named volume:&lt;br&gt;redis-data&lt;/b&gt;&lt;br&gt;redis 영속(dump.rdb)" style="shape=cylinder3;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;boundedLbl=1;backgroundOutline=1;size=12;verticalAlign=top;spacingTop=6;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="860" y="670" width="220" height="150" as="geometry" />
+        </mxCell>
+
+        <!-- ============ External systems ============ -->
+        <mxCell id="supabase" value="&lt;b&gt;Supabase&lt;/b&gt;&lt;br&gt;(원격 Postgres)&lt;br&gt;• books / book_cfi_index&lt;br&gt;• build_agent_snapshots" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;verticalAlign=top;spacingTop=6;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1440" y="300" width="220" height="120" as="geometry" />
+        </mxCell>
+
+        <mxCell id="upstage" value="&lt;b&gt;Upstage LLM API&lt;/b&gt;&lt;br&gt;(외부 API)&lt;br&gt;분석 파이프라인 호출" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;verticalAlign=top;spacingTop=6;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1440" y="470" width="220" height="110" as="geometry" />
+        </mxCell>
+
+        <!-- ============ Legend ============ -->
+        <mxCell id="legend" value="&lt;b&gt;범례&lt;/b&gt;&lt;br&gt;━━ 런타임 트래픽&lt;br&gt;- - 볼륨 마운트&lt;br&gt;····· depends_on" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#333333;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="40" y="600" width="160" height="90" as="geometry" />
+        </mxCell>
+
+        <!-- ============ Runtime traffic edges (solid) ============ -->
+        <mxCell id="e_browser_fe" value=":8080" style="endArrow=block;html=1;strokeColor=#333333;strokeWidth=2;fontSize=11;" edge="1" parent="1" source="browser" target="frontend">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_fe_be" value="/api → backend:8000&#10;(nginx 리버스 프록시)" style="endArrow=block;html=1;strokeColor=#333333;strokeWidth=2;fontSize=11;" edge="1" parent="1" source="frontend" target="backend">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_be_redis" value="enqueue 분석 잡&#10;+ 진행률 read" style="endArrow=block;html=1;strokeColor=#333333;strokeWidth=2;fontSize=11;" edge="1" parent="1" source="backend" target="redis">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_agent_redis" value="dequeue 잡&#10;+ 진행률 write" style="endArrow=block;html=1;strokeColor=#333333;strokeWidth=2;fontSize=11;" edge="1" parent="1" source="agent" target="redis">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_be_supa" value="조회/적재" style="endArrow=block;html=1;strokeColor=#2d7dd2;strokeWidth=2;fontSize=11;" edge="1" parent="1" source="backend" target="supabase">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_agent_supa" value="결과 적재&#10;(snapshots)" style="endArrow=block;html=1;strokeColor=#2d7dd2;strokeWidth=2;fontSize=11;" edge="1" parent="1" source="agent" target="supabase">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_agent_upstage" value="LLM 호출" style="endArrow=block;html=1;strokeColor=#2d7dd2;strokeWidth=2;fontSize=11;" edge="1" parent="1" source="agent" target="upstage">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ============ Volume mount edges (dashed) ============ -->
+        <mxCell id="m_be_data" style="endArrow=none;html=1;dashed=1;strokeColor=#666666;" edge="1" parent="1" source="backend" target="voldata">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m_agent_data" style="endArrow=none;html=1;dashed=1;strokeColor=#666666;" edge="1" parent="1" source="agent" target="voldata">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m_be_env" style="endArrow=none;html=1;dashed=1;strokeColor=#666666;" edge="1" parent="1" source="backend" target="volenv">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m_agent_env" style="endArrow=none;html=1;dashed=1;strokeColor=#666666;" edge="1" parent="1" source="agent" target="volenv">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="m_redis_vol" style="endArrow=none;html=1;dashed=1;strokeColor=#666666;" edge="1" parent="1" source="redis" target="volredis">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ============ depends_on edges (dotted) ============ -->
+        <mxCell id="d_fe_be" value="depends_on" style="endArrow=open;html=1;dashed=1;dashPattern=1 3;strokeColor=#9673a6;fontSize=10;fontColor=#9673a6;" edge="1" parent="1" source="frontend" target="backend">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d_be_redis" value="depends_on" style="endArrow=open;html=1;dashed=1;dashPattern=1 3;strokeColor=#9673a6;fontSize=10;fontColor=#9673a6;exitX=1;exitY=0.25;entryX=0;entryY=0.25;" edge="1" parent="1" source="backend" target="redis">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="d_agent_redis" value="depends_on" style="endArrow=open;html=1;dashed=1;dashPattern=1 3;strokeColor=#9673a6;fontSize=10;fontColor=#9673a6;" edge="1" parent="1" source="agent" target="redis">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

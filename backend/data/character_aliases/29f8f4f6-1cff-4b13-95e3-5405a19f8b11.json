@@ -1,0 +1,87 @@
+{
+  "version": 1,
+  "book_id": "29f8f4f6-1cff-4b13-95e3-5405a19f8b11",
+  "characters": [
+    {
+      "canonical_name": "셜록 홈즈",
+      "aliases": [
+        "셜록 홈스",
+        "홈즈",
+        "셜록",
+        "홈즈 씨"
+      ],
+      "notes": "The Hound of the Baskervilles Sherlock variants."
+    },
+    {
+      "canonical_name": "존 H. 왓슨",
+      "aliases": [
+        "존 왓슨",
+        "왓슨",
+        "왓슨 박사",
+        "나(왓슨)",
+        "화자(왓슨)"
+      ],
+      "notes": "Watson is the narrator in many extracted passages."
+    },
+    {
+      "canonical_name": "스태플턴",
+      "aliases": [
+        "스텁블턴",
+        "스태플턴 씨",
+        "스탭틀턴 씨",
+        "스탤프턴",
+        "스테플턴"
+      ],
+      "notes": "The Hound of the Baskervilles Stapleton transliteration variant."
+    },
+    {
+      "canonical_name": "스태플턴 양",
+      "aliases": [
+        "스텁블턴의 여동생",
+        "스탤튼 양",
+        "베릴",
+        "스테플턴 부인"
+      ],
+      "notes": "Keep distinct from Stapleton; this is the woman referred to as Miss Stapleton."
+    },
+    {
+      "canonical_name": "셀든",
+      "aliases": [
+        "선든",
+        "셀던",
+        "실덴",
+        "션든"
+      ],
+      "notes": "Selden Korean transliteration variants."
+    },
+    {
+      "canonical_name": "제임스 모티머",
+      "aliases": [
+        "모티머 박사"
+      ],
+      "notes": "Dr. James Mortimer name/title variants."
+    },
+    {
+      "canonical_name": "프랭크랜드 씨",
+      "aliases": [
+        "프랭클랜드 씨"
+      ],
+      "notes": "Frankland Korean transliteration variant."
+    },
+    {
+      "canonical_name": "헨리 배스커빌",
+      "aliases": [
+        "헨리 배스커빌 경",
+        "헨리 바스커빌"
+      ],
+      "notes": "Sir Henry Baskerville title and transliteration variants."
+    },
+    {
+      "canonical_name": "로라 라이언스 부인",
+      "aliases": [
+        "라이언스 부인"
+      ],
+      "notes": "Laura Lyons title variant."
+    }
+  ]
+}
