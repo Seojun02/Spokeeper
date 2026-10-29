@@ -26,3 +26,10 @@ frontend/dist/
 *.log
 eval/cache/
 eval/data/scarlet_chapters.json
+
+# Local run artifacts / copyrighted text
+backend/data/local_db/
+backend/data/주홍색의_연구.epub
+.venv/
+frontend/node_modules/
+backend/cfi_tools/node_modules/

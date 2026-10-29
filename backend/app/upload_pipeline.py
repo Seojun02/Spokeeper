@@ -46,6 +46,8 @@ def _run_cfi_script(unpacked_dir: Path, output_json: Path) -> None:
         ["node", str(CFI_SCRIPT), str(unpacked_dir), str(output_json)],
         cwd=CFI_TOOLS_DIR,
         capture_output=True,
+        encoding="utf-8",
+        errors="replace",
         text=True,
         timeout=300,
     )

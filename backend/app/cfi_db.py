@@ -7,14 +7,29 @@ CFI 통합의 핵심 아이디어: 지금까지 시스템 곳곳에 흩어져 �
 """
 from __future__ import annotations
 
+import json
+import subprocess
+import tempfile
+import uuid
+import zipfile
 from dataclasses import dataclass
 from functools import lru_cache
-
-import psycopg2
-import psycopg2.extras
+from pathlib import Path
 
 from .cfi_utils import cfi_to_path
 from .config import SUPABASE_DB_URL
+
+try:  # Supabase 모드에서만 필요. 로컬 모드(SUPABASE_DB_URL 없음)는 설치 없이도 동작한다.
+    import psycopg2
+    import psycopg2.extras
+except ImportError:  # pragma: no cover
+    psycopg2 = None
+
+# SUPABASE_DB_URL 이 없으면 DB 대신 backend/data/local_db/ 의 JSON 파일로 같은 함수들을 제공한다.
+LOCAL_MODE = not SUPABASE_DB_URL
+LOCAL_DB_DIR = Path(__file__).resolve().parent.parent / "data" / "local_db"
+LOCAL_BOOKS_PATH = LOCAL_DB_DIR / "books.json"
+CFI_SCRIPT = Path(__file__).resolve().parent.parent / "cfi_tools" / "build_cfi_index.js"
 
 
 @dataclass(frozen=True)
@@ -34,12 +49,80 @@ def _connect():
     return psycopg2.connect(SUPABASE_DB_URL, connect_timeout=10)
 
 
+# ── 로컬 모드 (DB 없이 JSON 파일 사용) ───────────────────────────────────
+
+def _local_books() -> dict:
+    if LOCAL_BOOKS_PATH.exists():
+        return json.loads(LOCAL_BOOKS_PATH.read_text(encoding="utf-8"))
+    return {}
+
+
+def _save_local_books(books: dict) -> None:
+    LOCAL_DB_DIR.mkdir(parents=True, exist_ok=True)
+    LOCAL_BOOKS_PATH.write_text(json.dumps(books, ensure_ascii=False, indent=1), encoding="utf-8")
+
+
+def _local_cfi_path(book_id: str) -> Path:
+    return LOCAL_DB_DIR / "cfi" / f"{book_id}.json"
+
+
+def _build_rows_from_epub(epub_path: Path) -> list[dict]:
+    """업로드 파이프라인과 같은 Node 스크립트로 EPUB에서 CFI 문단 행을 만든다."""
+    with tempfile.TemporaryDirectory() as tmp:
+        unpacked = Path(tmp) / "unpacked"
+        unpacked.mkdir()
+        with zipfile.ZipFile(epub_path) as zf:
+            zf.extractall(unpacked)
+        out = Path(tmp) / "cfi_index.json"
+        result = subprocess.run(
+            ["node", str(CFI_SCRIPT), str(unpacked), str(out)],
+            cwd=CFI_SCRIPT.parent, capture_output=True,
+        encoding="utf-8",
+        errors="replace", text=True, timeout=300,
+        )
+        if result.returncode != 0:
+            raise RuntimeError(f"CFI 생성 스크립트 실패 (exit={result.returncode}):\n{result.stderr}")
+        return json.loads(out.read_text(encoding="utf-8"))
+
+
+def _local_paragraphs(book_id: str) -> tuple["CfiParagraph", ...]:
+    if not book_id:
+        return ()
+    path = _local_cfi_path(book_id)
+    if not path.exists():
+        # 등록된 EPUB 은 처음 읽을 때 한 번 인덱싱해서 저장한다.
+        from .book_repository import get_local_book_metadata, resolve_epub_path
+
+        if get_local_book_metadata(book_id) is None:
+            return ()
+        rows = _build_rows_from_epub(resolve_epub_path(book_id))
+        if not rows:  # 문단을 인식하지 못한 EPUB 은 빈 책으로 취급
+            return ()
+        insert_paragraphs(book_id, rows)
+    rows = json.loads(path.read_text(encoding="utf-8"))
+    rows.sort(key=lambda r: r["cfi_path"])
+    return tuple(
+        CfiParagraph(
+            global_index=i,
+            chapter_index=r["chapter_index"],
+            chapter_title=r["chapter_title"] or f"Chapter {r['chapter_index']}",
+            paragraph_index=r["paragraph_index"],
+            cfi_raw=r["cfi_raw"],
+            cfi_path=cfi_to_path(r["cfi_raw"]),
+            text_preview=r["text_preview"],
+        )
+        for i, r in enumerate(rows)
+    )
+
+
 # maxsize=8이었을 때는 등록된 책이 8권을 넘으면 /api/books가 전체 책을 순회할 때마다
 # LRU 캐시가 계속 밀려나서(스래싱) 캐시가 사실상 안 먹혀 매 요청마다 Supabase에 새
 # 연결을 맺느라 몇 초씩 걸렸다 — 책 수가 작고 자연히 유계라 무제한으로 둔다.
 @lru_cache(maxsize=None)
 def get_paragraphs(book_id: str) -> tuple[CfiParagraph, ...]:
     """book_id의 전체 문단을 cfi_path 순서(=global_index)로 반환. 결과는 캐시됨."""
+    if LOCAL_MODE:
+        return _local_paragraphs(book_id)
     conn = _connect()
     try:
         with conn.cursor(cursor_factory=psycopg2.extras.DictCursor) as cur:
@@ -126,6 +209,8 @@ def clear_cache() -> None:
 
 def find_book_by_hash(content_hash: str) -> str | None:
     """같은 content_hash의 책이 이미 있으면 book_id를, 없으면 None을 반환."""
+    if LOCAL_MODE:
+        return next((bid for bid, b in _local_books().items() if b.get("content_hash") == content_hash), None)
     conn = _connect()
     try:
         with conn.cursor() as cur:
@@ -137,6 +222,12 @@ def find_book_by_hash(content_hash: str) -> str | None:
 
 
 def set_storage_path(book_id: str, storage_path: str) -> None:
+    if LOCAL_MODE:
+        books = _local_books()
+        if book_id in books:
+            books[book_id]["storage_path"] = storage_path
+            _save_local_books(books)
+        return
     conn = _connect()
     try:
         with conn.cursor() as cur:
@@ -148,6 +239,8 @@ def set_storage_path(book_id: str, storage_path: str) -> None:
 
 def get_book_storage_path(book_id: str) -> str | None:
     """books.storage_path를 반환하고, 해당 book_id가 없으면 None을 반환한다."""
+    if LOCAL_MODE:
+        return (_local_books().get(book_id) or {}).get("storage_path") or None
     conn = _connect()
     try:
         with conn.cursor() as cur:
@@ -164,6 +257,12 @@ def get_book_storage_path(book_id: str) -> str | None:
 
 def list_books() -> list[dict]:
     """status='ready'인 책 목록을 (book_id, title, storage_path)로 반환."""
+    if LOCAL_MODE:
+        return [
+            {"book_id": bid, "title": b.get("title", ""), "storage_path": b.get("storage_path", "")}
+            for bid, b in _local_books().items()
+            if b.get("status") == "ready"
+        ]
     conn = _connect()
     try:
         with conn.cursor(cursor_factory=psycopg2.extras.DictCursor) as cur:
@@ -174,6 +273,8 @@ def list_books() -> list[dict]:
 
 
 def has_paragraphs(book_id: str) -> bool:
+    if LOCAL_MODE:
+        return _local_cfi_path(book_id).exists()
     conn = _connect()
     try:
         with conn.cursor() as cur:
@@ -185,6 +286,14 @@ def has_paragraphs(book_id: str) -> bool:
 
 def insert_book(content_hash: str, title: str, storage_path: str) -> str:
     """books row 생성(이미 있으면 기존 row 재사용). book_id 반환."""
+    if LOCAL_MODE:
+        books = _local_books()
+        existing = next((bid for bid, b in books.items() if b.get("content_hash") == content_hash), None)
+        book_id = existing or str(uuid.uuid4())
+        status = books.get(book_id, {}).get("status", "processing")
+        books[book_id] = {"content_hash": content_hash, "title": title, "storage_path": storage_path, "status": status}
+        _save_local_books(books)
+        return book_id
     conn = _connect()
     try:
         with conn.cursor() as cur:
@@ -208,6 +317,16 @@ def insert_paragraphs(book_id: str, rows: list[dict]) -> int:
     """CFI 생성 스크립트 결과(rows)를 book_cfi_index에 적재. 적재된 행 수 반환."""
     if not rows:
         return 0
+    if LOCAL_MODE:
+        path = _local_cfi_path(book_id)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(json.dumps(rows, ensure_ascii=False), encoding="utf-8")
+        books = _local_books()
+        if book_id in books:
+            books[book_id]["status"] = "ready"
+            _save_local_books(books)
+        get_paragraphs.cache_clear()
+        return len(rows)
     conn = _connect()
     try:
         with conn.cursor() as cur:
@@ -243,6 +362,12 @@ def delete_book(book_id: str) -> bool:
     전부 book_id에 ON DELETE CASCADE가 걸려있어 자동으로 같이 삭제된다.
     실제로 삭제된 행이 있었으면 True, 애초에 없던 book_id면 False.
     """
+    if LOCAL_MODE:
+        books = _local_books()
+        existed = books.pop(book_id, None) is not None
+        _save_local_books(books)
+        _local_cfi_path(book_id).unlink(missing_ok=True)
+        return existed
     conn = _connect()
     try:
         with conn.cursor() as cur:
