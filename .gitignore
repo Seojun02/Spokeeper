@@ -33,3 +33,8 @@ backend/data/주홍색의_연구.epub
 .venv/
 frontend/node_modules/
 backend/cfi_tools/node_modules/
+
+# Local runs: server logs, Scarlet analysis output (contains translated text)
+backend_run.err
+scarlet_book_id.txt
+backend/data/precomputed/bb62a77a-ca49-591c-b189-85907d14fc46.json

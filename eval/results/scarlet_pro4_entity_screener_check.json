@@ -1,0 +1,439 @@
+{
+ "와트슨": {
+  "scores": {
+   "person": 0.970688,
+   "single": 0.990292,
+   "inplot": 0.904651,
+   "human": 0.966914
+  },
+  "flag": []
+ },
+ "스탬포드": {
+  "scores": {
+   "person": 0.970688,
+   "single": 0.991423,
+   "inplot": 0.999704,
+   "human": 0.970688
+  },
+  "flag": []
+ },
+ "셜록 홈즈": {
+  "scores": {
+   "person": 0.939913,
+   "single": 0.987568,
+   "inplot": 0.962673,
+   "human": 0.924142
+  },
+  "flag": []
+ },
+ "레스트레이드": {
+  "scores": {
+   "person": 0.904651,
+   "single": 0.987568,
+   "inplot": 0.880797,
+   "human": 0.970688
+  },
+  "flag": []
+ },
+ "최신 유행의 옷을 차려 입은 젊은 아가씨": {
+  "scores": {
+   "person": 0.001701,
+   "single": 0.991423,
+   "inplot": 0.148047,
+   "human": 0.904651
+  },
+  "flag": [
+   "person",
+   "inplot"
+  ]
+ },
+ "행상을 하는 유대인 차림의 머리가 반백이 된 초라한 사람": {
+  "scores": {
+   "person": 0.037327,
+   "single": 0.985936,
+   "inplot": 0.999196,
+   "human": 0.851953
+  },
+  "flag": [
+   "person"
+  ]
+ },
+ "뒤꿈치가 닳아 없어진 구두를 신은 노파": {
+  "scores": {
+   "person": 0.047426,
+   "single": 0.979668,
+   "inplot": 0.182426,
+   "human": 0.320821
+  },
+  "flag": [
+   "person",
+   "inplot",
+   "human"
+  ]
+ },
+ "하숙집 아주머니": {
+  "scores": {
+   "person": 0.119203,
+   "single": 0.979668,
+   "inplot": 0.99929,
+   "human": 0.952574
+  },
+  "flag": [
+   "person"
+  ]
+ },
+ "뒤팽": {
+  "scores": {
+   "person": 0.880797,
+   "single": 0.987568,
+   "inplot": 0.003594,
+   "human": 0.010987
+  },
+  "flag": [
+   "inplot",
+   "human"
+  ]
+ },
+ "르코크": {
+  "scores": {
+   "person": 0.880797,
+   "single": 0.979668,
+   "inplot": 0.006693,
+   "human": 0.148047
+  },
+  "flag": [
+   "inplot",
+   "human"
+  ]
+ },
+ "가보리오": {
+  "scores": {
+   "person": 0.939913,
+   "single": 0.962673,
+   "inplot": 0.015906,
+   "human": 0.001927
+  },
+  "flag": [
+   "inplot",
+   "human"
+  ]
+ },
+ "포": {
+  "scores": {
+   "person": 0.924142,
+   "single": 0.974043,
+   "inplot": 0.005911,
+   "human": 0.880797
+  },
+  "flag": [
+   "inplot"
+  ]
+ },
+ "그레그슨": {
+  "scores": {
+   "person": 0.970688,
+   "single": 0.982014,
+   "inplot": 0.998499,
+   "human": 0.970688
+  },
+  "flag": []
+ },
+ "조셉 스탠거슨": {
+  "scores": {
+   "person": 0.952574,
+   "single": 0.994089,
+   "inplot": 0.998499,
+   "human": 0.904651
+  },
+  "flag": []
+ },
+ "해병대 출신 중사": {
+  "scores": {
+   "person": 0.119203,
+   "single": 0.992423,
+   "inplot": 0.999447,
+   "human": 0.880797
+  },
+  "flag": [
+   "person"
+  ]
+ },
+ "레이첼": {
+  "scores": {
+   "person": 0.924142,
+   "single": 0.987568,
+   "inplot": 0.095349,
+   "human": 0.119203
+  },
+  "flag": [
+   "inplot",
+   "human"
+  ]
+ },
+ "존 랜스": {
+  "scores": {
+   "person": 0.924142,
+   "single": 0.985936,
+   "inplot": 0.998073,
+   "human": 0.851953
+  },
+  "flag": []
+ },
+ "넬다 여사": {
+  "scores": {
+   "person": 0.880797,
+   "single": 0.990292,
+   "inplot": 0.075858,
+   "human": 0.851953
+  },
+  "flag": [
+   "inplot"
+  ]
+ },
+ "랜스의 부인": {
+  "scores": {
+   "person": 0.00038,
+   "single": 0.977023,
+   "inplot": 0.164516,
+   "human": 0.946597
+  },
+  "flag": [
+   "person",
+   "inplot"
+  ]
+ },
+ "소여라는 노파": {
+  "scores": {
+   "person": 0.998499,
+   "single": 0.957912,
+   "inplot": 0.182426,
+   "human": 0.047426
+  },
+  "flag": [
+   "inplot",
+   "human"
+  ]
+ },
+ "샤르팡티에 부인": {
+  "scores": {
+   "person": 0.998299,
+   "single": 0.970688,
+   "inplot": 0.997527,
+   "human": 0.939913
+  },
+  "flag": []
+ },
+ "아서 샤르팡티에": {
+  "scores": {
+   "person": 0.962673,
+   "single": 0.982014,
+   "inplot": 0.817574,
+   "human": 0.851953
+  },
+  "flag": []
+ },
+ "테리어종 개": {
+  "scores": {
+   "person": 0.119203,
+   "single": 0.851953,
+   "inplot": 0.998675,
+   "human": 0.904651
+  },
+  "flag": [
+   "person"
+  ]
+ },
+ "존 페리어": {
+  "scores": {
+   "person": 0.880797,
+   "single": 0.962673,
+   "inplot": 0.924142,
+   "human": 0.904651
+  },
+  "flag": []
+ },
+ "루시 페리어": {
+  "scores": {
+   "person": 0.952574,
+   "single": 0.970688,
+   "inplot": 0.946597,
+   "human": 0.924142
+  },
+  "flag": []
+ },
+ "모르몬 교도 지도자": {
+  "scores": {
+   "person": 0.182426,
+   "single": 0.962673,
+   "inplot": 0.817574,
+   "human": 0.924142
+  },
+  "flag": [
+   "person"
+  ]
+ },
+ "제퍼슨 호프": {
+  "scores": {
+   "person": 0.977023,
+   "single": 0.970688,
+   "inplot": 0.970688,
+   "human": 0.957912
+  },
+  "flag": []
+ },
+ "브리감 영": {
+  "scores": {
+   "person": 0.939913,
+   "single": 0.974043,
+   "inplot": 0.880797,
+   "human": 0.939913
+  },
+  "flag": []
+ },
+ "드리버 장로의 아들": {
+  "scores": {
+   "person": 0.00038,
+   "single": 0.962673,
+   "inplot": 0.999374,
+   "human": 0.999569
+  },
+  "flag": [
+   "person"
+  ]
+ },
+ "쿠퍼": {
+  "scores": {
+   "person": 0.851953,
+   "single": 0.977023,
+   "inplot": 0.817574,
+   "human": 0.851953
+  },
+  "flag": []
+ },
+ "예언자": {
+  "scores": {
+   "person": 0.00071,
+   "single": 0.952574,
+   "inplot": 0.997527,
+   "human": 0.817574
+  },
+  "flag": [
+   "person"
+  ]
+ },
+ "치안 판사": {
+  "scores": {
+   "person": 0.001325,
+   "single": 0.982014,
+   "inplot": 0.880797,
+   "human": 0.904651
+  },
+  "flag": [
+   "person"
+  ]
+ },
+ "경시청 경감": {
+  "scores": {
+   "person": 0.095349,
+   "single": 0.982014,
+   "inplot": 0.984094,
+   "human": 0.999196
+  },
+  "flag": [
+   "person"
+  ]
+ },
+ "홈즈와 와트슨": {
+  "scores": {
+   "person": 0.998073,
+   "single": 8.5e-05,
+   "inplot": 0.042088,
+   "human": 0.075858
+  },
+  "flag": [
+   "single",
+   "inplot",
+   "human"
+  ]
+ },
+ "드리버 가문": {
+  "scores": {
+   "person": 0.182426,
+   "single": 0.095349,
+   "inplot": 0.268941,
+   "human": 0.001032
+  },
+  "flag": [
+   "person",
+   "single",
+   "inplot",
+   "human"
+  ]
+ },
+ "머레이": {
+  "scores": {
+   "person": 0.991423,
+   "single": 0.996827,
+   "inplot": 0.029312,
+   "human": 0.037327
+  },
+  "flag": [
+   "inplot",
+   "human"
+  ]
+ },
+ "순찰 경관": {
+  "scores": {
+   "person": 0.119203,
+   "single": 0.99539,
+   "inplot": 0.095349,
+   "human": 0.119203
+  },
+  "flag": [
+   "person",
+   "inplot",
+   "human"
+  ]
+ },
+ "대머리 독수리": {
+  "scores": {
+   "person": 0.005911,
+   "single": 0.99883,
+   "inplot": 0.014064,
+   "human": 0.029312
+  },
+  "flag": [
+   "person",
+   "inplot",
+   "human"
+  ]
+ },
+ "총을 든 남자들(약 20명)": {
+  "scores": {
+   "person": 0.005911,
+   "single": 0.001701,
+   "inplot": 0.060087,
+   "human": 0.148047
+  },
+  "flag": [
+   "person",
+   "single",
+   "inplot",
+   "human"
+  ]
+ },
+ "이주민 무리": {
+  "scores": {
+   "person": 0.095349,
+   "single": 0.020332,
+   "inplot": 0.148047,
+   "human": 0.005911
+  },
+  "flag": [
+   "person",
+   "single",
+   "inplot",
+   "human"
+  ]
+ }
+}

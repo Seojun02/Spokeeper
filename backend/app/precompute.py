@@ -60,6 +60,7 @@ def _build_single_entry(
     canonical_registry: list[dict],
     global_name_map: dict[str, str],
     prev_raw_names: set[str],
+    passages_for=None,
 ) -> tuple[dict, dict[str, str]]:
     """경계선 하나에 대해 인물 병합 → VerifierAgent → ReminderWriterAgent →
     (간접 누출 판정은 제거)를 체이닝해서 계약 entry 하나를 만든다.
@@ -78,7 +79,7 @@ def _build_single_entry(
     과거 entries에도 이 rename을 소급 적용해야 한다(그러지 않으면 같은 인물이
     경계선 전후로 다른 이름을 갖게 된다).
     """
-    from agents.character_entity_filter import filter_generic_role_entities
+    from agents.entity_screener import screen_result
     from agents.reminder_writer_agent import write_reminders
     from agents.config import CANONICALIZER
     from agents.verifier_agent import _apply_character_name_map, verify_build_result
@@ -87,18 +88,15 @@ def _build_single_entry(
     else:
         from agents.verifier_agent import canonicalize_new_characters
 
-    result = filter_generic_role_entities(result, book_id=book_id)
+    # 인물이 아닌 항목(일반 지칭·무리·언급만 되는 인물·글자)은 규칙 대신 solar-decide 질문으로 거른다
+    result, role_aliases = screen_result(result, canonical_registry, book_id=book_id, passages_for=passages_for)
+    for role, target in role_aliases.items():  # 본문으로 확인된 역할 호칭 → 기존 인물 (확인된 경계선부터만 적용)
+        global_name_map[role] = global_name_map.get(target, target)
+        prev_raw_names.add(role)
 
     raw_characters = result.get("characters", [])
     new_characters = [c for c in raw_characters if c.get("name", "") not in prev_raw_names]
     prev_raw_names.update(c.get("name", "") for c in raw_characters)
-
-    if CANONICALIZER == "hybrid":  # 일반 지칭 판별은 solar-decide, 동일 인물 병합은 기존 LLM 방식 그대로
-        from agents.decide_canonicalizer import classify_generic_names, drop_entities, pop_dropped_names
-        classify_generic_names(new_characters, canonical_registry, book_id=book_id)
-        dropped_all = pop_dropped_names(canonical_registry)
-        result = drop_entities(result, dropped_all)
-        new_characters = [c for c in new_characters if c.get("name") not in dropped_all]
 
     new_map, rename_map = canonicalize_new_characters(new_characters, canonical_registry, book_id=book_id)
     global_name_map.update(new_map)
@@ -561,7 +559,21 @@ def precompute_from_epub(
 
         entries[:] = _apply_consolidation_to_entries(entries, merge_map, remove_names)
 
+    current_boundary = {"value": -1}
+
+    def passages_for(name: str, limit: int = 4) -> list[str]:
+        """이 이름이 처음 나온 청크 몇 개(현재 경계선까지만). 이름이 본문에 그대로 없으면 빈 목록."""
+        key = name.replace(" ", "")
+        found: list[str] = []
+        for ch in chunks:
+            if ch["offset"] > current_boundary["value"] or len(found) >= limit:
+                break
+            if key and key in ch["text"].replace(" ", ""):
+                found.append(ch["text"])
+        return found
+
     for chunk_boundary in sorted(boundaries):
+        current_boundary["value"] = chunk_boundary
         result = incremental_build_agent(
             chunks=chunks,
             current_offset=chunk_boundary,
@@ -579,6 +591,7 @@ def precompute_from_epub(
             canonical_registry,
             global_name_map,
             prev_raw_names,
+            passages_for=passages_for,
         )
         entries.append(entry)
         if rename_map:

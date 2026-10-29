@@ -1,576 +1,126 @@
 # 🍀 SpoKeeper
 
-<div align="right">
+> **읽은 곳까지만 알려주는 독서 도우미.** 소설을 읽다가 "이 사람 누구였지?" 싶을 때, 지금 읽은 위치까지의 내용만으로 인물 관계도와 줄거리 요약을 보여 줍니다. 뒤에 나올 내용은 보여 주지 않습니다.
 
-[🇺🇸 English Version](#-english-version)
+[English summary](#english-summary)
 
-</div>
+## 무엇을 하나
 
-> **"읽기 위치가 스포일러의 경계가 됩니다."**
+- EPUB 소설을 올리면, 책을 일정 간격(경계선)마다 끊어 그 위치까지의 **인물, 관계, 사건**을 LLM으로 미리 분석해 둡니다.
+- 독자가 책을 읽으면 현재 위치에 맞는 **인물 관계도**와 **리마인드**(여기까지의 줄거리 요약)를 보여 줍니다.
+- 핵심 원칙은 하나입니다. **읽기 위치가 스포일러의 경계다.** 각 위치의 결과는 그 위치까지의 본문만으로 만듭니다.
 
----
+## 이 저장소에 대해
 
-## 1. 프로젝트 소개
+SpoKeeper는 Upstage AI 부트캠프에서 4인 팀으로 만든 프로젝트입니다(아래 [만든 사람들](#만든-사람들)). 팀 프로젝트는 원래 저장소에 기록으로 남겨 두었습니다.
 
-**SpoKeeper**는 사용자가 현재까지 읽은 소설의 내용만을 기반으로 **인물 관계도(Context Graph)** 와 **맥락 리마인드(Context Reminder)** 를 제공하는 AI 기반 **Spoiler-Safe 독서 보조 서비스**입니다.
+이 저장소는 팀 프로젝트가 끝난 뒤 **양준서(@Seojun02)가 개인적으로 이어서 진행한 연구와 개선**을 담은 포트폴리오용 저장소입니다. 팀 커밋 기록은 가져오지 않았습니다.
 
-기존 AI 요약 서비스나 RAG 기반 검색은 책 전체를 참조하기 때문에 의도치 않은 스포일러가 발생할 수 있습니다.
+### 개인 연구에서 한 일
 
-SpoKeeper는 **현재 읽기 위치(Offset)** 를 기준으로 정보 접근을 제한하고, **Multi-Agent Workflow**를 통해 미래 내용을 차단하면서 독서 경험을 돕는 것을 목표로 합니다.
+| 주제 | 내용 | 문서 |
+|---|---|---|
+| 모델 비교 | solar-pro3 → solar-pro4 교체 효과를 정답 세트로 측정. 관계 재현율 30.7% → 63.0%, 틀린 관계 20 → 2 | [model-comparison.md](docs/model-comparison.md) |
+| 파이프라인 경량화 | 멀티 에이전트 파이프라인을 줄여도 정확도가 같거나 나음을 확인(LLM 호출 약 1/4) | [model-comparison.md](docs/model-comparison.md) |
+| 간접 누출 판정 제거 | 리마인드 스포일러 시험 후, 이득이 없고 오히려 복선을 덧붙인 판정 에이전트를 제거 | [indirect-leakage-test.md](docs/indirect-leakage-test.md) |
+| 인물 검사 | 책 하나에 맞춰진 단어 규칙 필터를 solar-decide 질문 4개로 교체 | [entity-screening.md](docs/entity-screening.md) |
+| 역할 호칭 연결 | "예언자" → "브리감 영"처럼 호칭을 본문 근거가 있을 때만 기존 인물에 연결 | [entity-screening.md](docs/entity-screening.md) |
+| 로컬 실행 | DB 없이 JSON 파일로 동작하는 로컬 모드 | 아래 [실행하기](#실행하기) |
 
-사용자는 EPUB 소설을 업로드한 후 평소처럼 책을 읽기만 하면 됩니다.
+파이프라인을 처음 보는 분은 [docs/pipeline-explainer.html](docs/pipeline-explainer.html)을 브라우저로 열어 보세요. 이름 세 개가 파이프라인을 지나가는 과정을 단계별로 보여 줍니다.
 
-SpoKeeper는 사용자의 현재 읽기 위치까지 등장한 다음 정보를 자동으로 분석합니다.
-
-* 등장인물
-* 인물 관계
-* 주요 사건
-
-현재까지 읽은 내용만을 기반으로 다음 기능을 제공합니다.
-
-* 인물 관계도
-* Context Reminder
-
----
-
-## 2. 문제 정의
-
-독서 중 AI를 활용할 때 가장 큰 문제는 **스포일러**입니다.
-
-| 문제          | 설명                           |
-| ----------- | ---------------------------- |
-| 스포일러 발생     | AI가 미래 사건이나 등장인물을 함께 설명하는 문제 |
-| 등장인물 기억 어려움 | 장편 소설일수록 인물 관계를 기억하기 어려움     |
-| 줄거리 기억 부족   | 오랜만에 다시 읽으면 앞 내용을 잊어버림       |
-
-기존 AI 요약 서비스나 RAG 기반 검색은 책 전체를 참조할 수 있기 때문에, 사용자가 아직 읽지 않은 미래 사건이나 등장인물 정보를 의도치 않게 제공할 수 있습니다.
-
-SpoKeeper는 **"현재 읽은 위치까지만"** 정보를 제공하여 이러한 문제를 해결합니다.
-
----
-
-## 3. 문제 해결
-
-SpoKeeper는 사용자의 **현재 읽기 위치(Offset)** 를 스포일러의 경계로 설정합니다.
-
-사용자가 EPUB 소설을 업로드하면 본문과 챕터를 분석하고, 현재 읽은 위치까지 등장한 인물, 관계, 사건을 추출합니다.
-
-이후 **Multi-Agent Workflow**를 통해 현재 Offset 이후의 정보가 사용자에게 노출되지 않도록 제한합니다.
-
-### Spoiler Guard
-
-#### 1. VerifierAgent (1차 Guard)
-
-RetrieverAgent가 검색한 결과 중 다음 조건을 만족하는 정보만 통과시킵니다.
-
-> **정보 Offset ≤ 사용자 Offset**
-
-#### 2. ReminderWriterAgent
-
-현재 Offset 이하의 정보만 이용하여 리마인드를 생성합니다.
-
-추측, 해석, 미래 예측은 수행하지 않습니다.
-
-#### 3. Render Guard (예정)
-
-생성된 결과를 다시 Offset 기준으로 검증하여 미래 정보가 포함되지 않았는지 확인합니다.
-
-#### 4. IndirectLeakageJudge (예정)
-
-직접적인 스포일러뿐 아니라 다음 요소까지 판단합니다.
-
-* 암시
-* 복선
-* 미래를 연상시키는 표현
-
-판단 결과에 따라 다음 중 하나를 선택합니다.
-
-* `PASS`
-* `REWRITE`
-* `SUPPRESS`
-
-### Agent Workflow
+## 분석 파이프라인 (현재)
 
 ```text
-                 EPUB
-                   │
-             ParserAgent
-                   │
-             ChunkAgent
-                   │
-              ChromaDB
-                   │
-      Incremental BuildAgent
-                   │
-             BuildAgent
-                   │
-         Knowledge Graph
-        ┌──────────┴──────────┐
-        ▼                     ▼
- CharacterProfiler      Graph Viewer
-        │
-        ▼
- Avatar Prompt (예정)
-
-────────────────────────────────────
-
-       RetrieverAgent
-              │
-              ▼
-      VerifierAgent
-              │
-              ▼
-    ReminderWriterAgent
-              │
-              ▼
- IndirectLeakageJudge (예정)
-              │
-              ▼
-      Render Guard (예정)
-              │
-              ▼
-            사용자
+EPUB → 청크 분할 → 경계선마다 반복
+                      │
+                      ▼
+   증분 추출 (LLM)             지금까지 읽은 글에서 인물·관계·사건 추출
+                      │
+                      ▼
+   인물 검사 (solar-decide)    새 이름마다 질문 4개: 개인 이름인가 / 한 명인가 /
+                      │        이야기 속 인물인가 / 실재하는 존재인가
+                      │        └ 역할 호칭이면 → 본문 근거로 기존 인물에 연결, 못 하면 제거
+                      ▼
+   동일 인물 병합 (LLM)        새 이름을 기존 인물 목록과 비교
+                      │
+                      ▼
+   근거 검증                   원문 근거 없는 관계·사건 제거
+                      │
+                      ▼
+   그래프 + 리마인드 (LLM)     → 위치별로 저장, 읽기 위치에 맞춰 서빙
 ```
 
-### 프로젝트 구조
+- 기본 모델: `solar-pro4` (`UPSTAGE_CHAT_MODEL`로 변경)
+- 인물 검사 끄기: `SCREENER=off`, 호칭 연결 끄기: `ALIAS_RESOLVE=0`
 
-저장소는 `frontend` / `backend` / `agents` 세 개의 주요 폴더로 구성됩니다.
+## 실행하기
+
+DB 없이 로컬에서 실행하는 방법입니다. Python 3.12 이상(3.13에서 확인), Node.js, Upstage API 키가 필요합니다.
+
+```bash
+# 1) 설치
+python -m venv .venv && .venv/Scripts/pip install -r backend/requirements.txt -r agents/requirements.txt   # macOS/Linux: .venv/bin/pip
+(cd backend/cfi_tools && npm ci)
+(cd frontend && npm ci)
+echo "UPSTAGE_API_KEY=..." > .env
+
+# 2) EPUB을 backend/data/ 아래에 둔다 (서버 시작 시 자동 등록, 책 ID는 파일 내용으로 정해진다)
+
+# 3) 백엔드 (저장소 최상위에서)
+SPO_SOURCE=local .venv/Scripts/python -m uvicorn backend.app.main:app --port 8000
+
+# 4) 책 분석 (책 ID는 /api/books 에서 확인)
+.venv/Scripts/python backend/scripts/run_full_analysis.py <book_id>
+
+# 5) 프론트엔드 → http://127.0.0.1:5173
+(cd frontend && npm run dev)
+```
+
+`SUPABASE_DB_URL`이 없으면 자동으로 로컬 모드가 되어 `backend/data/local_db/`의 JSON 파일을 씁니다. 원래의 Docker + Supabase 구성은 [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)에 있습니다.
+
+## 저장소 구조
 
 ```text
-.
-├── frontend/                # React + Vite (읽기 UI, 관계도, 리마인드)
-│   ├── src/
-│   │   ├── api/             # 통합 계약 타입·클라이언트·훅
-│   │   └── components/
-│   └── vite.config.ts       # /api → 127.0.0.1:8000 프록시
-│
-├── backend/                 # FastAPI 서빙 (graph_json, reminders, progress 계약)
-│   ├── app/
-│   │   ├── main.py          # 라우트 + 소스 주입(_make_source)
-│   │   ├── schemas.py       # 통합 계약 스키마
-│   │   ├── content_source.py# FixtureSource / AgentResultSource
-│   │   ├── agent_adapter.py # 에이전트 출력 → 계약 변환
-│   │   ├── precompute.py    # 경계선별 build 결과 → 계약 JSON 저장소
-│   │   └── db.py, fixtures.py
-│   ├── scripts/make_demo_store.py
-│   └── tests/
-│
-└── agents/                  # AI 에이전트 파이프라인 (Solar-Pro2 + LangChain)
-    ├── build_agent.py       # 인물·관계·사건 추출 (+ 증분 빌드)
-    ├── character_profiler_agent.py
-    ├── parsers/epub_parser.py
-    ├── tools/chunk_tool.py
-    ├── config.py
-    ├── app.py               # Streamlit 프로토타입
-    ├── data/books/          # EPUB 샘플
-    └── requirements.txt
+agents/      추출·검사·병합·리마인드 에이전트 (entity_screener.py, role_alias_resolver.py 등)
+backend/     FastAPI 서버, 위치별 결과 생성(precompute.py), 테스트
+frontend/    React + Vite 리더 UI (관계도, 리마인드)
+eval/        모델 비교 하네스, 정답 세트, 결과(eval/results), 제거한 구성요소(eval/legacy)
+docs/        실험 문서, 아키텍처, 파이프라인 설명 페이지
 ```
 
-**실행:** 모든 명령은 저장소 최상위 경로에서 실행합니다.
+## 한계
 
-`agents`와 `backend`는 저장소 최상위를 `sys.path` 기준으로 사용합니다.
+- 실험은 『주홍색의 연구』 한 권으로 했고, 정답 세트는 사람의 전수 검토를 마치지 않았습니다.
+- 인물 검사의 기준값은 이 책으로 정했습니다. 다른 책에서의 적정성은 확인하지 않았습니다.
+- 역할 호칭 연결은 정확도를 우선해, 본문에 호칭과 이름이 함께 나오지 않으면 연결하지 않습니다. 놓치는 연결이 많습니다.
+- 번역본 원문과 그 분석 결과는 저작권 때문에 저장소에 넣지 않았습니다.
 
-```python
-from agents.build_agent import ...
-from backend.app...
-```
+## 만든 사람들
 
-### 기술 스택
+팀 프로젝트(Upstage AI 부트캠프):
 
-#### AI
+| 이름 | 역할 | GitHub |
+|---|---|---|
+| 김원재 | 백엔드 및 아키텍처 | @1jaekim |
+| 양준서 | 프로젝트 매니저 | @Seojun02 |
+| 최정재 | AI 에이전트 개발 | @Giseulg |
+| 현지민 | UX/UI | @jmmom0320 |
 
-* Upstage Solar-Pro2
-* LangChain
-
-#### Vector Database
-
-* ChromaDB
-
-#### Backend
-
-* Python
-* Streamlit (Prototype)
-
-#### 예정
-
-* FastAPI
-* React
+팀 이후의 개인 연구(이 저장소의 추가 작업): 양준서
 
 ---
 
-## 4. 핵심 기능
+## English summary
 
-### EPUB Parser
+**SpoKeeper** is a spoiler-safe reading assistant. For an EPUB novel, it pre-computes characters, relationships, and events at fixed reading positions, and shows a relationship graph and a story reminder based only on the text up to the reader's current position.
 
-EPUB 파일에서 본문과 챕터를 자동으로 추출합니다.
+It started as a 4-person team project at the Upstage AI Bootcamp. This repository holds the follow-up research by Seojun Yang (@Seojun02):
 
-### AI BuildAgent
+- **Model comparison:** switching extraction from solar-pro3 to solar-pro4 doubled core-relation recall (30.7% → 63.0%) and cut wrong relations from 20 to 2 on a hand-built answer set ([details](docs/model-comparison.md)).
+- **Lighter pipeline:** a reduced pipeline matched or beat the full multi-agent one with about 1/4 of the LLM calls.
+- **Removed the indirect-leakage judge** after a reminder spoiler test showed no benefit ([details](docs/indirect-leakage-test.md)).
+- **Entity screening:** replaced a book-specific word-list filter with four solar-decide questions, and links role names (e.g., "the prophet") to named characters only when the text names both in one sentence ([details](docs/entity-screening.md)).
+- **Local mode:** runs without a database, using JSON files.
 
-등장인물, 관계, 사건을 자동으로 분석합니다.
-
-### Knowledge Graph
-
-현재 읽은 위치까지 등장한 인물 관계를 시각화합니다.
-
-### Context Reminder
-
-현재 읽은 위치까지의 내용을 자연스럽게 요약합니다.
-
-### Spoiler Guard
-
-Offset을 기준으로 미래 내용을 차단하여 스포일러를 방지합니다.
-
-### 개발 진행 현황
-
-| 기능                     | 상태 |
-| ---------------------- | -- |
-| EPUB Parser            | ✅  |
-| Chunk Generator        | ✅  |
-| ChromaDB               | ✅  |
-| Incremental BuildAgent | ✅  |
-| BuildAgent             | ✅  |
-| CharacterProfilerAgent | ✅  |
-| Graph Viewer           | ✅  |
-| VerifierAgent          | ✅  |
-| ReminderWriterAgent    | 🚧 |
-| Render Guard           | 🚧 |
-| IndirectLeakageJudge   | 🚧 |
-| AvatarGeneratorAgent   | 🚧 |
-
-### 기대 효과
-
-#### 독자
-
-* 등장인물 관계를 쉽게 이해
-* 줄거리 기억 부담 감소
-* 스포일러 없는 독서 경험
-
-#### AI 서비스
-
-* Offset 기반 접근 제어
-* Multi-Agent Workflow
-* Knowledge Graph 기반 관계 관리
-* Spoiler Guard 구조를 통한 안전한 AI 독서 지원
-
----
-
-## 5. 데모 영상
-
-프로젝트를 확인할 수 있는 데모 영상 및 시연 자료를 첨부합니다.
-
-* **데모 영상:** 추가 예정
-* **배포 URL:** 추가 예정
-* **추가 시연 자료:** 추가 예정
-
----
-
-## 6. 팀원 소개
-
-| 이름  | 역할         | GitHub     |
-| --- | ---------- | ---------- |
-| 김원재 | 백엔드 및 아키텍처 | @1jaekim   |
-| 양준서 | 프로젝트 매니저   | @Seojun02  |
-| 최정재 | AI 에이전트 개발 | @Giseulg   |
-| 현지민 | UX/UI      | @jmmom0320 |
-
----
-
-## 7. 참고자료 / 발표자료
-
-프로젝트를 이해하는 데 도움이 되는 자료를 첨부합니다.
-
-* **발표자료:** 추가 예정
-* **기획서:** 추가 예정
-* **참고한 문서:** 추가 예정
-* **참고한 오픈소스:** 추가 예정
-* **기타 자료:** 추가 예정
-
----
-
-# 🇺🇸 English Version
-
-<details>
-<summary><b>🇺🇸 Click to view the English version</b></summary>
-
-<br>
-
-> **"Your reading position becomes the boundary against spoilers."**
-
----
-
-## 1. Project Introduction
-
-**SpoKeeper** is an AI-powered **Spoiler-Safe Reading Assistant** that provides a **Character Relationship Graph (Context Graph)** and **Context Reminder** based only on the content of a novel that the user has read so far.
-
-Existing AI summarization services and RAG-based search systems may reference the entire book, which can unintentionally expose users to spoilers.
-
-SpoKeeper aims to enhance the reading experience while preventing access to future content by restricting information based on the user's **current reading position (Offset)** and using a **Multi-Agent Workflow**.
-
-Users simply upload an EPUB novel and read it as usual.
-
-SpoKeeper automatically analyzes the following information that has appeared up to the user's current reading position:
-
-* Characters
-* Character relationships
-* Major events
-
-Based only on the content read so far, it provides:
-
-* Character Relationship Graph
-* Context Reminder
-
----
-
-## 2. Problem Definition
-
-The biggest challenge when using AI while reading is **spoilers**.
-
-| Problem                           | Description                                                                          |
-| --------------------------------- | ------------------------------------------------------------------------------------ |
-| Spoiler Exposure                  | AI may reveal future events or characters                                            |
-| Difficulty Remembering Characters | It becomes increasingly difficult to remember character relationships in long novels |
-| Difficulty Remembering the Story  | Readers may forget previous events when returning to a book after a long break       |
-
-Existing AI summarization services and RAG-based search systems may reference the entire book, potentially exposing users to future events or characters they have not yet encountered.
-
-SpoKeeper solves these problems by providing information **only up to the user's current reading position**.
-
----
-
-## 3. Problem Solution
-
-SpoKeeper defines the user's **current reading position (Offset)** as the boundary against spoilers.
-
-When a user uploads an EPUB novel, SpoKeeper analyzes the text and chapters and extracts characters, relationships, and events that have appeared only up to the user's current reading position.
-
-A **Multi-Agent Workflow** then prevents information beyond the current Offset from being exposed to the user.
-
-### Spoiler Guard
-
-#### 1. VerifierAgent (First Guard)
-
-Among the results retrieved by the RetrieverAgent, only information that satisfies the following condition is allowed to pass:
-
-> **Information Offset ≤ User Offset**
-
-#### 2. ReminderWriterAgent
-
-The ReminderWriterAgent generates reminders using only information at or below the current Offset.
-
-It does not perform speculation, interpretation, or prediction of future events.
-
-#### 3. Render Guard (Planned)
-
-The generated results are verified again based on the Offset to ensure that no future information is included.
-
-#### 4. IndirectLeakageJudge (Planned)
-
-In addition to direct spoilers, the IndirectLeakageJudge evaluates elements such as:
-
-* Implications
-* Foreshadowing
-* Expressions that may suggest future events
-
-Based on the evaluation result, one of the following actions is selected:
-
-* `PASS`
-* `REWRITE`
-* `SUPPRESS`
-
-### Agent Workflow
-
-```text
-                 EPUB
-                   │
-             ParserAgent
-                   │
-             ChunkAgent
-                   │
-              ChromaDB
-                   │
-      Incremental BuildAgent
-                   │
-             BuildAgent
-                   │
-         Knowledge Graph
-        ┌──────────┴──────────┐
-        ▼                     ▼
- CharacterProfiler      Graph Viewer
-        │
-        ▼
- Avatar Prompt (Planned)
-
-────────────────────────────────────
-
-       RetrieverAgent
-              │
-              ▼
-      VerifierAgent
-              │
-              ▼
-    ReminderWriterAgent
-              │
-              ▼
- IndirectLeakageJudge (Planned)
-              │
-              ▼
-      Render Guard (Planned)
-              │
-              ▼
-             User
-```
-
-### Project Structure
-
-The repository consists of three main directories: `frontend`, `backend`, and `agents`.
-
-```text
-.
-├── frontend/                # React + Vite (Reading UI, Graph, Reminder)
-│   ├── src/
-│   │   ├── api/             # Unified contract types, client, and hooks
-│   │   └── components/
-│   └── vite.config.ts       # /api → 127.0.0.1:8000 proxy
-│
-├── backend/                 # FastAPI serving (graph_json, reminders, progress contract)
-│   ├── app/
-│   │   ├── main.py          # Routes + source injection (_make_source)
-│   │   ├── schemas.py       # Unified contract schemas
-│   │   ├── content_source.py# FixtureSource / AgentResultSource
-│   │   ├── agent_adapter.py # Agent output → contract conversion
-│   │   ├── precompute.py    # Boundary-based build results → contract JSON storage
-│   │   └── db.py, fixtures.py
-│   ├── scripts/make_demo_store.py
-│   └── tests/
-│
-└── agents/                  # AI Agent Pipeline (Solar-Pro2 + LangChain)
-    ├── build_agent.py       # Character, relationship, and event extraction (+ incremental build)
-    ├── character_profiler_agent.py
-    ├── parsers/epub_parser.py
-    ├── tools/chunk_tool.py
-    ├── config.py
-    ├── app.py               # Streamlit prototype
-    ├── data/books/          # EPUB samples
-    └── requirements.txt
-```
-
-**Execution:** All commands should be run from the repository root directory.
-
-The `agents` and `backend` modules use the repository root as the `sys.path` base.
-
-```python
-from agents.build_agent import ...
-from backend.app...
-```
-
-### Tech Stack
-
-#### AI
-
-* Upstage Solar-Pro2
-* LangChain
-
-#### Vector Database
-
-* ChromaDB
-
-#### Backend
-
-* Python
-* Streamlit (Prototype)
-
-#### Planned
-
-* FastAPI
-* React
-
----
-
-## 4. Core Features
-
-### EPUB Parser
-
-Automatically extracts text and chapters from EPUB files.
-
-### AI BuildAgent
-
-Automatically analyzes characters, relationships, and events.
-
-### Knowledge Graph
-
-Visualizes character relationships that have appeared up to the user's current reading position.
-
-### Context Reminder
-
-Naturally summarizes the story only up to the user's current reading position.
-
-### Spoiler Guard
-
-Prevents spoilers by blocking future information based on the user's current Offset.
-
-### Development Status
-
-| Feature                | Status |
-| ---------------------- | ------ |
-| EPUB Parser            | ✅      |
-| Chunk Generator        | ✅      |
-| ChromaDB               | ✅      |
-| Incremental BuildAgent | ✅      |
-| BuildAgent             | ✅      |
-| CharacterProfilerAgent | ✅      |
-| Graph Viewer           | ✅      |
-| VerifierAgent          | ✅      |
-| ReminderWriterAgent    | 🚧     |
-| Render Guard           | 🚧     |
-| IndirectLeakageJudge   | 🚧     |
-| AvatarGeneratorAgent   | 🚧     |
-
-### Expected Benefits
-
-#### For Readers
-
-* Easier understanding of character relationships
-* Reduced burden of remembering previous story details
-* A spoiler-free reading experience
-
-#### For AI Services
-
-* Offset-based access control
-* Multi-Agent Workflow
-* Knowledge Graph-based relationship management
-* Safe AI-powered reading assistance through the Spoiler Guard architecture
-
----
-
-## 5. Demo Video
-
-Demo videos and other materials showcasing the project can be found below.
-
-* **Demo Video:** Coming soon
-* **Deployment URL:** Coming soon
-* **Additional Demo Materials:** Coming soon
-
----
-
-## 6. Team Members
-
-| Name          | Role                   | GitHub     |
-| ------------- | ---------------------- | ---------- |
-| Wonjae Kim    | Backend & Architecture | @1jaekim   |
-| Junseo Yang   | Project Manager        | @Seojun02  |
-| Jeongjae Choi | AI Agent Development   | @Giseulg   |
-| Jimin Hyun    | UX/UI                  | @jmmom0320 |
-
----
-
-## 7. References / Presentation Materials
-
-Materials that provide additional information about the project are listed below.
-
-* **Presentation:** Coming soon
-* **Project Plan:** Coming soon
-* **Reference Documents:** Coming soon
-* **Open Source References:** Coming soon
-* **Other Materials:** Coming soon
-
-</details>
+Limits: one book, an answer set not fully human-reviewed, thresholds tuned on that book.

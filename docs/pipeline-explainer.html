@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SpoKeeper 파이프라인</title>
+<style>
+:root{
+  --bg:#f7f1e6; --card:#fffaf0; --ink:#2b2622; --muted:#6f655b; --line:#e0d4bd;
+  --rule:#8a6d3b; --llm:#3b6ea5; --decide:#b5532a; --keep:#3f7d4e; --drop:#b03a3a; --merge:#7a4fa0;
+  --done:#3f7d4e; --propose:#b5532a; --todo:#8a8a8a;
+  --display:Georgia,"Noto Serif KR","Malgun Gothic",serif; --body:"Malgun Gothic","Apple SD Gothic Neo",system-ui,sans-serif; --mono:Consolas,"SFMono-Regular",monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.65 var(--body)}
+.wrap{max-width:1000px;margin:0 auto;padding:24px 16px 56px}
+h1{font:700 28px/1.3 var(--display);margin:0 0 6px}
+h2{font:700 20px/1.3 var(--display);margin:34px 0 10px}
+.sub{color:var(--muted);margin:0 0 18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;box-shadow:0 1px 2px rgba(60,40,10,.06)}
+.ribbon{display:flex;flex-wrap:wrap;gap:8px;align-items:center;background:#efe3c8;border:1px solid var(--line);border-radius:10px;padding:10px 14px}
+.ribbon b{font-family:var(--display)}
+.tag{display:inline-block;font-size:12px;padding:1px 8px;border-radius:99px;color:#fff;font-weight:600;white-space:nowrap}
+.t-rule{background:var(--rule)} .t-llm{background:var(--llm)} .t-decide{background:var(--decide)}
+.t-done{background:var(--done)} .t-propose{background:var(--propose)} .t-todo{background:var(--todo)}
+.toggle{display:inline-flex;border:1px solid var(--line);border-radius:99px;overflow:hidden;background:var(--card)}
+.toggle button{border:0;background:transparent;padding:6px 16px;font:600 14px var(--body);color:var(--muted);cursor:pointer}
+.toggle button[aria-pressed="true"]{background:var(--ink);color:#fff}
+button:focus-visible{outline:3px solid var(--decide);outline-offset:2px}
+svg{width:100%;height:auto;display:block}
+.node rect{fill:var(--card);stroke:var(--line);stroke-width:1.5;transition:fill .3s,stroke .3s}
+.node text{font:600 13px var(--body);fill:var(--ink);text-anchor:middle}
+.node .kind{font:600 11px var(--body);fill:var(--muted)}
+.node{cursor:pointer}
+.node.off rect{fill:#ece6d8;stroke-dasharray:4 3}
+.node.off text{fill:#a59b8b}
+.node.active rect{stroke:var(--ink);stroke-width:3;fill:#fff3d6}
+.node.past rect{stroke:var(--done)}
+.edge{stroke:var(--line);stroke-width:2;fill:none}
+.edge.on{stroke:var(--muted)}
+.player{display:grid;grid-template-columns:1fr;gap:14px;margin-top:14px}
+@media(min-width:800px){.player{grid-template-columns:1.1fr 1fr}}
+.controls{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:10px}
+.controls button{border:1px solid var(--line);background:var(--card);border-radius:8px;padding:7px 14px;font:600 14px var(--body);cursor:pointer;color:var(--ink)}
+.controls button:disabled{opacity:.4;cursor:default}
+.dots{display:flex;gap:6px;margin-left:auto}
+.dot{width:12px;height:12px;border-radius:50%;border:2px solid var(--muted);background:transparent;padding:0;cursor:pointer}
+.dot[aria-current="true"]{background:var(--ink);border-color:var(--ink)}
+.scene-title{font:700 17px var(--display);margin:0 0 4px}
+.chips{display:flex;flex-direction:column;gap:8px;margin-top:10px}
+.chip{display:flex;align-items:center;gap:10px;border:2px solid var(--line);border-radius:10px;padding:8px 12px;background:#fff;transition:all .35s}
+.chip .nm{font-weight:700}
+.chip .st{margin-left:auto;font-size:13px;font-weight:700}
+.chip .why{display:block;font-size:12.5px;color:var(--muted);font-weight:400}
+.chip[data-s="wait"]{opacity:.35}
+.chip[data-s="pass"]{border-color:var(--keep)} .chip[data-s="pass"] .st{color:var(--keep)}
+.chip[data-s="drop"]{border-color:var(--drop);background:#fbeeee} .chip[data-s="drop"] .st{color:var(--drop)}
+.chip[data-s="drop"] .nm{text-decoration:line-through}
+.chip[data-s="merge"]{border-color:var(--merge);background:#f4eefa} .chip[data-s="merge"] .st{color:var(--merge)}
+.chip[data-s="here"]{border-color:var(--ink);transform:translateX(4px)}
+.q{width:100%;border-collapse:collapse;margin-top:8px;font-size:13.5px}
+.q th,.q td{border-bottom:1px solid var(--line);padding:5px 6px;text-align:left}
+.q td.p{font-family:var(--mono);text-align:right;white-space:nowrap}
+.q td.bad{color:var(--drop);font-weight:700}
+.legend{display:flex;flex-wrap:wrap;gap:10px;font-size:13px;color:var(--muted);margin-top:8px}
+dl{margin:0}
+dt{font-weight:700;margin-top:10px}
+dd{margin:2px 0 0;color:var(--muted)}
+.note{font-size:13px;color:var(--muted)}
+.hide{display:none}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>SpoKeeper 파이프라인, 한 경계선을 따라가기</h1>
+  <p class="sub">책을 읽은 위치마다 인물 관계도와 요약을 만드는 과정입니다. 이름 세 개가 이 과정을 지나가는 모습을 단계별로 봅니다.</p>
+
+  <div class="ribbon" id="ribbon"></div>
+
+  <h2>파이프라인</h2>
+  <div class="card">
+    <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:8px">
+      <div class="toggle" role="group" aria-label="보기 선택">
+        <button id="mCur" aria-pressed="false">이전: 규칙 필터</button>
+        <button id="mNew" aria-pressed="true">현재: Decide 검사</button>
+      </div>
+      <span class="note">단계를 클릭하면 그 단계로 이동합니다.</span>
+    </div>
+    <svg id="flow" viewBox="0 0 960 150" role="img" aria-label="파이프라인 흐름도"></svg>
+    <div class="legend">
+      <span><span class="tag t-rule">규칙</span> 코드의 고정 규칙</span>
+      <span><span class="tag t-llm">LLM</span> 언어 모델 호출</span>
+      <span><span class="tag t-decide">Decide</span> solar-decide 분류</span>
+    </div>
+  </div>
+
+  <div class="player">
+    <div class="card">
+      <p class="scene-title" id="sTitle"></p>
+      <div id="sText"></div>
+      <div id="sExtra"></div>
+      <div class="controls">
+        <button id="prev">← 이전</button>
+        <button id="next">다음 →</button>
+        <div class="dots" id="dots"></div>
+      </div>
+    </div>
+    <div class="card">
+      <b style="font-family:var(--display)">이 경계선에서 새로 나온 이름</b>
+      <div class="chips" id="chips"></div>
+      <p class="note" id="chipNote"></p>
+    </div>
+  </div>
+
+  <h2>왜 규칙 대신 Decide인가</h2>
+  <div class="card">
+    <dl>
+      <dt>규칙 필터의 한계</dt>
+      <dd>"노파", "경관" 같은 패턴을 코드에 적어 두는 방식이라, 적어 두지 않은 표현은 통과합니다. 이번 분석에서도 "대머리 독수리", "이주민 무리", "홈즈와 와트슨" 같은 이름이 남았습니다.</dd>
+      <dt>Decide로 바꾸면</dt>
+      <dd>이름과 설명을 보내고 "개인 이름인가", "한 명인가" 같은 질문을 하면 확률이 돌아옵니다. 책이 바뀌어도 질문은 그대로 씁니다. 새 이름이 나올 때만 묻기 때문에 호출이 커지지 않습니다.</dd>
+      <dt>호칭 연결은 왜 이렇게 엄격한가</dt>
+      <dd>설명만 비교하면 같은 역할의 다른 사람을 합치기 쉽습니다. 시험에서 화자의 하숙집 주인과 피살자의 하숙집 주인이 합쳐졌고, 정체가 끝내 밝혀지지 않는 인물이 등장인물의 추리 문장을 근거로 범인과 합쳐졌습니다. 그래서 본문 한 문장에 호칭과 이름이 함께 나올 때만 연결합니다.</dd>
+      <dt>아직 확인되지 않은 것</dt>
+      <dd>기준값은 이 책 하나로 정했습니다. 다른 책에서도 맞는지는 시험하지 않았습니다. 경계선마다 돌렸을 때의 시간도 측정하지 않았습니다.</dd>
+    </dl>
+  </div>
+
+  <h2>용어</h2>
+  <div class="card"><dl id="gloss"></dl></div>
+  <p class="note">수치 출처: 주홍색의 연구 pro4 분석 결과를 저장된 최종 경계선에서 시험한 값 (eval/results/scarlet_pro4_entity_filter_probe.json). 자세한 내용은 docs/entity-screening.md.</p>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var NS="http://www.w3.org/2000/svg";
+  function el(tag,attrs,kids,ns){
+    var e=ns?document.createElementNS(NS,tag):document.createElement(tag);
+    for(var k in (attrs||{})){ if(k==="text"){e.textContent=attrs[k];} else {e.setAttribute(k,attrs[k]);} }
+    (kids||[]).forEach(function(c){e.appendChild(typeof c==="string"?document.createTextNode(c):c);});
+    return e;
+  }
+  function clear(n){while(n.firstChild)n.removeChild(n.firstChild);}
+
+  var NAMES=["순찰 경관","뒤팽","아서 샤르팡티에"];
+
+  /* 단계 정의 */
+  var STAGES=[
+    {id:"read",  label:"경계선 읽기",   kind:"",       only:null},
+    {id:"extract",label:"증분 추출",    kind:"LLM",    only:null},
+    {id:"rule",  label:"일반 지칭 규칙", kind:"규칙",   only:"cur"},
+    {id:"decide",label:"Decide 검사",   kind:"Decide", only:"new"},
+    {id:"merge", label:"동일 인물 병합", kind:"LLM",    only:null},
+    {id:"verify",label:"근거 검증",     kind:"규칙+LLM",only:null},
+    {id:"graph", label:"그래프 · 리마인드",kind:"LLM", only:null}
+  ];
+
+  /* 장면 정의: stage = STAGES id, chip 상태는 모드별 */
+  var SCENES=[
+    {stage:"read", title:"1. 경계선까지 읽는다",
+     text:"책을 일정 간격(5청크)으로 끊은 지점이 경계선입니다. 처음부터 그 경계선까지의 글만 분석 대상입니다. 이 책은 경계선이 42개입니다.",
+     chips:{cur:["wait","wait","wait"],new:["wait","wait","wait"]}},
+    {stage:"extract", title:"2. 인물, 관계, 사건을 뽑는다",
+     text:"LLM이 지금까지 읽은 글에서 인물, 관계, 사건을 뽑습니다. 이름과 설명이 함께 나옵니다. 이 단계에서 세 이름이 처음 등장합니다.",
+     chips:{cur:["here","here","here"],new:["here","here","here"]},
+     why:null},
+    {stage:"rule", title:"3. 규칙으로 일반 지칭을 거른다",
+     text:"이전 방식은 코드에 적어 둔 단어 목록으로 직함이나 역할만 있는 이름을 걸렀습니다. 세 이름은 모두 통과했습니다. 목록에 없는 표현은 걸러지지 않고, 목록에는 특정 책의 단어가 섞여 있었습니다. 현재 방식에서는 이 단계를 뺐습니다.",
+     chips:{cur:["pass","pass","pass"],new:["pass","pass","pass"]}},
+    {stage:"decide", title:"4. Decide로 이름을 검사한다",
+     text:"새로 나온 이름마다 질문 4개를 보내고 확률을 받습니다. 기준값보다 낮으면 걸립니다. 개인 이름이 아니라고만 걸린 이름(역할 호칭)은 지우기 전에 기존 인물과 연결을 시도합니다. 후보는 설명 비교로 3명까지 추리고, 본문 발췌에서 호칭과 후보 이름이 한 문장에 함께 나올 때만 연결합니다.",
+     chips:{cur:["pass","pass","pass"],new:["drop","drop","pass"]},
+     table:true,
+     why:{new:["개인 이름 확률 0.10 → 역할 호칭. 본문에 이 표현이 그대로 없어 연결 근거를 못 찾음 → 제거","이야기 속 인물 0.06, 실재 0.00 → 다른 소설의 탐정","모든 질문 0.88 이상 → 통과"]}},
+    {stage:"merge", title:"5. 같은 사람인지 판단해 병합한다",
+     text:"새 이름이 이미 있는 인물과 같은 사람인지 LLM이 판단합니다. 후보는 이름이 겹치는 인물과 최근 등록된 8명입니다. 그래서 이름이 전혀 다른 역할 호칭은 여기서 잡히지 않고, 앞 단계의 호칭 연결이 맡습니다.",
+     chips:{cur:["pass","pass","pass"],new:["drop","drop","pass"]},
+     why:{new:["제거됨","제거됨","새 인물로 유지"]}},
+    {stage:"verify", title:"6. 근거 없는 관계를 제거한다",
+     text:"원문에 근거가 없는 관계와 사건을 지웁니다. 이 단계는 관계를 지우는 용도이고, 인물 목록은 정리하지 않습니다. 그래서 이전 방식에서는 앞에서 걸러지지 않은 이름이 그대로 남았습니다.",
+     chips:{cur:["pass","pass","pass"],new:["drop","drop","pass"]}},
+    {stage:"graph", title:"7. 그래프와 리마인드를 저장한다",
+     text:"그래프 JSON과 \"여기까지 읽은 내용\" 요약을 만들어 저장합니다. 이전 방식의 최종 결과에는 뒤팽과 순찰 경관이 그대로 남았습니다. 현재 방식은 둘을 빼고 아서 샤르팡티에만 남깁니다.",
+     chips:{cur:["pass","pass","pass"],new:["drop","drop","pass"]}}
+  ];
+  var CHIP_TXT={wait:"대기",here:"이 단계에 있음",pass:"통과 · 남음",drop:"제거",merge:"병합 후보"};
+  var NOTE={
+    cur:"이 열은 실제 pro4 분석 결과에서 세 이름이 최종 그래프에 남은 모습과 같습니다.",
+    new:"현재 방식의 결과는 저장된 최종 경계선에 검사를 적용한 값입니다. 책 전체를 이 방식으로 다시 분석한 것은 아닙니다."
+  };
+
+  var Q_ROWS=[
+    ["개인 이름인가","person",0.30],
+    ["한 명인가","single",0.50],
+    ["이야기 속 인물인가","inplot",0.30],
+    ["실재하는 사람인가","human",0.50]
+  ];
+  var SCORES={"순찰 경관":{person:0.10,single:0.84,inplot:0.38,human:0.85},"뒤팽":{person:0.92,single:0.98,inplot:0.06,human:0.0},"아서 샤르팡티에":{person:0.99,single:0.98,inplot:0.88,human:0.88}};
+
+  var GLOSS=[
+    ["경계선","책을 읽은 위치를 나누는 지점. 이 위치까지 읽은 사람이 볼 수 있는 결과만 만든다."],
+    ["증분 추출","경계선마다 처음부터 다시 하지 않고, 앞서 얻은 결과에 새 내용을 더해 뽑는 방식."],
+    ["일반 지칭","\"노파\", \"경관\"처럼 개인 이름이 아니라 역할이나 묘사로 부르는 말."],
+    ["solar-decide","질문과 상태를 보내면 선택지별 확률을 돌려주는 Upstage 분류 API."],
+    ["병합","다른 이름으로 불린 같은 사람을 하나의 인물로 합치는 일."],
+    ["리마인드","읽은 곳까지의 내용을 스포일러 없이 요약한 문장."]
+  ];
+
+  var mode="new", idx=0;
+
+  /* 리본 */
+  var rib=document.getElementById("ribbon");
+  rib.appendChild(el("b",{text:"따라갈 예시"}));
+  rib.appendChild(document.createTextNode("주홍색의 연구, 한 경계선에서 새로 나온 이름 3개:"));
+  NAMES.forEach(function(n){rib.appendChild(el("span",{"class":"tag t-rule",style:"background:#5a4a35",text:n}));});
+
+  /* 용어 */
+  var g=document.getElementById("gloss");
+  GLOSS.forEach(function(r){g.appendChild(el("dt",{text:r[0]}));g.appendChild(el("dd",{text:r[1]}));});
+
+  /* 흐름도 */
+  var flow=document.getElementById("flow");
+  var X0=20,W=118,GAP=22,Y=34,H=70;
+  function visibleStages(){return STAGES;}
+  function drawFlow(){
+    clear(flow);
+    var cur=SCENES[idx].stage;
+    var curIndex=STAGES.findIndex(function(s){return s.id===cur;});
+    STAGES.forEach(function(s,i){
+      var x=X0+i*(W+GAP);
+      if(i>0){
+        var on=i<=curIndex;
+        flow.appendChild(el("line",{"class":"edge"+(on?" on":""),x1:x-GAP,y1:Y+H/2,x2:x,y2:Y+H/2},[],true));
+      }
+      var off=(s.only!==null&&s.only!==mode);
+      var cls="node"+(off?" off":"")+(s.id===cur?" active":"")+(i<curIndex&&!off?" past":"");
+      var gEl=el("g",{"class":cls,tabindex:"0",role:"button","aria-label":s.label+(off?" (지금은 없음)":"")},[],true);
+      gEl.appendChild(el("rect",{x:x,y:Y,width:W,height:H,rx:10},[],true));
+      var t=s.label.length>8?[s.label.slice(0,s.label.indexOf(" ")>0?s.label.indexOf(" "):6),s.label.slice(s.label.indexOf(" ")>0?s.label.indexOf(" ")+1:6)]:[s.label];
+      t.forEach(function(line,li){
+        gEl.appendChild(el("text",{x:x+W/2,y:Y+30+li*17,text:line},[],true));
+      });
+      if(s.kind){
+        gEl.appendChild(el("text",{"class":"kind",x:x+W/2,y:Y+H-8,text:off?(s.only==="cur"?"이전":"현재"):s.kind},[],true));
+      }
+      function go(){
+        var target=SCENES.findIndex(function(sc){return sc.stage===s.id;});
+        if(off){mode=s.only;syncMode();}
+        idx=Math.max(0,SCENES.findIndex(function(sc){return sc.stage===s.id;}));
+        render();
+      }
+      gEl.addEventListener("click",go);
+      gEl.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();go();}});
+      flow.appendChild(gEl);
+    });
+  }
+
+  function qTable(name){
+    var sc=SCORES[name];
+    var tb=el("table",{"class":"q"});
+    tb.appendChild(el("tr",{},[el("th",{text:"질문"}),el("th",{text:"확률"}),el("th",{text:"기준"})]));
+    Q_ROWS.forEach(function(r){
+      var p=sc[r[1]], bad=p<r[2];
+      tb.appendChild(el("tr",{},[
+        el("td",{text:r[0]}),
+        el("td",{"class":"p"+(bad?" bad":""),text:p.toFixed(2)}),
+        el("td",{"class":"p",text:"≥ "+r[2].toFixed(2)})
+      ]));
+    });
+    return tb;
+  }
+
+  function render(){
+    var sc=SCENES[idx];
+    document.getElementById("sTitle").textContent=sc.title;
+    document.getElementById("sText").textContent=sc.text;
+    var ex=document.getElementById("sExtra"); clear(ex);
+    if(sc.table){
+      if(mode==="new"){
+        ex.appendChild(el("p",{"class":"note",text:"기준값보다 낮은 칸이 붉게 표시됩니다."}));
+        NAMES.forEach(function(n){
+          ex.appendChild(el("b",{text:n}));
+          ex.appendChild(qTable(n));
+        });
+      } else {
+        ex.appendChild(el("p",{"class":"note",text:"이전 방식에는 이 단계가 없었습니다. 위쪽에서 \"현재\" 보기를 켜면 결과가 보입니다."}));
+      }
+    }
+    var states=sc.chips[mode];
+    var chips=document.getElementById("chips"); clear(chips);
+    NAMES.forEach(function(n,i){
+      var s=states[i];
+      var why=(sc.why&&sc.why[mode])?sc.why[mode][i]:"";
+      var st=el("span",{"class":"st"},[CHIP_TXT[s]]);
+      var left=el("span",{},[el("span",{"class":"nm",text:n})]);
+      if(why){left.appendChild(el("span",{"class":"why",text:why}));}
+      chips.appendChild(el("div",{"class":"chip","data-s":s},[left,st]));
+    });
+    document.getElementById("chipNote").textContent=NOTE[mode];
+    document.getElementById("prev").disabled=idx===0;
+    document.getElementById("next").disabled=idx===SCENES.length-1;
+    var dots=document.getElementById("dots");
+    Array.prototype.forEach.call(dots.children,function(d,i){d.setAttribute("aria-current",i===idx?"true":"false");});
+    drawFlow();
+  }
+
+  function syncMode(){
+    document.getElementById("mCur").setAttribute("aria-pressed",mode==="cur");
+    document.getElementById("mNew").setAttribute("aria-pressed",mode==="new");
+  }
+
+  var dots=document.getElementById("dots");
+  SCENES.forEach(function(_,i){
+    var b=el("button",{"class":"dot","aria-label":"장면 "+(i+1),type:"button"});
+    b.addEventListener("click",function(){idx=i;render();});
+    dots.appendChild(b);
+  });
+  document.getElementById("prev").addEventListener("click",function(){if(idx>0){idx--;render();}});
+  document.getElementById("next").addEventListener("click",function(){if(idx<SCENES.length-1){idx++;render();}});
+  document.getElementById("mCur").addEventListener("click",function(){mode="cur";syncMode();render();});
+  document.getElementById("mNew").addEventListener("click",function(){mode="new";syncMode();render();});
+  document.addEventListener("keydown",function(e){
+    if(e.key==="ArrowRight"&&idx<SCENES.length-1){idx++;render();}
+    if(e.key==="ArrowLeft"&&idx>0){idx--;render();}
+  });
+  syncMode();render();
+})();
+</script>
+</body>
+</html>
