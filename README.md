@@ -27,6 +27,8 @@ SpoKeeper는 Upstage AI 부트캠프에서 4인 팀으로 만든 프로젝트입
 | 역할 호칭 연결 | "예언자" → "브리감 영"처럼 호칭을 본문 근거가 있을 때만 기존 인물에 연결 | [entity-screening.md](docs/entity-screening.md) |
 | 로컬 실행 | DB 없이 JSON 파일로 동작하는 로컬 모드 | 아래 [실행하기](#실행하기) |
 
+무엇을 고민했고 왜 그렇게 결정했는지, 처음 파이프라인에서 무엇이 바뀌었는지는 [docs/decision-log.md](docs/decision-log.md)에 정리했습니다.
+
 파이프라인을 처음 보는 분은 [docs/pipeline-explainer.html](docs/pipeline-explainer.html)을 브라우저로 열어 보세요. 이름 세 개가 파이프라인을 지나가는 과정을 단계별로 보여 줍니다.
 
 ## 분석 파이프라인 (현재)
